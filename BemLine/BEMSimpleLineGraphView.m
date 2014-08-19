@@ -148,7 +148,7 @@ int currentlyCloser;
         line.alpha = 0;
         line.backgroundColor = [UIColor clearColor];
         line.firstPoint = CGPointMake(xDot1, yDot1);
-        line.secondPoint = CGPointMake(xDot2, yDot2);
+        line.secondPoint = CGPointMake(xDot2, yDot2);  //
         line.topColor = self.colorTop;
         line.bottomColor = self.colorBottom;
         line.color = self.colorLine;
