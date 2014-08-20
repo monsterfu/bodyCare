@@ -17,6 +17,8 @@
     firstUseOneViewController* _oneViewController;
     firstUseTwoViewController* _twoViewController;
     firstUseThreeViewController* _threeViewController;
+    
+    UILabel* _label;
 }
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;

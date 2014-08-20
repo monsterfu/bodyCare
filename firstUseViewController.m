@@ -65,6 +65,7 @@
     if (scrollView.contentOffset.x == 0) {
         NSLog(@"1");
         [_pageControl setCurrentPage:0];
+        [_oneViewController showAnimation];
         
     }else if (scrollView.contentOffset.x == DEVICE_WIDTH) {
         NSLog(@"2");
