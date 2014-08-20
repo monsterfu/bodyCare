@@ -43,6 +43,9 @@
 		64072A7F19A3328400510ED4 /* firstUseTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64072A7D19A3328400510ED4 /* firstUseTwoViewController.xib */; };
 		64072A8419A342E100510ED4 /* firstUseThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64072A8219A342E100510ED4 /* firstUseThreeViewController.m */; };
 		64072A8519A342E100510ED4 /* firstUseThreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64072A8319A342E100510ED4 /* firstUseThreeViewController.xib */; };
+		6414659E19A4B3B3007EE432 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6414659919A4B3B3007EE432 /* DemoViewController.m */; };
+		6414659F19A4B3B3007EE432 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6414659B19A4B3B3007EE432 /* RootViewController.m */; };
+		641465A019A4B3B3007EE432 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6414659D19A4B3B3007EE432 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +115,12 @@
 		64072A8119A342E100510ED4 /* firstUseThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firstUseThreeViewController.h; sourceTree = "<group>"; };
 		64072A8219A342E100510ED4 /* firstUseThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = firstUseThreeViewController.m; sourceTree = "<group>"; };
 		64072A8319A342E100510ED4 /* firstUseThreeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = firstUseThreeViewController.xib; sourceTree = "<group>"; };
+		6414659819A4B3B3007EE432 /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		6414659919A4B3B3007EE432 /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		6414659A19A4B3B3007EE432 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		6414659B19A4B3B3007EE432 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		6414659C19A4B3B3007EE432 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		6414659D19A4B3B3007EE432 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,9 +225,15 @@
 		64072A3F19A31DC400510ED4 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				6414659819A4B3B3007EE432 /* DemoViewController.h */,
+				6414659919A4B3B3007EE432 /* DemoViewController.m */,
+				6414659A19A4B3B3007EE432 /* RootViewController.h */,
+				6414659B19A4B3B3007EE432 /* RootViewController.m */,
+				6414659C19A4B3B3007EE432 /* SecondViewController.h */,
+				6414659D19A4B3B3007EE432 /* SecondViewController.m */,
+				64072A5A19A32BA600510ED4 /* firstUseView */,
 				64072A5719A3228000510ED4 /* firstUseViewController.h */,
 				64072A5819A3228000510ED4 /* firstUseViewController.m */,
-				64072A5A19A32BA600510ED4 /* firstUseView */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
@@ -409,7 +424,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				641465A019A4B3B3007EE432 /* SecondViewController.m in Sources */,
 				64072A5919A3228000510ED4 /* firstUseViewController.m in Sources */,
+				6414659F19A4B3B3007EE432 /* RootViewController.m in Sources */,
 				64072A7E19A3328400510ED4 /* firstUseTwoViewController.m in Sources */,
 				64072A5019A31E2900510ED4 /* AccelerationAnimation.m in Sources */,
 				64072A7719A3325800510ED4 /* BEMAnimations.m in Sources */,
@@ -424,6 +441,7 @@
 				64072A5119A31E2900510ED4 /* Evaluate.m in Sources */,
 				64072A5219A31E2900510ED4 /* REBackgroundView.m in Sources */,
 				64072A5619A31E2900510ED4 /* UIWindow+RESideMenuExtensions.m in Sources */,
+				6414659E19A4B3B3007EE432 /* DemoViewController.m in Sources */,
 				64072A8419A342E100510ED4 /* firstUseThreeViewController.m in Sources */,
 				64072A5319A31E2900510ED4 /* RESideMenu.m in Sources */,
 			);
@@ -553,6 +571,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bodyCare/bodyCare-Prefix.pch";
 				INFOPLIST_FILE = "bodyCare/bodyCare-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -566,6 +585,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bodyCare/bodyCare-Prefix.pch";
 				INFOPLIST_FILE = "bodyCare/bodyCare-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -630,6 +650,7 @@
 				64072A3B19A31DB400510ED4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		64072A3C19A31DB400510ED4 /* Build configuration list for PBXNativeTarget "bodyCareTests" */ = {
 			isa = XCConfigurationList;
@@ -638,6 +659,7 @@
 				64072A3E19A31DB400510ED4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
