@@ -82,6 +82,6 @@
 #pragma mark - firstUseThreeViewControllerDelegat
 -(void)startButtonTouch
 {
-    
+    [self performSegueWithIdentifier:@"enterMainIdentifier" sender:nil];
 }
 @end
