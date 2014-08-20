@@ -15,5 +15,6 @@
 @property (strong, nonatomic) NSMutableArray *ArrayOfDates;
 
 @property (weak, nonatomic) IBOutlet BEMSimpleLineGraphView *lineGraphView;
-- (void)refresh;
+@property (weak, nonatomic) IBOutlet UIImageView *imgaView;
+- (void)showAnimation;
 @end

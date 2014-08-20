@@ -26,13 +26,23 @@
 }
 
 // Animation of the graph
-- (void)animationForLine:(NSInteger)lineIndex line:(BEMLine *)line animationSpeed:(NSInteger)speed {
+- (void)animationForLine:(NSInteger)lineIndex line:(BEMLine *)line animationSpeed:(NSInteger)speed isLast:(BOOL)last {
     if (speed == 0) {
         line.alpha = 1.0;
     } else {
         [UIView animateWithDuration:1.0 delay:lineIndex/(speed*2.0) options:UIViewAnimationOptionCurveEaseOut animations:^{
             line.alpha = 1.0;
-        } completion:nil];
+        } completion:^(BOOL finished){
+            if (finished) {
+                if (!last) {
+                    return ;
+                }
+                if (self.delegate&&[self.delegate respondsToSelector:@selector(didAnimationFinished)]) {
+                    [self.delegate didAnimationFinished];
+                }
+            }
+            
+        }];
     }
 }
 

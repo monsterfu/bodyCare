@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="firstUseTwoViewController">
             <connections>
+                <outlet property="imgaView" destination="iZD-rr-esG" id="FI4-CU-R2W"/>
                 <outlet property="lineGraphView" destination="yk9-u9-1mm" id="JO8-Da-RaK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -15,18 +16,22 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fu_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="EPX-i9-Fkg">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3.png" translatesAutoresizingMaskIntoConstraints="NO" id="EPX-i9-Fkg">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yk9-u9-1mm" customClass="BEMSimpleLineGraphView">
-                    <rect key="frame" x="86" y="171" width="148" height="136"/>
+                    <rect key="frame" x="88" y="203" width="146" height="107"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="EEn-gT-Iaq"/>
                     </connections>
                 </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fu_table.png" translatesAutoresizingMaskIntoConstraints="NO" id="iZD-rr-esG">
+                    <rect key="frame" x="143" y="318" width="35" height="46"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -34,6 +39,7 @@
         </view>
     </objects>
     <resources>
-        <image name="fu_bg.png" width="640" height="1136"/>
+        <image name="3.png" width="640" height="1136"/>
+        <image name="fu_table.png" width="68" height="93"/>
     </resources>
 </document>

@@ -15,5 +15,11 @@
 @interface firstUseThreeViewController : UIViewController
 
 @property(nonatomic,assign)id<firstUseThreeViewControllerDelegate>delegate;
+
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 - (IBAction)startButtonTouch:(UIButton *)sender;
+
+-(void)showAnimation;
 @end

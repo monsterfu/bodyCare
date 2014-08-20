@@ -11,14 +11,14 @@
 #import "BEMLine.h"
 
 @protocol BEMAnimationDelegate <NSObject>
-
+-(void)didAnimationFinished;
 @end
 
 /// Class for the animation when the graph first gets created.
 @interface BEMAnimations : NSObject
 
 - (void)animationForDot:(NSInteger)dotIndex circleDot:(BEMCircle *)circleDot animationSpeed:(NSInteger)speed;
-- (void)animationForLine:(NSInteger)lineIndex line:(BEMLine *)line animationSpeed:(NSInteger)speed;
+- (void)animationForLine:(NSInteger)lineIndex line:(BEMLine *)line animationSpeed:(NSInteger)speed isLast:(BOOL)last;
 
 @property (assign) id <BEMAnimationDelegate> delegate;
 

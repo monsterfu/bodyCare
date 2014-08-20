@@ -66,7 +66,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
+-(void)allAnimationDidFinished;
 @end
 
 @interface BEMSimpleLineGraphView : UIView <BEMAnimationDelegate, UIGestureRecognizerDelegate>

@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GlobalHeader.h"
 
 @interface firstUseOneViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *label;
 
+@property (weak, nonatomic) IBOutlet UIView *panelView;
+@property (weak, nonatomic) IBOutlet UIImageView *ringImage;
 -(void)showAnimation;
 @end

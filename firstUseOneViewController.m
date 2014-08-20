@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    _ringImage.transform=CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(180.0));
     [self showAnimation];
 }
 
@@ -45,48 +46,24 @@
 -(void)showAnimation
 {
     
-    CABasicAnimation* rotationAnimation;
-    rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-    rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * 2.0 ];
-    rotationAnimation.duration = 1;
-    rotationAnimation.cumulative = YES;
+//    CABasicAnimation* rotationAnimation;
+//    rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+//    rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI ];
+//    rotationAnimation.duration = 5;
+//    rotationAnimation.cumulative = YES;
+//    
+//    rotationAnimation.repeatCount = 1;
+//    [_ringImage.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
     
-    rotationAnimation.repeatCount = 1;
-    [_label.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
     
-    [UIView animateWithDuration:1.2 delay:0.5 options:UIViewAnimationOptionCurveLinear animations:^{
-        _label.text = [NSString stringWithFormat:@"34.2℃"];
-        _label.backgroundColor = [UIColor colorWithWhite:1.0f alpha:0.1];
-    } completion:^(BOOL finish){
-        [UIView animateWithDuration:1.2 delay:0.5 options:UIViewAnimationOptionCurveLinear animations:^{
-            _label.text = [NSString stringWithFormat:@"34.8℃"];
-            _label.backgroundColor = [UIColor colorWithWhite:1.0f alpha:0.3];
-        } completion:^(BOOL finish){
-            [UIView animateWithDuration:1.2 delay:0.5 options:UIViewAnimationOptionCurveLinear animations:^{
-                _label.text = [NSString stringWithFormat:@"35.4℃"];
-                _label.backgroundColor = [UIColor colorWithWhite:1.0f alpha:0.5];
-            } completion:^(BOOL finish){
-                [UIView animateWithDuration:1.2 delay:0.5 options:UIViewAnimationOptionCurveLinear animations:^{
-                    _label.text = [NSString stringWithFormat:@"36.0℃"];
-                    _label.backgroundColor = [UIColor colorWithWhite:1.0f alpha:0.7];
-                } completion:^(BOOL finish){
-                    [UIView animateWithDuration:1.2 delay:0.5 options:UIViewAnimationOptionCurveLinear animations:^{
-                        _label.text = [NSString stringWithFormat:@"36.5℃"];
-                    } completion:^(BOOL finish){
-                        [UIView animateWithDuration:1.2 delay:0.5 options:UIViewAnimationOptionCurveLinear animations:^{
-                            _label.text = [NSString stringWithFormat:@"37.1℃"];
-                        } completion:^(BOOL finish){
-                            [UIView animateWithDuration:1.2 delay:0.5 options:UIViewAnimationOptionCurveLinear animations:^{
-                                _label.text = [NSString stringWithFormat:@"38.6℃"];
-                            } completion:^(BOOL finish){
-                                _label.text = [NSString stringWithFormat:@"34.2℃"];
-                            }];
-                        }];
-                    }];
-                }];
-            }];
-        }];
-    }];
+    CABasicAnimation* rotationAnimation1;
+    rotationAnimation1 = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    rotationAnimation1.toValue = [NSNumber numberWithFloat: M_PI/2];
+    rotationAnimation1.duration = 1;
+    rotationAnimation1.cumulative = YES;
+    rotationAnimation1.removedOnCompletion = NO;
+    rotationAnimation1.repeatCount = 1;
+    [_panelView.layer addAnimation:rotationAnimation1 forKey:@"rotationAnimation"];
 }
 
 @end

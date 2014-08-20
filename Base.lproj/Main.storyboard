@@ -4,6 +4,189 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="EXu-9S-HKf">
+            <objects>
+                <viewController id="EIV-rx-mKO" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HeV-Z0-bT5"/>
+                        <viewControllerLayoutGuide type="bottom" id="1aa-Hv-rUO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WHm-Jb-2MS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="c2f-fo-kdT">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZv-gR-mq2">
+                                <rect key="frame" x="101" y="189" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="login_jiazhang.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="login_jiazhang_hl.png"/>
+                                <state key="highlighted" backgroundImage="login_jiazhang_hl.png"/>
+                                <connections>
+                                    <action selector="jiazhangButtonTouch:" destination="EIV-rx-mKO" eventType="touchUpInside" id="h1k-lF-rF9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUk-R6-6QD">
+                                <rect key="frame" x="156" y="189" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="login_yisheng.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="login_yisheng_hl.png"/>
+                                <state key="highlighted" backgroundImage="login_yisheng_hl.png"/>
+                                <connections>
+                                    <action selector="yishengButtonTouch:" destination="EIV-rx-mKO" eventType="touchUpInside" id="aN8-J9-UlO"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A3u-t6-aff">
+                                <rect key="frame" x="126" y="227" width="93" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hro-95-8dk">
+                                <rect key="frame" x="126" y="254" width="93" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EG2-2e-J96">
+                                <rect key="frame" x="101" y="287" width="118" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKF-Jv-mPk">
+                                <rect key="frame" x="101" y="329" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="login_login.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="login_login_hl.png"/>
+                                <state key="highlighted" backgroundImage="login_login_hl.png"/>
+                                <connections>
+                                    <action selector="loginButtonTouch:" destination="EIV-rx-mKO" eventType="touchUpInside" id="AfG-Op-QXq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ST6-rV-K7W">
+                                <rect key="frame" x="156" y="329" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="login_register_hl.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="login_register_hl.png"/>
+                                <state key="highlighted" backgroundImage="login_register_hl.png"/>
+                                <connections>
+                                    <action selector="registerButtonTouch:" destination="EIV-rx-mKO" eventType="touchUpInside" id="eFk-7y-6lX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="jiazhangButton" destination="BZv-gR-mq2" id="XFC-Rg-wCk"/>
+                        <outlet property="loginButton" destination="eKF-Jv-mPk" id="mCb-Xd-7Aw"/>
+                        <outlet property="passWordTextField" destination="hro-95-8dk" id="0SS-3n-XVL"/>
+                        <outlet property="registerButton" destination="ST6-rV-K7W" id="lo2-Ep-8Xx"/>
+                        <outlet property="userNameTextField" destination="A3u-t6-aff" id="yLy-q4-i8b"/>
+                        <outlet property="yanzhengmaTextField" destination="EG2-2e-J96" id="ovo-9h-evb"/>
+                        <outlet property="yishengButton" destination="bUk-R6-6QD" id="nhh-2i-8ui"/>
+                        <segue destination="QTZ-Ap-vq6" kind="modal" identifier="enterRegisterIdentifier" id="6UT-WH-1cs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c1j-0T-KNS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1478" y="-654"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="FrM-4j-Teb">
+            <objects>
+                <viewController id="QTZ-Ap-vq6" customClass="RegisterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wee-v0-i4J"/>
+                        <viewControllerLayoutGuide type="bottom" id="INH-es-oip"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3xs-V3-7E4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="re_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Azj-CQ-GkW">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qrg-4J-nC2">
+                                <rect key="frame" x="104" y="179" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="login_jiazhang.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="login_jiazhang_hl.png"/>
+                                <state key="highlighted" backgroundImage="login_jiazhang_hl.png"/>
+                                <connections>
+                                    <action selector="jzButtonTouch:" destination="QTZ-Ap-vq6" eventType="touchUpInside" id="Bez-3R-AKX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUj-Ij-5VV">
+                                <rect key="frame" x="159" y="179" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="login_yisheng.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="login_yisheng_hl.png"/>
+                                <state key="highlighted" backgroundImage="login_yisheng_hl.png"/>
+                                <connections>
+                                    <action selector="ysButtonTouch:" destination="QTZ-Ap-vq6" eventType="touchUpInside" id="noL-3a-UCk"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s2W-VG-gWs">
+                                <rect key="frame" x="98" y="225" width="122" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4VN-N7-aMc">
+                                <rect key="frame" x="98" y="257" width="122" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eG0-f7-EtK">
+                                <rect key="frame" x="98" y="292" width="122" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQb-Fw-SwR">
+                                <rect key="frame" x="129" y="335" width="63" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="re_re.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerButtonTouch:" destination="QTZ-Ap-vq6" eventType="touchUpInside" id="VZB-4q-382"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="codeTextField" destination="eG0-f7-EtK" id="IUi-DG-URN"/>
+                        <outlet property="jzButton" destination="Qrg-4J-nC2" id="3f7-DG-g2G"/>
+                        <outlet property="passWordTextField" destination="4VN-N7-aMc" id="FBF-ip-VBD"/>
+                        <outlet property="phoneTextField" destination="s2W-VG-gWs" id="d0M-hg-cGm"/>
+                        <outlet property="ysButton" destination="eUj-Ij-5VV" id="Rd3-W3-6XX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hay-bR-JR8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1478" y="-1315"/>
+        </scene>
         <!--First Use View Controller-->
         <scene sceneID="wkp-7V-cbG">
             <objects>
@@ -16,6 +199,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="Lqa-c9-0Zj">
+                                <rect key="frame" x="140" y="530" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" red="0.84757206360000004" green="0.84757206360000004" blue="0.84757206360000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.42849671830000002" green="0.8947305485" blue="0.52235733640000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xY8-Ye-eTb">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,24 +212,18 @@
                                     <outlet property="delegate" destination="TzK-Yn-Ol8" id="bIp-L8-j27"/>
                                 </connections>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="Lqa-c9-0Zj">
-                                <rect key="frame" x="140" y="466" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="pageIndicatorTintColor" red="0.84757206360000004" green="0.84757206360000004" blue="0.84757206360000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="currentPageIndicatorTintColor" red="0.42849671830000002" green="0.8947305485" blue="0.52235733640000004" alpha="1" colorSpace="calibratedRGB"/>
-                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="pageControl" destination="Lqa-c9-0Zj" id="YxN-nN-TWj"/>
                         <outlet property="scrollView" destination="xY8-Ye-eTb" id="ogb-Hy-Wyd"/>
-                        <segue destination="oKF-jx-aAi" kind="modal" identifier="enterMainIdentifier" id="KhY-2a-vFP"/>
+                        <segue destination="EIV-rx-mKO" kind="modal" identifier="enterLoginIdentifier" animates="NO" id="PMe-nv-GuD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u3c-kX-30g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1147" y="-286"/>
+            <point key="canvasLocation" x="-1907" y="-654"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="C4i-QR-pnu">
@@ -74,9 +257,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a37-Pr-U2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-389" y="-286"/>
+            <point key="canvasLocation" x="-329" y="-286"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="login_bg.png" width="640" height="1136"/>
+        <image name="login_jiazhang.png" width="125" height="62"/>
+        <image name="login_jiazhang_hl.png" width="125" height="62"/>
+        <image name="login_login.png" width="120" height="52"/>
+        <image name="login_login_hl.png" width="120" height="52"/>
+        <image name="login_register_hl.png" width="119" height="52"/>
+        <image name="login_yisheng.png" width="125" height="62"/>
+        <image name="login_yisheng_hl.png" width="125" height="62"/>
+        <image name="re_bg.png" width="640" height="1136"/>
+        <image name="re_re.png" width="125" height="54"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

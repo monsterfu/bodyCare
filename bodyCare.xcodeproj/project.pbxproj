@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F9F191319A4F33E0089E452 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9F191219A4F33E0089E452 /* 3.png */; };
+		0F9F191519A4F4710089E452 /* fu_table.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9F191419A4F4710089E452 /* fu_table.png */; };
+		0F9F191A19A4F86D0089E452 /* fu_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9F191619A4F86D0089E452 /* fu_4.png */; };
+		0F9F191B19A4F86D0089E452 /* fu_button_hl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9F191719A4F86D0089E452 /* fu_button_hl.png */; };
+		0F9F191C19A4F86D0089E452 /* fu_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9F191819A4F86D0089E452 /* fu_button.png */; };
+		0F9F191D19A4F86D0089E452 /* fu_yezi.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9F191919A4F86D0089E452 /* fu_yezi.png */; };
+		0F9F192A19A50C5E0089E452 /* login_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9F191F19A50C5E0089E452 /* login_bg.png */; };
+		0F9F192B19A50C5E0089E452 /* login_code.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9F192019A50C5E0089E452 /* login_code.png */; };
+		0F9F192C19A50C5E0089E452 /* login_code_hl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9F192119A50C5E0089E452 /* login_code_hl.png */; };
+		0F9F192D19A50C5E0089E452 /* login_jiazhang.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9F192219A50C5E0089E452 /* login_jiazhang.png */; };
+		0F9F192E19A50C5E0089E452 /* login_jiazhang_hl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9F192319A50C5E0089E452 /* login_jiazhang_hl.png */; };
+		0F9F192F19A50C5E0089E452 /* login_login.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9F192419A50C5E0089E452 /* login_login.png */; };
+		0F9F193019A50C5E0089E452 /* login_login_hl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9F192519A50C5E0089E452 /* login_login_hl.png */; };
+		0F9F193119A50C5E0089E452 /* login_register.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9F192619A50C5E0089E452 /* login_register.png */; };
+		0F9F193219A50C5E0089E452 /* login_register_hl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9F192719A50C5E0089E452 /* login_register_hl.png */; };
+		0F9F193319A50C5E0089E452 /* login_yisheng.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9F192819A50C5E0089E452 /* login_yisheng.png */; };
+		0F9F193419A50C5E0089E452 /* login_yisheng_hl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9F192919A50C5E0089E452 /* login_yisheng_hl.png */; };
+		0F9F193719A50E880089E452 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9F193619A50E880089E452 /* LoginViewController.m */; };
+		0F9F193B19A5112E0089E452 /* re_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9F193819A5112E0089E452 /* re_bg.png */; };
+		0F9F193C19A5112E0089E452 /* re_re_hl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9F193919A5112E0089E452 /* re_re_hl.png */; };
+		0F9F193D19A5112E0089E452 /* re_re.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9F193A19A5112E0089E452 /* re_re.png */; };
+		0F9F194019A511A90089E452 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9F193F19A511A90089E452 /* RegisterViewController.m */; };
 		64072A0B19A31DB400510ED4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64072A0A19A31DB400510ED4 /* Foundation.framework */; };
 		64072A0D19A31DB400510ED4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64072A0C19A31DB400510ED4 /* CoreGraphics.framework */; };
 		64072A0F19A31DB400510ED4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64072A0E19A31DB400510ED4 /* UIKit.framework */; };
@@ -59,6 +81,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F9F191219A4F33E0089E452 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		0F9F191419A4F4710089E452 /* fu_table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fu_table.png; sourceTree = "<group>"; };
+		0F9F191619A4F86D0089E452 /* fu_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fu_4.png; path = 4/fu_4.png; sourceTree = "<group>"; };
+		0F9F191719A4F86D0089E452 /* fu_button_hl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fu_button_hl.png; path = 4/fu_button_hl.png; sourceTree = "<group>"; };
+		0F9F191819A4F86D0089E452 /* fu_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fu_button.png; path = 4/fu_button.png; sourceTree = "<group>"; };
+		0F9F191919A4F86D0089E452 /* fu_yezi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fu_yezi.png; path = 4/fu_yezi.png; sourceTree = "<group>"; };
+		0F9F191F19A50C5E0089E452 /* login_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_bg.png; sourceTree = "<group>"; };
+		0F9F192019A50C5E0089E452 /* login_code.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_code.png; sourceTree = "<group>"; };
+		0F9F192119A50C5E0089E452 /* login_code_hl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_code_hl.png; sourceTree = "<group>"; };
+		0F9F192219A50C5E0089E452 /* login_jiazhang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_jiazhang.png; sourceTree = "<group>"; };
+		0F9F192319A50C5E0089E452 /* login_jiazhang_hl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_jiazhang_hl.png; sourceTree = "<group>"; };
+		0F9F192419A50C5E0089E452 /* login_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_login.png; sourceTree = "<group>"; };
+		0F9F192519A50C5E0089E452 /* login_login_hl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_login_hl.png; sourceTree = "<group>"; };
+		0F9F192619A50C5E0089E452 /* login_register.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_register.png; sourceTree = "<group>"; };
+		0F9F192719A50C5E0089E452 /* login_register_hl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_register_hl.png; sourceTree = "<group>"; };
+		0F9F192819A50C5E0089E452 /* login_yisheng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_yisheng.png; sourceTree = "<group>"; };
+		0F9F192919A50C5E0089E452 /* login_yisheng_hl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_yisheng_hl.png; sourceTree = "<group>"; };
+		0F9F193519A50E880089E452 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		0F9F193619A50E880089E452 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		0F9F193819A5112E0089E452 /* re_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = re_bg.png; sourceTree = "<group>"; };
+		0F9F193919A5112E0089E452 /* re_re_hl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = re_re_hl.png; sourceTree = "<group>"; };
+		0F9F193A19A5112E0089E452 /* re_re.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = re_re.png; sourceTree = "<group>"; };
+		0F9F193E19A511A90089E452 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		0F9F193F19A511A90089E452 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		64072A0719A31DB400510ED4 /* bodyCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bodyCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64072A0A19A31DB400510ED4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		64072A0C19A31DB400510ED4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -147,6 +193,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F9F191E19A50C5E0089E452 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				0F9F193819A5112E0089E452 /* re_bg.png */,
+				0F9F193919A5112E0089E452 /* re_re_hl.png */,
+				0F9F193A19A5112E0089E452 /* re_re.png */,
+				0F9F191F19A50C5E0089E452 /* login_bg.png */,
+				0F9F192019A50C5E0089E452 /* login_code.png */,
+				0F9F192119A50C5E0089E452 /* login_code_hl.png */,
+				0F9F192219A50C5E0089E452 /* login_jiazhang.png */,
+				0F9F192319A50C5E0089E452 /* login_jiazhang_hl.png */,
+				0F9F192419A50C5E0089E452 /* login_login.png */,
+				0F9F192519A50C5E0089E452 /* login_login_hl.png */,
+				0F9F192619A50C5E0089E452 /* login_register.png */,
+				0F9F192719A50C5E0089E452 /* login_register_hl.png */,
+				0F9F192819A50C5E0089E452 /* login_yisheng.png */,
+				0F9F192919A50C5E0089E452 /* login_yisheng_hl.png */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
 		640729FE19A31DB400510ED4 = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +301,10 @@
 				64072A5A19A32BA600510ED4 /* firstUseView */,
 				64072A5719A3228000510ED4 /* firstUseViewController.h */,
 				64072A5819A3228000510ED4 /* firstUseViewController.m */,
+				0F9F193519A50E880089E452 /* LoginViewController.h */,
+				0F9F193619A50E880089E452 /* LoginViewController.m */,
+				0F9F193E19A511A90089E452 /* RegisterViewController.h */,
+				0F9F193F19A511A90089E452 /* RegisterViewController.m */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
@@ -287,6 +358,7 @@
 		64072A6019A32CD500510ED4 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				0F9F191E19A50C5E0089E452 /* login */,
 				64072A6119A32CD500510ED4 /* firstUse */,
 			);
 			path = Image;
@@ -295,6 +367,12 @@
 		64072A6119A32CD500510ED4 /* firstUse */ = {
 			isa = PBXGroup;
 			children = (
+				0F9F191619A4F86D0089E452 /* fu_4.png */,
+				0F9F191719A4F86D0089E452 /* fu_button_hl.png */,
+				0F9F191819A4F86D0089E452 /* fu_button.png */,
+				0F9F191919A4F86D0089E452 /* fu_yezi.png */,
+				0F9F191419A4F4710089E452 /* fu_table.png */,
+				0F9F191219A4F33E0089E452 /* 3.png */,
 				64072A6C19A32D0F00510ED4 /* fu_bg2.png */,
 				64072A6319A32CD500510ED4 /* fu_alarm.png */,
 				64072A6419A32CD500510ED4 /* fu_bg.png */,
@@ -396,16 +474,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				64072A6D19A32D0F00510ED4 /* fu_bg2.png in Resources */,
+				0F9F193B19A5112E0089E452 /* re_bg.png in Resources */,
+				0F9F193019A50C5E0089E452 /* login_login_hl.png in Resources */,
+				0F9F191A19A4F86D0089E452 /* fu_4.png in Resources */,
 				64072A5F19A32C3E00510ED4 /* firstUseOneViewController.xib in Resources */,
+				0F9F191519A4F4710089E452 /* fu_table.png in Resources */,
 				64072A7F19A3328400510ED4 /* firstUseTwoViewController.xib in Resources */,
+				0F9F191319A4F33E0089E452 /* 3.png in Resources */,
+				0F9F191C19A4F86D0089E452 /* fu_button.png in Resources */,
+				0F9F192F19A50C5E0089E452 /* login_login.png in Resources */,
+				0F9F193419A50C5E0089E452 /* login_yisheng_hl.png in Resources */,
+				0F9F191B19A4F86D0089E452 /* fu_button_hl.png in Resources */,
+				0F9F192D19A50C5E0089E452 /* login_jiazhang.png in Resources */,
+				0F9F192A19A50C5E0089E452 /* login_bg.png in Resources */,
 				64072A6A19A32CD500510ED4 /* fu_panel.png in Resources */,
 				64072A2319A31DB400510ED4 /* Images.xcassets in Resources */,
 				64072A6919A32CD500510ED4 /* fu_bg.png in Resources */,
 				64072A8519A342E100510ED4 /* firstUseThreeViewController.xib in Resources */,
 				64072A1519A31DB400510ED4 /* InfoPlist.strings in Resources */,
+				0F9F193119A50C5E0089E452 /* login_register.png in Resources */,
 				64072A6819A32CD500510ED4 /* fu_alarm.png in Resources */,
+				0F9F191D19A4F86D0089E452 /* fu_yezi.png in Resources */,
+				0F9F193319A50C5E0089E452 /* login_yisheng.png in Resources */,
+				0F9F193D19A5112E0089E452 /* re_re.png in Resources */,
+				0F9F192E19A50C5E0089E452 /* login_jiazhang_hl.png in Resources */,
 				64072A6B19A32CD500510ED4 /* fu_title.png in Resources */,
+				0F9F193219A50C5E0089E452 /* login_register_hl.png in Resources */,
 				64072A1E19A31DB400510ED4 /* Main.storyboard in Resources */,
+				0F9F193C19A5112E0089E452 /* re_re_hl.png in Resources */,
+				0F9F192C19A50C5E0089E452 /* login_code_hl.png in Resources */,
+				0F9F192B19A50C5E0089E452 /* login_code.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +533,8 @@
 				64072A7A19A3325800510ED4 /* BEMSimpleLineGraphView.m in Sources */,
 				64072A5E19A32C3E00510ED4 /* firstUseOneViewController.m in Sources */,
 				64072A1719A31DB400510ED4 /* main.m in Sources */,
+				0F9F194019A511A90089E452 /* RegisterViewController.m in Sources */,
+				0F9F193719A50E880089E452 /* LoginViewController.m in Sources */,
 				64072A5419A31E2900510ED4 /* RESideMenuCell.m in Sources */,
 				64072A7819A3325800510ED4 /* BEMCircle.m in Sources */,
 				64072A5519A31E2900510ED4 /* RESideMenuItem.m in Sources */,

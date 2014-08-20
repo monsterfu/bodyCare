@@ -22,5 +22,8 @@
 #define USER_DEFAULT [NSUserDefaults standardUserDefaults]
 #define APP_BACKGROUND_COLOR  [UIColor colorWithRed:0 green:222/255.0 blue:111/255.0 alpha:1.0]
 
+//弧度、角度转换
+#define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
+#define RADIANS_TO_DEGREES(radians) ((radians) * (180.0 / M_PI))
 
 #endif

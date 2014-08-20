@@ -33,7 +33,7 @@
     
 //    totalNumber = 0;
     
-    for (int i=0; i < 11; i++) {
+    for (int i=0; i < 6; i++) {
         [self.ArrayOfValues addObject:[NSNumber numberWithInteger:(arc4random() % 70000)]]; // Random values for the graph
         [self.ArrayOfDates addObject:[NSString stringWithFormat:@"%@",[NSNumber numberWithInt:2000 + i]]]; // Dates for the X-Axis of the graph
         
@@ -46,22 +46,23 @@
      [self.view addSubview:myGraph]; */
     
     // Customization of the graph
+    self.lineGraphView.delegate = self;
     self.lineGraphView.enableTouchReport = YES;
-    self.lineGraphView.colorTop = [UIColor colorWithRed:31.0/255.0 green:187.0/255.0 blue:166.0/255.0 alpha:1.0];
-    self.lineGraphView.colorBottom = [UIColor colorWithRed:31.0/255.0 green:187.0/255.0 blue:166.0/255.0 alpha:1.0]; // Leaving this not-set on iOS 7 will default to your window's tintColor
+    self.lineGraphView.colorTop = [UIColor clearColor];
+    self.lineGraphView.colorBottom = [UIColor clearColor]; // Leaving this not-set on iOS 7 will default to your window's tintColor
     self.lineGraphView.colorLine = [UIColor whiteColor];
+    self.lineGraphView.backgroundColor = [UIColor clearColor];
     self.lineGraphView.colorXaxisLabel = [UIColor whiteColor];
     self.lineGraphView.widthLine = 3.0;
     self.lineGraphView.enableTouchReport = YES;
 
 }
-- (void)refresh
+- (void)showAnimation
 {
-    
     [self.ArrayOfValues removeAllObjects];
     [self.ArrayOfDates removeAllObjects];
     
-    for (int i = 0; i < 11; i++) {
+    for (int i = 0; i < 6; i++) {
         [self.ArrayOfValues addObject:[NSNumber numberWithInteger:(arc4random() % 70000)]]; // Random values for the graph
         [self.ArrayOfDates addObject:[NSString stringWithFormat:@"%@",[NSNumber numberWithInt:2000 + i]]]; // Dates for the X-Axis of the graph
         
@@ -72,7 +73,7 @@
 //    if (self.graphColorChoice.selectedSegmentIndex == 0) color = [UIColor colorWithRed:31.0/255.0 green:187.0/255.0 blue:166.0/255.0 alpha:1.0];
 //    else if (self.graphColorChoice.selectedSegmentIndex == 1) color = [UIColor colorWithRed:255.0/255.0 green:187.0/255.0 blue:31.0/255.0 alpha:1.0];
 //    else if (self.graphColorChoice.selectedSegmentIndex == 2) color = [UIColor colorWithRed:0.0 green:140.0/255.0 blue:255.0/255.0 alpha:1.0];
-    color = [UIColor colorWithRed:31.0/255.0 green:187.0/255.0 blue:166.0/255.0 alpha:1.0];
+    color = [UIColor clearColor];//[UIColor colorWithRed:31.0/255.0 green:187.0/255.0 blue:166.0/255.0 alpha:1.0];
     self.lineGraphView.colorTop = color;
     self.lineGraphView.colorBottom = color;
     self.lineGraphView.backgroundColor = color;
@@ -130,4 +131,17 @@
 //    }];
 //    
 //}
+
+-(void)allAnimationDidFinished
+{
+    CABasicAnimation* rotationAnimation;
+    rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI*2];
+    rotationAnimation.duration = 1;
+    rotationAnimation.cumulative = NO;
+    rotationAnimation.removedOnCompletion = NO;
+    rotationAnimation.repeatCount = 0;
+    [_imgaView.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
+    NSLog(@"allAnimationDidFinished");
+}
 @end

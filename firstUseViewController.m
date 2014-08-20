@@ -70,10 +70,11 @@
     }else if (scrollView.contentOffset.x == DEVICE_WIDTH) {
         NSLog(@"2");
         [_pageControl setCurrentPage:1];
-        [_twoViewController refresh];
+        [_twoViewController showAnimation];
     }else if (scrollView.contentOffset.x == DEVICE_WIDTH*2) {
         NSLog(@"3");
         [_pageControl setCurrentPage:2];
+        [_threeViewController showAnimation];
     }
 }
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView;
@@ -83,6 +84,6 @@
 #pragma mark - firstUseThreeViewControllerDelegat
 -(void)startButtonTouch
 {
-    [self performSegueWithIdentifier:@"enterMainIdentifier" sender:nil];
+    [self performSegueWithIdentifier:@"enterLoginIdentifier" sender:nil];
 }
 @end

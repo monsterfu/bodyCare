@@ -159,7 +159,10 @@ int currentlyCloser;
         [self addSubview:line];
         [self sendSubviewToBack:line];
         
-        [self.animationDelegate animationForLine:i line:line animationSpeed:self.animationGraphEntranceSpeed];
+        if (i == numberOfPoints - 2) {
+            [self.animationDelegate animationForLine:i line:line animationSpeed:self.animationGraphEntranceSpeed isLast:YES];
+        }else
+        [self.animationDelegate animationForLine:i line:line animationSpeed:self.animationGraphEntranceSpeed isLast:NO];
     }
 }
 
@@ -283,5 +286,11 @@ int currentlyCloser;
         }
     }
 }
-
+#pragma mark -
+-(void)didAnimationFinished
+{
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(allAnimationDidFinished)]) {
+        [self.delegate allAnimationDidFinished];
+    }
+}
 @end
