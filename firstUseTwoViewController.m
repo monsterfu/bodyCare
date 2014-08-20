@@ -88,5 +88,46 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark - SimpleLineGraph Data Source
 
+- (int)numberOfPointsInGraph {
+    return (int)[self.ArrayOfValues count];
+}
+
+- (float)valueForIndex:(NSInteger)index {
+    return [[self.ArrayOfValues objectAtIndex:index] floatValue];
+}
+
+#pragma mark - SimpleLineGraph Delegate
+
+- (int)numberOfGapsBetweenLabels {
+    return 1;
+}
+
+- (NSString *)labelOnXAxisForIndex:(NSInteger)index {
+    return [self.ArrayOfDates objectAtIndex:index];
+}
+//
+//- (void)didTouchGraphWithClosestIndex:(int)index {
+//    self.labelValues.text = [NSString stringWithFormat:@"%@", [self.ArrayOfValues objectAtIndex:index]];
+//    
+//    self.labelDates.text = [NSString stringWithFormat:@"in %@", [self.ArrayOfDates objectAtIndex:index]];
+//}
+//
+//- (void)didReleaseGraphWithClosestIndex:(float)index {
+//    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+//        self.labelValues.alpha = 0.0;
+//        self.labelDates.alpha = 0.0;
+//    } completion:^(BOOL finished){
+//        
+//        self.labelValues.text = [NSString stringWithFormat:@"%i", totalNumber];
+//        self.labelDates.text = @"between 2000 and 2010";
+//        
+//        [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+//            self.labelValues.alpha = 1.0;
+//            self.labelDates.alpha = 1.0;
+//        } completion:nil];
+//    }];
+//    
+//}
 @end

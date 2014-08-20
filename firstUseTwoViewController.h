@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GlobalHeader.h"
 
-@interface firstUseTwoViewController : UIViewController
+@interface firstUseTwoViewController : UIViewController<BEMSimpleLineGraphDelegate>
 
 @property (strong, nonatomic) NSMutableArray *ArrayOfValues;
 @property (strong, nonatomic) NSMutableArray *ArrayOfDates;
