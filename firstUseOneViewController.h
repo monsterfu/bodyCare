@@ -10,7 +10,10 @@
 #import "GlobalHeader.h"
 
 @interface firstUseOneViewController : UIViewController
-
+{
+    float _tem;
+    NSTimer* _textTImer;
+}
 @property (weak, nonatomic) IBOutlet UILabel *label;
 
 @property (weak, nonatomic) IBOutlet UIView *panelView;

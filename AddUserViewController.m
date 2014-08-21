@@ -1,18 +1,18 @@
 //
-//  RegisterViewController.m
+//  AddUserViewController.m
 //  bodyCare
 //
-//  Created by 符鑫 on 14-8-21.
+//  Created by Monster on 14-8-21.
 //  Copyright (c) 2014年 Monster. All rights reserved.
 //
 
-#import "RegisterViewController.h"
+#import "AddUserViewController.h"
 
-@interface RegisterViewController ()
+@interface AddUserViewController ()
 
 @end
 
-@implementation RegisterViewController
+@implementation AddUserViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,7 +27,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,17 +46,4 @@
 }
 */
 
-- (IBAction)jzButtonTouch:(UIButton *)sender {
-    [_jzButton setSelected:YES];
-    [_ysButton setSelected:NO];
-}
-
-- (IBAction)ysButtonTouch:(UIButton *)sender {
-    [_jzButton setSelected:NO];
-    [_ysButton setSelected:YES];
-}
-- (IBAction)registerButtonTouch:(UIButton *)sender {
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 @end

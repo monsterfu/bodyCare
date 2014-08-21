@@ -26,4 +26,8 @@
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 #define RADIANS_TO_DEGREES(radians) ((radians) * (180.0 / M_PI))
 
+
+//注册登录
+#define KEY_USERNAME @"KEY_USERNAME"
+#define KEY_PASSWORD @"KEY_PASSWORD"
 #endif
