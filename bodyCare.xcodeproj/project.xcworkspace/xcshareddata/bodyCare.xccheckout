@@ -5,31 +5,31 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>F5F62E53-BE29-41D2-B264-2F8ECEEFBA75</string>
+	<string>6BEC68B7-132C-42C0-902F-1F583720E0A7</string>
 	<key>IDESourceControlProjectName</key>
 	<string>bodyCare</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>64166472-3389-4C4B-9FB0-07B1FAFA91F3</key>
+		<string>https://github.com/monsterfu/bodyCare0821.git</string>
 		<key>94BD809D-182E-4D12-BA9F-5F32EFBFA62E</key>
 		<string>https://github.com/monsterfu/bodyCare.git</string>
-		<key>D1012838-B9B8-4F00-898B-4662E489618E</key>
-		<string>https://github.com/monsterfu/bodyCare0820.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>bodyCare.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>64166472-3389-4C4B-9FB0-07B1FAFA91F3</key>
+		<string>../..</string>
 		<key>94BD809D-182E-4D12-BA9F-5F32EFBFA62E</key>
 		<string>../../bodyCare</string>
-		<key>D1012838-B9B8-4F00-898B-4662E489618E</key>
-		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/monsterfu/bodyCare0820.git</string>
+	<string>https://github.com/monsterfu/bodyCare0821.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D1012838-B9B8-4F00-898B-4662E489618E</string>
+	<string>64166472-3389-4C4B-9FB0-07B1FAFA91F3</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -44,9 +44,9 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D1012838-B9B8-4F00-898B-4662E489618E</string>
+			<string>64166472-3389-4C4B-9FB0-07B1FAFA91F3</string>
 			<key>IDESourceControlWCCName</key>
-			<string>bodyCare0820</string>
+			<string>bodyCare0821</string>
 		</dict>
 	</array>
 </dict>

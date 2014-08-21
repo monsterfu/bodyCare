@@ -25,7 +25,7 @@
                     <rect key="frame" x="91" y="234" width="152" height="100"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="49"/>
-                    <color key="textColor" red="1" green="0.12217647641598584" blue="0.055965545983036158" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="1" green="0.12156862745098039" blue="0.054901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3AG-nn-qzf">
