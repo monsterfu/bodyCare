@@ -80,7 +80,6 @@
 		640DFB8219A5BC5E00F3A092 /* add_name_hl.png in Resources */ = {isa = PBXBuildFile; fileRef = 640DFB7319A5BC5E00F3A092 /* add_name_hl.png */; };
 		640DFB8319A5BC5E00F3A092 /* add_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 640DFB7419A5BC5E00F3A092 /* add_photo.png */; };
 		640DFB8419A5BC5E00F3A092 /* add_photo_hl.png in Resources */ = {isa = PBXBuildFile; fileRef = 640DFB7519A5BC5E00F3A092 /* add_photo_hl.png */; };
-		640DFB8719A5C1E700F3A092 /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 640DFB8619A5C1E700F3A092 /* AddUserViewController.m */; };
 		640DFB9D19A5C63B00F3A092 /* main_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 640DFB8819A5C63B00F3A092 /* main_1.png */; };
 		640DFB9E19A5C63B00F3A092 /* main_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 640DFB8919A5C63B00F3A092 /* main_2.png */; };
 		640DFB9F19A5C63B00F3A092 /* main_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 640DFB8A19A5C63B00F3A092 /* main_3.png */; };
@@ -166,6 +165,19 @@
 		6414659E19A4B3B3007EE432 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6414659919A4B3B3007EE432 /* DemoViewController.m */; };
 		6414659F19A4B3B3007EE432 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6414659B19A4B3B3007EE432 /* RootViewController.m */; };
 		641465A019A4B3B3007EE432 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6414659D19A4B3B3007EE432 /* SecondViewController.m */; };
+		6419DBDB19A70E1B00D0F74B /* ll_add.png in Resources */ = {isa = PBXBuildFile; fileRef = 6419DBD519A70E1B00D0F74B /* ll_add.png */; };
+		6419DBDC19A70E1B00D0F74B /* ll_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6419DBD619A70E1B00D0F74B /* ll_bg.png */; };
+		6419DBDD19A70E1B00D0F74B /* ll_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 6419DBD719A70E1B00D0F74B /* ll_close.png */; };
+		6419DBDE19A70E1B00D0F74B /* ll_head.png in Resources */ = {isa = PBXBuildFile; fileRef = 6419DBD819A70E1B00D0F74B /* ll_head.png */; };
+		6419DBDF19A70E1B00D0F74B /* ll_neiquan.png in Resources */ = {isa = PBXBuildFile; fileRef = 6419DBD919A70E1B00D0F74B /* ll_neiquan.png */; };
+		6419DBE019A70E1B00D0F74B /* ll_open.png in Resources */ = {isa = PBXBuildFile; fileRef = 6419DBDA19A70E1B00D0F74B /* ll_open.png */; };
+		6419DBE619A7103F00D0F74B /* DIDatepicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6419DBE319A7103F00D0F74B /* DIDatepicker.m */; };
+		6419DBE719A7103F00D0F74B /* DIDatepickerDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6419DBE519A7103F00D0F74B /* DIDatepickerDateView.m */; };
+		6419DBEA19A7119C00D0F74B /* UserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6419DBE919A7119C00D0F74B /* UserListViewController.m */; };
+		6419DBED19A711C600D0F74B /* UserInfoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6419DBEC19A711C600D0F74B /* UserInfoEditViewController.m */; };
+		6419DBF019A71D3A00D0F74B /* CheckTemperatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6419DBEF19A71D3A00D0F74B /* CheckTemperatureViewController.m */; };
+		6419DBF319A71E0800D0F74B /* TemperatureAndCheckManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6419DBF219A71E0800D0F74B /* TemperatureAndCheckManagerViewController.m */; };
+		6419DBF619A71E7500D0F74B /* RecordLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6419DBF519A71E7500D0F74B /* RecordLineViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -274,8 +286,6 @@
 		640DFB7319A5BC5E00F3A092 /* add_name_hl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_name_hl.png; sourceTree = "<group>"; };
 		640DFB7419A5BC5E00F3A092 /* add_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_photo.png; sourceTree = "<group>"; };
 		640DFB7519A5BC5E00F3A092 /* add_photo_hl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_photo_hl.png; sourceTree = "<group>"; };
-		640DFB8519A5C1E700F3A092 /* AddUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddUserViewController.h; sourceTree = "<group>"; };
-		640DFB8619A5C1E700F3A092 /* AddUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserViewController.m; sourceTree = "<group>"; };
 		640DFB8819A5C63B00F3A092 /* main_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_1.png; sourceTree = "<group>"; };
 		640DFB8919A5C63B00F3A092 /* main_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_2.png; sourceTree = "<group>"; };
 		640DFB8A19A5C63B00F3A092 /* main_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_3.png; sourceTree = "<group>"; };
@@ -404,6 +414,26 @@
 		6414659B19A4B3B3007EE432 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		6414659C19A4B3B3007EE432 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		6414659D19A4B3B3007EE432 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		6419DBD519A70E1B00D0F74B /* ll_add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ll_add.png; sourceTree = "<group>"; };
+		6419DBD619A70E1B00D0F74B /* ll_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ll_bg.png; sourceTree = "<group>"; };
+		6419DBD719A70E1B00D0F74B /* ll_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ll_close.png; sourceTree = "<group>"; };
+		6419DBD819A70E1B00D0F74B /* ll_head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ll_head.png; sourceTree = "<group>"; };
+		6419DBD919A70E1B00D0F74B /* ll_neiquan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ll_neiquan.png; sourceTree = "<group>"; };
+		6419DBDA19A70E1B00D0F74B /* ll_open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ll_open.png; sourceTree = "<group>"; };
+		6419DBE219A7103F00D0F74B /* DIDatepicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepicker.h; sourceTree = "<group>"; };
+		6419DBE319A7103F00D0F74B /* DIDatepicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepicker.m; sourceTree = "<group>"; };
+		6419DBE419A7103F00D0F74B /* DIDatepickerDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepickerDateView.h; sourceTree = "<group>"; };
+		6419DBE519A7103F00D0F74B /* DIDatepickerDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepickerDateView.m; sourceTree = "<group>"; };
+		6419DBE819A7119C00D0F74B /* UserListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserListViewController.h; sourceTree = "<group>"; };
+		6419DBE919A7119C00D0F74B /* UserListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserListViewController.m; sourceTree = "<group>"; };
+		6419DBEB19A711C600D0F74B /* UserInfoEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoEditViewController.h; sourceTree = "<group>"; };
+		6419DBEC19A711C600D0F74B /* UserInfoEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoEditViewController.m; sourceTree = "<group>"; };
+		6419DBEE19A71D3A00D0F74B /* CheckTemperatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckTemperatureViewController.h; sourceTree = "<group>"; };
+		6419DBEF19A71D3A00D0F74B /* CheckTemperatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckTemperatureViewController.m; sourceTree = "<group>"; };
+		6419DBF119A71E0800D0F74B /* TemperatureAndCheckManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemperatureAndCheckManagerViewController.h; sourceTree = "<group>"; };
+		6419DBF219A71E0800D0F74B /* TemperatureAndCheckManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperatureAndCheckManagerViewController.m; sourceTree = "<group>"; };
+		6419DBF419A71E7500D0F74B /* RecordLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordLineViewController.h; sourceTree = "<group>"; };
+		6419DBF519A71E7500D0F74B /* RecordLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordLineViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -562,8 +592,16 @@
 				0F9F193619A50E880089E452 /* LoginViewController.m */,
 				0F9F193E19A511A90089E452 /* RegisterViewController.h */,
 				0F9F193F19A511A90089E452 /* RegisterViewController.m */,
-				640DFB8519A5C1E700F3A092 /* AddUserViewController.h */,
-				640DFB8619A5C1E700F3A092 /* AddUserViewController.m */,
+				6419DBE819A7119C00D0F74B /* UserListViewController.h */,
+				6419DBE919A7119C00D0F74B /* UserListViewController.m */,
+				6419DBEB19A711C600D0F74B /* UserInfoEditViewController.h */,
+				6419DBEC19A711C600D0F74B /* UserInfoEditViewController.m */,
+				6419DBF119A71E0800D0F74B /* TemperatureAndCheckManagerViewController.h */,
+				6419DBF219A71E0800D0F74B /* TemperatureAndCheckManagerViewController.m */,
+				6419DBEE19A71D3A00D0F74B /* CheckTemperatureViewController.h */,
+				6419DBEF19A71D3A00D0F74B /* CheckTemperatureViewController.m */,
+				6419DBF419A71E7500D0F74B /* RecordLineViewController.h */,
+				6419DBF519A71E7500D0F74B /* RecordLineViewController.m */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
@@ -571,6 +609,7 @@
 		64072A4019A31E0000510ED4 /* thirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				6419DBE119A7103F00D0F74B /* DIDatepicker */,
 				640DFCC519A5E17900F3A092 /* Category */,
 				640DFBB219A5C92800F3A092 /* AsiHttp */,
 				64072A6E19A3325800510ED4 /* BemLine */,
@@ -619,6 +658,7 @@
 		64072A6019A32CD500510ED4 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				6419DBD419A70E1B00D0F74B /* leftList */,
 				640DFCD219A5F62800F3A092 /* main2 */,
 				640DFB6619A5BC5E00F3A092 /* main */,
 				0F9F191E19A50C5E0089E452 /* login */,
@@ -892,6 +932,30 @@
 			path = main2;
 			sourceTree = "<group>";
 		};
+		6419DBD419A70E1B00D0F74B /* leftList */ = {
+			isa = PBXGroup;
+			children = (
+				6419DBD519A70E1B00D0F74B /* ll_add.png */,
+				6419DBD619A70E1B00D0F74B /* ll_bg.png */,
+				6419DBD719A70E1B00D0F74B /* ll_close.png */,
+				6419DBD819A70E1B00D0F74B /* ll_head.png */,
+				6419DBD919A70E1B00D0F74B /* ll_neiquan.png */,
+				6419DBDA19A70E1B00D0F74B /* ll_open.png */,
+			);
+			path = leftList;
+			sourceTree = "<group>";
+		};
+		6419DBE119A7103F00D0F74B /* DIDatepicker */ = {
+			isa = PBXGroup;
+			children = (
+				6419DBE219A7103F00D0F74B /* DIDatepicker.h */,
+				6419DBE319A7103F00D0F74B /* DIDatepicker.m */,
+				6419DBE419A7103F00D0F74B /* DIDatepickerDateView.h */,
+				6419DBE519A7103F00D0F74B /* DIDatepickerDateView.m */,
+			);
+			path = DIDatepicker;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -973,6 +1037,7 @@
 				64072A6D19A32D0F00510ED4 /* fu_bg2.png in Resources */,
 				0F9F193B19A5112E0089E452 /* re_bg.png in Resources */,
 				640DFB9E19A5C63B00F3A092 /* main_2.png in Resources */,
+				6419DBDC19A70E1B00D0F74B /* ll_bg.png in Resources */,
 				0F9F193019A50C5E0089E452 /* login_login_hl.png in Resources */,
 				0F9F191A19A4F86D0089E452 /* fu_4.png in Resources */,
 				640DFBA419A5C63B00F3A092 /* main_add.png in Resources */,
@@ -981,6 +1046,7 @@
 				640DFB7719A5BC5E00F3A092 /* add_boy.png in Resources */,
 				640DFB8219A5BC5E00F3A092 /* add_name_hl.png in Resources */,
 				64072A5F19A32C3E00510ED4 /* firstUseOneViewController.xib in Resources */,
+				6419DBE019A70E1B00D0F74B /* ll_open.png in Resources */,
 				0F9F191519A4F4710089E452 /* fu_table.png in Resources */,
 				640DFB8319A5BC5E00F3A092 /* add_photo.png in Resources */,
 				64072A7F19A3328400510ED4 /* firstUseTwoViewController.xib in Resources */,
@@ -991,6 +1057,8 @@
 				640DFCEC19A5F62800F3A092 /* main2_ling.png in Resources */,
 				640DFCEB19A5F62800F3A092 /* main2_headn.png in Resources */,
 				640DFB7F19A5BC5E00F3A092 /* add_girl.png in Resources */,
+				6419DBDD19A70E1B00D0F74B /* ll_close.png in Resources */,
+				6419DBDF19A70E1B00D0F74B /* ll_neiquan.png in Resources */,
 				640DFCE919A5F62800F3A092 /* main2_cy_hl.png in Resources */,
 				640DFBAD19A5C63B00F3A092 /* main_rightup1.png in Resources */,
 				640DFB7E19A5BC5E00F3A092 /* add_done_hl.png in Resources */,
@@ -1030,6 +1098,7 @@
 				0F9F191D19A4F86D0089E452 /* fu_yezi.png in Resources */,
 				0F9F193319A50C5E0089E452 /* login_yisheng.png in Resources */,
 				640DFB8419A5BC5E00F3A092 /* add_photo_hl.png in Resources */,
+				6419DBDE19A70E1B00D0F74B /* ll_head.png in Resources */,
 				640DFCEF19A5F62800F3A092 /* main2_right.png in Resources */,
 				640DFBAF19A5C63B00F3A092 /* main_rightup3.png in Resources */,
 				640DFBA719A5C63B00F3A092 /* main_l1.png in Resources */,
@@ -1045,6 +1114,7 @@
 				640DFBAA19A5C63B00F3A092 /* main_l4.png in Resources */,
 				64072A6B19A32CD500510ED4 /* fu_title.png in Resources */,
 				0F9F193219A50C5E0089E452 /* login_register_hl.png in Resources */,
+				6419DBDB19A70E1B00D0F74B /* ll_add.png in Resources */,
 				640DFBA519A5C63B00F3A092 /* main_bg.png in Resources */,
 				640DFBA119A5C63B00F3A092 /* main_add_hl.png in Resources */,
 				640DFBA919A5C63B00F3A092 /* main_l3.png in Resources */,
@@ -1076,6 +1146,7 @@
 				641465A019A4B3B3007EE432 /* SecondViewController.m in Sources */,
 				640DFC0B19A5C92900F3A092 /* ASIAuthenticationDialog.m in Sources */,
 				640DFC1819A5C92900F3A092 /* ASICloudFilesObject.m in Sources */,
+				6419DBE719A7103F00D0F74B /* DIDatepickerDateView.m in Sources */,
 				640DFC1A19A5C92900F3A092 /* ASICloudFilesRequest.m in Sources */,
 				64072A5919A3228000510ED4 /* firstUseViewController.m in Sources */,
 				6414659F19A4B3B3007EE432 /* RootViewController.m in Sources */,
@@ -1085,31 +1156,36 @@
 				64072A7E19A3328400510ED4 /* firstUseTwoViewController.m in Sources */,
 				640DFC4019A5CED600F3A092 /* ConnectionManager.m in Sources */,
 				640DFC0E19A5C92900F3A092 /* ASIDownloadCache.m in Sources */,
+				6419DBF619A71E7500D0F74B /* RecordLineViewController.m in Sources */,
 				640DFC1619A5C92900F3A092 /* ASICloudFilesContainerRequest.m in Sources */,
 				64072A5019A31E2900510ED4 /* AccelerationAnimation.m in Sources */,
 				640DFC1419A5C92900F3A092 /* ASICloudFilesCDNRequest.m in Sources */,
 				640DFC0F19A5C92900F3A092 /* ASIFormDataRequest.m in Sources */,
 				640DFC1719A5C92900F3A092 /* ASICloudFilesContainerXMLParserDelegate.m in Sources */,
 				64072A7719A3325800510ED4 /* BEMAnimations.m in Sources */,
-				640DFB8719A5C1E700F3A092 /* AddUserViewController.m in Sources */,
 				640DFC3419A5C94A00F3A092 /* HttpRequest.m in Sources */,
 				640DFC1E19A5C92900F3A092 /* ASIS3BucketObject.m in Sources */,
 				64072A1B19A31DB400510ED4 /* AppDelegate.m in Sources */,
+				6419DBF319A71E0800D0F74B /* TemperatureAndCheckManagerViewController.m in Sources */,
 				640DFC1519A5C92900F3A092 /* ASICloudFilesContainer.m in Sources */,
 				64072A7919A3325800510ED4 /* BEMLine.m in Sources */,
 				640DFCCC19A5E1D800F3A092 /* NSDate+JBCommon.m in Sources */,
 				64072A7A19A3325800510ED4 /* BEMSimpleLineGraphView.m in Sources */,
+				6419DBED19A711C600D0F74B /* UserInfoEditViewController.m in Sources */,
 				64072A5E19A32C3E00510ED4 /* firstUseOneViewController.m in Sources */,
 				640DFC1D19A5C92900F3A092 /* ASIS3Bucket.m in Sources */,
 				640DFC1919A5C92900F3A092 /* ASICloudFilesObjectRequest.m in Sources */,
 				640DFC2219A5C92900F3A092 /* ASIS3ServiceRequest.m in Sources */,
 				640DFC1319A5C92900F3A092 /* ASIWebPageRequest.m in Sources */,
+				6419DBF019A71D3A00D0F74B /* CheckTemperatureViewController.m in Sources */,
 				640DFC2119A5C92900F3A092 /* ASIS3Request.m in Sources */,
 				64072A1719A31DB400510ED4 /* main.m in Sources */,
 				0F9F194019A511A90089E452 /* RegisterViewController.m in Sources */,
 				640DFC1219A5C92900F3A092 /* ASINetworkQueue.m in Sources */,
+				6419DBE619A7103F00D0F74B /* DIDatepicker.m in Sources */,
 				0F9F193719A50E880089E452 /* LoginViewController.m in Sources */,
 				640DFC1F19A5C92900F3A092 /* ASIS3BucketRequest.m in Sources */,
+				6419DBEA19A7119C00D0F74B /* UserListViewController.m in Sources */,
 				640DFCCD19A5E1D800F3A092 /* NSString+randonStr.m in Sources */,
 				640DFC4119A5CED600F3A092 /* soundVibrateManager.m in Sources */,
 				640DFC0D19A5C92900F3A092 /* ASIDataDecompressor.m in Sources */,
