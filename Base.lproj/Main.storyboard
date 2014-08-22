@@ -227,12 +227,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nWZ-ej-vKq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1109" y="-646"/>
+            <point key="canvasLocation" x="-993" y="-646"/>
         </scene>
-        <!--Add User View Controller-->
+        <!--User Info Edit View Controller-->
         <scene sceneID="bDD-Go-Ulg">
             <objects>
-                <viewController id="T5l-FE-I7A" customClass="AddUserViewController" sceneMemberID="viewController">
+                <viewController id="T5l-FE-I7A" customClass="UserInfoEditViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pEK-DQ-xkZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -302,7 +302,7 @@
                                     <!--2014-12-31 11:00:00 +0000-->
                                 </date>
                                 <timeZone key="timeZone" name="America/Los_Angeles">
-                                    <mutableData key="data">
+                                    <data key="data">
 VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
 y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
 5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
@@ -320,7 +320,7 @@ f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
-</mutableData>
+</data>
                                 </timeZone>
                             </datePicker>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W1Q-FN-e8i">
@@ -344,12 +344,46 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lye-Qb-aeF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-638" y="768"/>
+            <point key="canvasLocation" x="-46" y="700"/>
         </scene>
-        <!--View Controller-->
+        <!--Record Line View Controller-->
+        <scene sceneID="hJq-IO-WDT">
+            <objects>
+                <viewController storyboardIdentifier="RecordLineViewIdentifier" id="iM9-5t-4gx" customClass="RecordLineViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DPV-Oc-Hmc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ll_bg.png" id="cRY-bf-uaS">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" id="dlR-Sn-CPZ" customClass="DIDatepicker">
+                                <rect key="frame" x="0.0" y="71" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="7iu-2s-n5B" customClass="BEMSimpleLineGraphView">
+                                <rect key="frame" x="0.0" y="139" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="dlR-Sn-CPZ" id="P06-tM-tFI"/>
+                        <outlet property="recordLine" destination="7iu-2s-n5B" id="tAs-zb-LYL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v5T-Vp-7Er" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="351" y="538"/>
+        </scene>
+        <!--User List View Controller-->
         <scene sceneID="u3a-fb-5sU">
             <objects>
-                <viewController id="3I7-A1-i2l" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserListViewIdentifier" id="3I7-A1-i2l" customClass="UserListViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="muH-9z-atd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -400,17 +434,32 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </view>
                     <navigationItem key="navigationItem" id="OQz-E3-Zdb"/>
                     <connections>
-                        <segue destination="U0S-nX-ImH" kind="push" id="LAb-uP-PHk"/>
+                        <segue destination="AnD-FI-gp5" kind="push" id="3ey-r3-fef"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O60-em-Cf7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-630" y="101"/>
+            <point key="canvasLocation" x="-618" y="110"/>
         </scene>
-        <!--View Controller-->
+        <!--Temperature And Check Manager View Controller-->
+        <scene sceneID="XTJ-Sr-yeJ">
+            <objects>
+                <viewController id="AnD-FI-gp5" customClass="TemperatureAndCheckManagerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PVz-gd-vSm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4cn-CI-Zsv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nPa-Nn-DAd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-46" y="-39"/>
+        </scene>
+        <!--Check Temperature View Controller-->
         <scene sceneID="Kea-zO-ci6">
             <objects>
-                <viewController id="U0S-nX-ImH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CheckTemperatureIdentifier" id="U0S-nX-ImH" customClass="CheckTemperatureViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oj5-qO-QVt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -473,6 +522,16 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CE8-fl-qrv">
+                                <rect key="frame" x="298" y="348" width="22" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="main2_right.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightButtonTouch:" destination="U0S-nX-ImH" eventType="touchUpInside" id="P0s-3L-5gT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -480,22 +539,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xjl-PP-CsY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="49" y="90"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="N5x-Jo-rgn">
-            <objects>
-                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="rsz-XI-lfR" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eaF-Uz-L8c">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="3I7-A1-i2l" kind="relationship" relationship="rootViewController" id="Lz8-Ns-36J"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N6x-lq-eQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1013" y="101"/>
+            <point key="canvasLocation" x="351" y="-139"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="86j-3f-OTb">
@@ -510,7 +554,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a37-Pr-U2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-729" y="-646"/>
+            <point key="canvasLocation" x="-489" y="-646"/>
         </scene>
     </scenes>
     <resources>
@@ -526,6 +570,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="add_name.png" width="148" height="149"/>
         <image name="add_photo.png" width="148" height="148"/>
         <image name="fu_alarm.png" width="63" height="67"/>
+        <image name="ll_bg.png" width="640" height="1136"/>
         <image name="login_bg.png" width="640" height="1136"/>
         <image name="login_jiazhang.png" width="125" height="62"/>
         <image name="login_jiazhang_hl.png" width="125" height="62"/>
@@ -539,6 +584,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="main2_head.png" width="240" height="241"/>
         <image name="main2_ling.png" width="54" height="74"/>
         <image name="main2_panel.png" width="372" height="372"/>
+        <image name="main2_right.png" width="27" height="35"/>
         <image name="main2_zhengzhuang.png" width="123" height="122"/>
         <image name="main_1.png" width="223" height="223"/>
         <image name="main_add.png" width="223" height="223"/>

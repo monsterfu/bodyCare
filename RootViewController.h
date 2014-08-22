@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserListViewController.h"
 #import "RESideMenu.h"
 
 #define IS_WIDESCREEN ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
 
 @interface RootViewController : UIViewController
-
+{
+    UserListViewController* _userListViewController;
+}
 @property (strong, readonly, nonatomic) RESideMenu *sideMenu;
 
 @end

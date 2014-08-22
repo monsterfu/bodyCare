@@ -39,6 +39,7 @@
     if (self) {
         _imageView = [[UIImageView alloc] initWithFrame:self.bounds];
         _imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        _imageView.image = [UIImage imageNamed:@"ll_bg"];
         [self addSubview:_imageView];
     }
     return self;

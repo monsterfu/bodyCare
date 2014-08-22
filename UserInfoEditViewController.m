@@ -1,18 +1,18 @@
 //
-//  AddUserViewController.m
+//  UserInfoEditViewController.m
 //  bodyCare
 //
-//  Created by Monster on 14-8-21.
+//  Created by Monster on 14-8-22.
 //  Copyright (c) 2014年 Monster. All rights reserved.
 //
 
-#import "AddUserViewController.h"
+#import "UserInfoEditViewController.h"
 
-@interface AddUserViewController ()
+@interface UserInfoEditViewController ()
 
 @end
 
-@implementation AddUserViewController
+@implementation UserInfoEditViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

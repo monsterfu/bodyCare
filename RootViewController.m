@@ -21,6 +21,7 @@
 {
     [super viewDidLoad];
 	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Menu" style:UIBarButtonItemStyleBordered target:self action:@selector(showMenu)];
+//    self.sideMenu.backgroundImage = [UIImage imageNamed:@"ll_bg.png"];
 }
 
 #pragma mark -
@@ -36,9 +37,12 @@
             [menu setRootViewController:navigationController];
         }];
         RESideMenuItem *exploreItem = [[RESideMenuItem alloc] initWithTitle:@"Explore" action:^(RESideMenu *menu, RESideMenuItem *item) {
-            SecondViewController *secondViewController = [[SecondViewController alloc] init];
-            secondViewController.title = item.title;
-            UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:secondViewController];
+            UIStoryboard* storyBord = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            _userListViewController = [storyBord instantiateViewControllerWithIdentifier:@"UserListViewIdentifier"];
+            
+//            SecondViewController *secondViewController = [[SecondViewController alloc] init];
+//            secondViewController.title = item.title;
+            UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:_userListViewController];
             [menu setRootViewController:navigationController];
         }];
         RESideMenuItem *activityItem = [[RESideMenuItem alloc] initWithTitle:@"Activity" action:^(RESideMenu *menu, RESideMenuItem *item) {
