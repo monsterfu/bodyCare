@@ -29,8 +29,11 @@
 #import "REBackgroundView.h"
 #import "RESideMenuCell.h"
 #import "RESideMenuItem.h"
+#import "SKSTableView.h"
+#import "SKSTableViewCell.h"
 
-@interface RESideMenu : NSObject <UITableViewDataSource, UITableViewDelegate>
+
+@interface RESideMenu : NSObject <UITableViewDataSource, UITableViewDelegate,SKSTableViewDelegate>
 
 @property (strong, readonly, nonatomic) NSArray *items;
 @property (assign, readwrite, nonatomic) CGFloat verticalOffset;
@@ -43,9 +46,10 @@
 @property (assign, readwrite, nonatomic) BOOL hideStatusBarArea;
 @property (assign, readwrite, nonatomic) BOOL isShowing;
 
++ (id)shareInstance;
 - (id)initWithItems:(NSArray *)items;
 - (void)show;
 - (void)hide;
 - (void)setRootViewController:(UIViewController *)viewController;
-
+- (void)panGestureRecognized:(UIPanGestureRecognizer *)sender;
 @end

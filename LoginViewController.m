@@ -8,6 +8,9 @@
 
 #import "LoginViewController.h"
 
+#import "UserListViewController.h"
+#import "LeftViewController.h"
+
 @interface LoginViewController ()
 
 @end
@@ -109,11 +112,25 @@
     [USER_DEFAULT setObject:_userNameTextField.text forKey:KEY_USERNAME];
     [USER_DEFAULT synchronize];
     
-    [self performSegueWithIdentifier:@"enterMainIdentifier" sender:nil];
+//    [self performSegueWithIdentifier:@"enterMainIdentifier" sender:nil];
 //    [HttpRequest fetchHostRequest:telephoneNum seqno:[NSString randomStr] delegate:self finishSel:@selector(GetResult:) failSel:@selector(GetErr:)];
 //    
 //    [ProgressHUD show:@"获取主机信息中,请稍候"];
     
+    _sideViewController=[[YRSideViewController alloc]initWithNibName:nil bundle:nil];
+    
+    UIStoryboard* storyBord = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UserListViewController* _userListViewController = [storyBord instantiateViewControllerWithIdentifier:@"UserListViewIdentifier"];
+    LeftViewController* _leftViewController = [storyBord instantiateViewControllerWithIdentifier:@"LeftViewID"];
+    _sideViewController.rootViewController=_userListViewController;
+    _sideViewController.leftViewController=_leftViewController;
+    _sideViewController.rightViewController=nil;
+    
+    
+    _sideViewController.leftViewShowWidth=220;
+    _sideViewController.needSwipeShowMenu=true;//默认开启的可滑动展示    
+    
+    [self presentViewController:_sideViewController animated:NO completion:nil];
 }
 
 - (IBAction)registerButtonTouch:(UIButton *)sender {

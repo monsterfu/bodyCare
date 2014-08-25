@@ -12,6 +12,7 @@
 @interface LoginViewController : UIViewController<UITextFieldDelegate>
 {
     UITapGestureRecognizer* _tapGestureRecognizer;
+    YRSideViewController* _sideViewController;
 }
 
 

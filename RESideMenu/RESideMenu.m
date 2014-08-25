@@ -48,6 +48,16 @@ const int INTERSTITIAL_STEPS = 99;
 
 @implementation RESideMenu
 
+static RESideMenu* slideMenu;
+
++ (id)shareInstance
+{
+    if (slideMenu == nil)
+    {
+        slideMenu = [[RESideMenu alloc]init];
+    }
+    return slideMenu;
+}
 - (id)init
 {
     self = [super init];
@@ -58,7 +68,7 @@ const int INTERSTITIAL_STEPS = 99;
     self.horizontalOffset = 50;
     self.itemHeight = 50;
     self.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:21];
-    self.textColor = [UIColor whiteColor];
+    self.textColor = [UIColor lightGrayColor];
     self.highlightedTextColor = [UIColor lightGrayColor];
     self.hideStatusBarArea = YES;
     
@@ -350,6 +360,21 @@ const int INTERSTITIAL_STEPS = 99;
     
     return cell;
 }
+//- (UITableViewCell *)tableView:(SKSTableView *)tableView cellForSubRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if (indexPath.row == 0) {
+//        _rfidDeviceCell =[tableView dequeueReusableCellWithIdentifier:@"deviceIdentifier"];
+//        _rfidDeviceCell.rfidModel = [_rfidDeviceArray objectAtIndex:indexPath.subRow-1];
+//        _rfidDeviceCell.tag = indexPath.subRow-1;
+//        _rfidDeviceCell.delegate = self;
+//        return _rfidDeviceCell;
+//    }
+//}
+//- (CGFloat)tableView:(UITableView *)tableView heightForSubRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return 58.0f;
+//}
+
 
 #pragma mark - Table view delegate
 

@@ -15,6 +15,7 @@
 #import "BEMSimpleLineGraphView.h"
 #import "RESideMenu.h"
 #import "DIDatepicker/DIDatepicker.h"
+#import "YRSideViewController.h"
 
 #define VISION_NO    @"1.1.2"
 //#define NSLog(...) {}
