@@ -10,4 +10,21 @@
 
 @interface UserInfoEditViewController : UIViewController
 
+
+
+@property (weak, nonatomic) IBOutlet UIButton *girlButton;
+@property (weak, nonatomic) IBOutlet UIButton *boyButton;
+- (IBAction)girlButtonTouch:(UIButton *)sender;
+- (IBAction)boyButtonTouch:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UILabel *birthdayLabel;
+
+
+- (IBAction)cameraButtonTouch:(UIButton *)sender;
+- (IBAction)photoButtonTouch:(UIButton *)sender;
+
+- (IBAction)cancelButtonTouch:(UIButton *)sender;
+
+
+
+- (IBAction)doneButtonTouch:(UIButton *)sender;
 @end

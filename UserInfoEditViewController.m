@@ -46,4 +46,23 @@
 }
 */
 
+- (IBAction)girlButtonTouch:(UIButton *)sender {
+}
+
+- (IBAction)boyButtonTouch:(UIButton *)sender {
+}
+
+- (IBAction)cameraButtonTouch:(UIButton *)sender {
+}
+
+- (IBAction)photoButtonTouch:(UIButton *)sender {
+}
+
+- (IBAction)cancelButtonTouch:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)doneButtonTouch:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end
