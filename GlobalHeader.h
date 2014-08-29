@@ -16,6 +16,10 @@
 #import "RESideMenu.h"
 #import "DIDatepicker/DIDatepicker.h"
 #import "YRSideViewController.h"
+#import "ConnectionManager.h"
+#import "TWTSideMenuViewController.h"
+#import "CommonNavigationController.h"
+#import "UIColor+getColor.h"
 
 #define VISION_NO    @"1.1.2"
 //#define NSLog(...) {}
@@ -35,6 +39,8 @@
 #define BASE @"http://182.92.109.3:8080/EaseHome/door"
 #define TAG_LOGIN   10001
 
+//首次使用标记
+#define KEY_FIRSTUSE  @"key_first_use"
 //注册登录
 #define KEY_USERNAME @"KEY_USERNAME"
 #define KEY_PASSWORD @"KEY_PASSWORD"
@@ -64,4 +70,8 @@
 #define KEY_WARNING_OPEN   @"key_warning_open"   //报警开关
 #define KEY_BACKGROUND_OPEN @"key_background_open"  //后台开关
 
+//温度历史 时间选择
+
+#define KEY_SELECTED_YEAR   @"key_selected_year"
+#define KEY_SELECTED_MONTH  @"key_selected_month"
 #endif

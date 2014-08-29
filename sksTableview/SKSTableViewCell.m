@@ -33,7 +33,7 @@ static UIImage *_image = nil;
 - (UIView *)expandableView
 {
     if (!_image) {
-        _image = [UIImage imageNamed:@"ll_close.png"];
+        _image = [UIImage imageNamed:@"expandable.png"];
     }
     
     UIImageView *imageView = [[UIImageView alloc]init];

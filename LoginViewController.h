@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "GlobalHeader.h"
+#import "LeftViewController.h"
+#import "SelectedSwitchViewController.h"
 
-@interface LoginViewController : UIViewController<UITextFieldDelegate>
+@interface LoginViewController : UIViewController<UITextFieldDelegate,TWTSideMenuViewControllerDelegate,LeftViewControllerDelegate>
 {
     UITapGestureRecognizer* _tapGestureRecognizer;
     YRSideViewController* _sideViewController;
+    SelectedSwitchViewController* _selectedSwitchViewController;
+    LeftViewController* _leftViewController;
 }
 
 

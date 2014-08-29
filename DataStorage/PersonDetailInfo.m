@@ -23,6 +23,9 @@
 #pragma mark - Person
 + (PersonDetailInfo *) PersonWithPersonId:(NSString *)personId
 {
+    if (personId==nil) {
+        return nil;
+    }
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"PersonDetailInfo"];
     [request setPredicate:[NSPredicate predicateWithFormat:@"personId LIKE %@", personId]];
     NSManagedObjectContext *moc = [(AppDelegate*) [[UIApplication sharedApplication] delegate] managedObjectContext];

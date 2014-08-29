@@ -51,7 +51,7 @@
     [_passWordTextField resignFirstResponder];
     [_yanzhengmaTextField resignFirstResponder];
 }
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -59,8 +59,20 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"enterMainYRSideViewIdentifier"]) {
+        _sideViewController = [segue destinationViewController];
+        UIStoryboard* storyBord = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        _selectedSwitchViewController = [storyBord instantiateViewControllerWithIdentifier:@"SelectedSwitchViewID"];
+        _leftViewController = [storyBord instantiateViewControllerWithIdentifier:@"LeftViewID"];
+        _leftViewController.delegate = self;
+        _sideViewController.rootViewController=_selectedSwitchViewController;
+        _sideViewController.leftViewController=_leftViewController;
+        _sideViewController.rightViewController=nil;
+        _sideViewController.leftViewShowWidth=180;
+        _sideViewController.needSwipeShowMenu=true;//默认开启的可滑动展示
+    }
 }
-*/
+
 
 - (IBAction)jiazhangButtonTouch:(UIButton *)sender {
     [_jiazhangButton setSelected:YES];
@@ -112,25 +124,10 @@
     [USER_DEFAULT setObject:_userNameTextField.text forKey:KEY_USERNAME];
     [USER_DEFAULT synchronize];
     
-//    [self performSegueWithIdentifier:@"enterMainIdentifier" sender:nil];
+    [self performSegueWithIdentifier:@"enterMainYRSideViewIdentifier" sender:nil];
 //    [HttpRequest fetchHostRequest:telephoneNum seqno:[NSString randomStr] delegate:self finishSel:@selector(GetResult:) failSel:@selector(GetErr:)];
 //    
 //    [ProgressHUD show:@"获取主机信息中,请稍候"];
-    
-    _sideViewController=[[YRSideViewController alloc]initWithNibName:nil bundle:nil];
-    
-    UIStoryboard* storyBord = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UserListViewController* _userListViewController = [storyBord instantiateViewControllerWithIdentifier:@"UserListViewIdentifier"];
-    LeftViewController* _leftViewController = [storyBord instantiateViewControllerWithIdentifier:@"LeftViewID"];
-    _sideViewController.rootViewController=_userListViewController;
-    _sideViewController.leftViewController=_leftViewController;
-    _sideViewController.rightViewController=nil;
-    
-    
-    _sideViewController.leftViewShowWidth=220;
-    _sideViewController.needSwipeShowMenu=true;//默认开启的可滑动展示    
-    
-    [self presentViewController:_sideViewController animated:NO completion:nil];
 }
 
 - (IBAction)registerButtonTouch:(UIButton *)sender {
@@ -175,5 +172,18 @@
         return YES;
     }
     return YES;
+}
+#pragma mark - leftViewControllerDelegate
+-(void)leftViewControllerListSelectedAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"indexPath:%d,%d",indexPath.row,indexPath.subRow);
+    if (indexPath.row < 4&&indexPath.row) {
+        [_selectedSwitchViewController switchToViewEnum:SelectedSwitchEnum_User];
+        [_sideViewController hideSideViewController:YES];
+    }
+    if (indexPath.row == 4) {
+        [_selectedSwitchViewController switchToViewEnum:SelectedSwitchEnum_Setting];
+        [_sideViewController hideSideViewController:YES];
+    }
 }
 @end

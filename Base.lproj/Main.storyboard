@@ -7,7 +7,7 @@
         <!--Login View Controller-->
         <scene sceneID="EXu-9S-HKf">
             <objects>
-                <viewController id="EIV-rx-mKO" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewID" id="EIV-rx-mKO" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WHm-Jb-2MS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -94,7 +94,7 @@
                         <outlet property="yanzhengmaTextField" destination="EG2-2e-J96" id="ovo-9h-evb"/>
                         <outlet property="yishengButton" destination="bUk-R6-6QD" id="nhh-2i-8ui"/>
                         <segue destination="QTZ-Ap-vq6" kind="modal" identifier="enterRegisterIdentifier" id="6UT-WH-1cs"/>
-                        <segue destination="oKF-jx-aAi" kind="modal" identifier="enterMainIdentifier" animates="NO" id="Fkf-fz-d9z"/>
+                        <segue destination="6dn-dR-OFg" kind="modal" identifier="enterMainYRSideViewIdentifier" animates="NO" id="0kq-Fr-rMO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1j-0T-KNS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -214,21 +214,6 @@
             </objects>
             <point key="canvasLocation" x="-1907" y="-654"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="C4i-QR-pnu">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="oKF-jx-aAi" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k8e-tC-hVM">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="6dn-dR-OFg" kind="relationship" relationship="rootViewController" id="LS8-6D-6SZ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nWZ-ej-vKq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-993" y="-646"/>
-        </scene>
         <!--Side View Controller-->
         <scene sceneID="gfM-FF-TTZ">
             <objects>
@@ -242,7 +227,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jon-Ec-2Zc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-588" y="-247"/>
+            <point key="canvasLocation" x="-964" y="-654"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="tN7-ab-14E">
@@ -287,7 +272,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s28-Fg-F0E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1022" y="138"/>
+            <point key="canvasLocation" x="-106" y="254"/>
         </scene>
         <!--User Info Edit View Controller-->
         <scene sceneID="bDD-Go-Ulg">
@@ -320,13 +305,6 @@
                                 <connections>
                                     <action selector="photoButtonTouch:" destination="T5l-FE-I7A" eventType="touchUpInside" id="CR6-Oj-e8f"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GDy-Rx-Ywf">
-                                <rect key="frame" x="75" y="153" width="77" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="add_name.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5oG-oD-BUc">
                                 <rect key="frame" x="155" y="153" width="77" height="72"/>
@@ -397,11 +375,14 @@ AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
 </data>
                                 </timeZone>
+                                <connections>
+                                    <action selector="datePicker:" destination="T5l-FE-I7A" eventType="valueChanged" id="bgv-G8-Chd"/>
+                                </connections>
                             </datePicker>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W1Q-FN-e8i">
-                                <rect key="frame" x="103" y="295" width="115" height="24"/>
+                                <rect key="frame" x="20" y="295" width="280" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.458505681" green="0.8648542749" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -416,18 +397,27 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <action selector="doneButtonTouch:" destination="T5l-FE-I7A" eventType="touchUpInside" id="PxP-fr-jbR"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="姓名" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" background="add_name.png" id="50f-zJ-UFL">
+                                <rect key="frame" x="75" y="153" width="77" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="birthdayLabel" destination="W1Q-FN-e8i" id="ggb-bq-hgX"/>
                         <outlet property="boyButton" destination="WCe-87-BwA" id="wWD-Vj-j3Z"/>
+                        <outlet property="datePicker" destination="xJT-Gf-NJy" id="CMX-de-Vkp"/>
                         <outlet property="girlButton" destination="Rha-XP-TBy" id="sG4-EL-Gii"/>
+                        <outlet property="nameTextfield" destination="50f-zJ-UFL" id="tzw-7G-uyB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lye-Qb-aeF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-46" y="700"/>
+            <point key="canvasLocation" x="346" y="772"/>
         </scene>
         <!--Record Line View Controller-->
         <scene sceneID="hJq-IO-WDT">
@@ -461,7 +451,22 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v5T-Vp-7Er" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="351" y="538"/>
+            <point key="canvasLocation" x="1055" y="-365"/>
+        </scene>
+        <!--Common Navigation Controller-->
+        <scene sceneID="EaO-Tj-cuU">
+            <objects>
+                <navigationController storyboardIdentifier="UserListNavigationIdentifier" definesPresentationContext="YES" id="Q0s-tf-baA" customClass="CommonNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0le-iq-03K">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3I7-A1-i2l" kind="relationship" relationship="rootViewController" id="j8q-c4-k1K"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CwY-Xn-RY7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-414" y="-1300"/>
         </scene>
         <!--User List View Controller-->
         <scene sceneID="u3a-fb-5sU">
@@ -480,6 +485,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <state key="normal" backgroundImage="main_l2.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="test1ButtonTouched:" destination="3I7-A1-i2l" eventType="touchUpInside" id="9Kx-5e-Wth"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aF5-eL-VF7">
                                 <rect key="frame" x="181" y="183" width="109" height="109"/>
@@ -487,6 +495,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <state key="normal" title="Feman" backgroundImage="main_rightUp.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="test2ButtonTouched:" destination="3I7-A1-i2l" eventType="touchUpInside" id="blZ-Fu-uuu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dcq-Op-X6v">
                                 <rect key="frame" x="64" y="300" width="109" height="109"/>
@@ -504,6 +515,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <state key="normal" title="贝儿" backgroundImage="main_1.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="test3ButtonTouched:" destination="3I7-A1-i2l" eventType="touchUpInside" id="JGd-J8-vBv"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="蓝牙未打开" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ivz-h2-zLR">
                                 <rect key="frame" x="79" y="472" width="162" height="39"/>
@@ -515,14 +529,21 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="OQz-E3-Zdb"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="OQz-E3-Zdb">
+                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="zLH-D4-BHL">
+                            <connections>
+                                <action selector="leftListButtonTouch:" destination="3I7-A1-i2l" id="RSC-eh-qC8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="AnD-FI-gp5" kind="push" id="3ey-r3-fef"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O60-em-Cf7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-178" y="-942"/>
+            <point key="canvasLocation" x="22" y="-598"/>
         </scene>
         <!--Temperature And Check Manager View Controller-->
         <scene sceneID="XTJ-Sr-yeJ">
@@ -537,7 +558,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nPa-Nn-DAd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-46" y="-39"/>
+            <point key="canvasLocation" x="874" y="-1023"/>
         </scene>
         <!--Check Temperature View Controller-->
         <scene sceneID="Kea-zO-ci6">
@@ -622,7 +643,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xjl-PP-CsY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="335" y="-187"/>
+            <point key="canvasLocation" x="639" y="-365"/>
         </scene>
         <!--Left View Controller-->
         <scene sceneID="chO-15-mnz">
@@ -637,20 +658,50 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="22" sectionFooterHeight="22" id="Jg0-9D-zCE" customClass="SKSTableView">
-                                <rect key="frame" x="0.0" y="63" width="186" height="505"/>
+                                <rect key="frame" x="0.0" y="63" width="180" height="505"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="settingCellIdentifier" rowHeight="56" id="6A4-iZ-I8g" customClass="SKSTableViewCell">
-                                        <rect key="frame" x="0.0" y="22" width="186" height="56"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="settingCellIdentifier" rowHeight="59" id="6A4-iZ-I8g" customClass="SKSTableViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="180" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6A4-iZ-I8g" id="PfV-dI-lKk">
-                                            <rect key="frame" x="0.0" y="0.0" width="186" height="55"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="58"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="userLIstCellIdentifier" rowHeight="59" id="POy-BP-cYf" customClass="userLIstCell">
+                                        <rect key="frame" x="0.0" y="81" width="180" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="POy-BP-cYf" id="BDH-M3-L5K">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="58"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ll_head.png" id="99P-vM-waF">
+                                                    <rect key="frame" x="76" y="4" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="y1N-mL-TJw">
+                                                    <rect key="frame" x="76" y="4" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VCQ-61-pNU">
+                                                    <rect key="frame" x="20" y="18" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="headImage" destination="y1N-mL-TJw" id="ZxR-AI-0Ag"/>
+                                            <outlet property="nameLabel" destination="VCQ-61-pNU" id="PGO-bV-9Tq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -662,12 +713,27 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="backgroundImage" destination="c3Q-TB-hCx" id="bHi-a6-5do"/>
                         <outlet property="tableView" destination="Jg0-9D-zCE" id="waf-01-7gf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l8a-HB-lxI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-610" y="538"/>
+            <point key="canvasLocation" x="-1022" y="262"/>
+        </scene>
+        <!--Selected Switch View Controller-->
+        <scene sceneID="yaJ-ga-jQa">
+            <objects>
+                <viewController storyboardIdentifier="SelectedSwitchViewID" id="Pnh-AY-XIf" customClass="SelectedSwitchViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ede-wX-UpH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LUh-NA-dfG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-579" y="252"/>
         </scene>
     </scenes>
     <resources>
@@ -680,10 +746,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="add_done_hl.png" width="221" height="55"/>
         <image name="add_girl.png" width="83" height="31"/>
         <image name="add_girl_hl.png" width="83" height="31"/>
-        <image name="add_name.png" width="148" height="149"/>
+        <image name="add_name.png" width="168" height="168"/>
         <image name="add_photo.png" width="148" height="148"/>
         <image name="fu_alarm.png" width="63" height="67"/>
         <image name="ll_bg.png" width="640" height="1136"/>
+        <image name="ll_head.png" width="133" height="134"/>
         <image name="login_bg.png" width="640" height="1136"/>
         <image name="login_jiazhang.png" width="125" height="62"/>
         <image name="login_jiazhang_hl.png" width="125" height="62"/>

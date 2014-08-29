@@ -7,24 +7,32 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ImageCroperViewController.h"
+#import "GlobalHeader.h"
 
-@interface UserInfoEditViewController : UIViewController
+@interface UserInfoEditViewController : UIViewController<UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,ImageCroperViewControllerDelegate>
+{
+    UIImagePickerController* _imagePickerController;
+}
 
+@property(nonatomic,retain)PersonDetailInfo* person;
 
-
+//性别
 @property (weak, nonatomic) IBOutlet UIButton *girlButton;
 @property (weak, nonatomic) IBOutlet UIButton *boyButton;
 - (IBAction)girlButtonTouch:(UIButton *)sender;
 - (IBAction)boyButtonTouch:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UILabel *birthdayLabel;
 
-
+//头像
 - (IBAction)cameraButtonTouch:(UIButton *)sender;
 - (IBAction)photoButtonTouch:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UITextField *nameTextfield;
 
 - (IBAction)cancelButtonTouch:(UIButton *)sender;
 
-
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+- (IBAction)datePicker:(UIDatePicker *)sender;
 
 - (IBAction)doneButtonTouch:(UIButton *)sender;
 @end

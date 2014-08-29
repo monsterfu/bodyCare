@@ -29,6 +29,7 @@
     // Do any additional setup after loading the view.
     _settingArray = [NSArray arrayWithObjects:@"宝贝列表",@"设置",nil];
     _tableView.SKSTableViewDelegate = self;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -91,8 +92,12 @@
 }
 - (UITableViewCell *)tableView:(SKSTableView *)tableView cellForSubRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    _settingCell =[tableView dequeueReusableCellWithIdentifier:@"settingCellIdentifier"];
-    return _settingCell;
+    if (1){//indexPath.row == 0) {
+        _userListCell = [tableView dequeueReusableCellWithIdentifier:@"userLIstCellIdentifier" forIndexPath:indexPath];
+        _userListCell.headImage = nil;
+        _userListCell.backgroundColor = [UIColor clearColor];
+        return _userListCell;
+    }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForSubRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -149,6 +154,9 @@
         if (![_tableView isExpandedForCellAtIndexPath:indexPath]) {
             //            [self performSegueWithIdentifier:WIRELESSALARMACTION sender:nil];
         }
+    }
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(leftViewControllerListSelectedAtIndexPath:)]) {
+        [self.delegate leftViewControllerListSelectedAtIndexPath:indexPath];
     }
     
 }

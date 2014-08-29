@@ -113,10 +113,10 @@ CGFloat const rowHeight = 44.0f;
             [self.expandableCells setObject:[NSNumber numberWithBool:[cell isExpanded]]
                                      forKey:indexPath];
             if (cell.isExpanded) {
-                expandableImageView.image = [UIImage imageNamed:@"ll_closed.png"];
+                expandableImageView.image = [UIImage imageNamed:@"expanded.png"];
             } else {
                 
-                expandableImageView.image = [UIImage imageNamed:@"ll_open.png"];
+                expandableImageView.image = [UIImage imageNamed:@"expandable.png"];
             }
             
         } else {
@@ -214,10 +214,10 @@ CGFloat const rowHeight = 44.0f;
         UIImageView* tempImageView = (UIImageView*)cell.accessoryView;
         [UIView animateWithDuration:0.2 animations:^{
             if (cell.isExpanded) {
-                tempImageView.image = [UIImage imageNamed:@"ll_closed.png"];
+                tempImageView.image = [UIImage imageNamed:@"expanded.png"];
                 
             } else {
-                 tempImageView.image = [UIImage imageNamed:@"ll_open.png"];
+                 tempImageView.image = [UIImage imageNamed:@"expandable.png"];
             }
         } completion:^(BOOL finished) {
             
@@ -409,10 +409,10 @@ CGFloat const rowHeight = 44.0f;
             UIImageView* tempImageView = (UIImageView*)cell.accessoryView;
             [UIView animateWithDuration:0.2 animations:^{
                 if (cell.isExpanded) {
-                    tempImageView.image = [UIImage imageNamed:@"ll_closed.png"];
+                    tempImageView.image = [UIImage imageNamed:@"expanded.png"];
                     
                 } else {
-                    tempImageView.image = [UIImage imageNamed:@"ll_open.png"];
+                    tempImageView.image = [UIImage imageNamed:@"expandable.png"];
                 }
             } completion:^(BOOL finished) {
                 

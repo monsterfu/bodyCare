@@ -11,4 +11,12 @@
 
 @interface UserListViewController : UIViewController
 
+
+@property(nonatomic, retain)NSMutableArray* personArray;
+
+- (IBAction)leftListButtonTouch:(UIBarButtonItem *)sender;
+- (IBAction)test1ButtonTouched:(UIButton *)sender;
+- (IBAction)test2ButtonTouched:(UIButton *)sender;
+- (IBAction)test3ButtonTouched:(UIButton *)sender;
+
 @end

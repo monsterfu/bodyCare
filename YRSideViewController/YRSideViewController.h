@@ -18,6 +18,7 @@ typedef void(^RootViewMoveBlock)(UIView *rootView,CGRect orginFrame,CGFloat xoff
 @property (assign,nonatomic) BOOL needSwipeShowMenu;//是否开启手势滑动出菜单
 
 @property (retain,nonatomic) UIViewController *rootViewController;
+@property (retain,nonatomic) UIViewController *rootViewController1;
 @property (retain,nonatomic) UIViewController *leftViewController NS_AVAILABLE_IOS(5_0);
 @property (retain,nonatomic) UIViewController *rightViewController NS_AVAILABLE_IOS(5_0);
 

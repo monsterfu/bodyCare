@@ -35,19 +35,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        _leftViewShowWidth = 267;
-        _rightViewShowWidth = 267;
-        _animationDuration = 0.35;
-        _showBoundsShadow = true;
-
-        _panGestureRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(pan:)];
-        [_panGestureRecognizer setDelegate:self];
-
-        _panMovingRightOrLeft = false;
-        _lastPanPoint = CGPointZero;
-
-        _coverButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-        [_coverButton addTarget:self action:@selector(hideSideViewController) forControlEvents:UIControlEventTouchUpInside];
+        
     }
     return self;
 }
@@ -60,6 +48,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    _rightViewShowWidth = 0;
+    _animationDuration = 0.35;
+    _showBoundsShadow = true;
+    
+    _panGestureRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(pan:)];
+    [_panGestureRecognizer setDelegate:self];
+    
+    _panMovingRightOrLeft = false;
+    _lastPanPoint = CGPointZero;
+    
+    _coverButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    [_coverButton addTarget:self action:@selector(hideSideViewController) forControlEvents:UIControlEventTouchUpInside];
     _baseView              = self.view;
     [_baseView setBackgroundColor:[UIColor colorWithRed:0.5 green:0.6 blue:0.8 alpha:1]];
     self.needSwipeShowMenu = true;
@@ -87,6 +87,7 @@
 }
 
 - (void)setRootViewController:(UIViewController *)rootViewController{
+    
     if (_rootViewController!=rootViewController) {
         if (_rootViewController) {
             [_rootViewController removeFromParentViewController];
@@ -243,19 +244,19 @@
     }
     CGPoint currentPostion = [pan translationInView:_baseView];
     CGFloat xoffset = _startPanPoint.x + currentPostion.x;
-//    if (xoffset>0) {//向右滑
-//        if (_leftViewController && _leftViewController.view.superview) {
-//            xoffset = xoffset>_leftViewShowWidth?_leftViewShowWidth:xoffset;
-//        }else{
-//            xoffset = 0;
-//        }
-//    }else if(xoffset<0){//向左滑
-//        if (_rightViewController && _rightViewController.view.superview) {
-//            xoffset = xoffset<-_rightViewShowWidth?-_rightViewShowWidth:xoffset;
-//        }else{
-//            xoffset = 0;
-//        }
-//    }
+    if (xoffset>0) {//向右滑
+        if (_leftViewController && _leftViewController.view.superview) {
+            xoffset = xoffset>_leftViewShowWidth?_leftViewShowWidth:xoffset;
+        }else{
+            xoffset = 0;
+        }
+    }else if(xoffset<0){//向左滑
+        if (_rightViewController && _rightViewController.view.superview) {
+            xoffset = xoffset<-_rightViewShowWidth?-_rightViewShowWidth:xoffset;
+        }else{
+            xoffset = 0;
+        }
+    }
     if (xoffset!=_currentView.frame.origin.x)
     {
         [self layoutCurrentViewWithOffset:xoffset];
@@ -304,8 +305,9 @@
     }
     CGFloat scale = ABS(600 - ABS(xoffset)) / 600;
     scale = MAX(0.8, scale);
-    _currentView.transform = CGAffineTransformMakeScale(scale, scale);
     
+    _currentView.transform = CGAffineTransformMakeScale(scale, scale);
+    _baseView.transform = CGAffineTransformMakeTranslation(scale, scale);
     CGFloat totalWidth=_baseView.frame.size.width;
     CGFloat totalHeight=_baseView.frame.size.height;
     if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation)) {

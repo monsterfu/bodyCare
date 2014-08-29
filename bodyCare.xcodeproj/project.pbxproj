@@ -163,12 +163,8 @@
 		640DFCF319A5F62800F3A092 /* main2_zhengzhuang.png in Resources */ = {isa = PBXBuildFile; fileRef = 640DFCE219A5F62800F3A092 /* main2_zhengzhuang.png */; };
 		640DFCF419A5F62800F3A092 /* main2_zhengzhuang_hl.png in Resources */ = {isa = PBXBuildFile; fileRef = 640DFCE319A5F62800F3A092 /* main2_zhengzhuang_hl.png */; };
 		640EF93D19AB1863006EB5BB /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 640EF93C19AB1863006EB5BB /* SettingViewController.m */; };
-		640EF94019AB1DAE006EB5BB /* ll_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 640EF93E19AB1DAE006EB5BB /* ll_close@2x.png */; };
-		640EF94119AB1DAE006EB5BB /* ll_open@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 640EF93F19AB1DAE006EB5BB /* ll_open@2x.png */; };
 		640EF94519AB3303006EB5BB /* YRSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 640EF94419AB3303006EB5BB /* YRSideViewController.m */; };
 		640EF94819AB3745006EB5BB /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 640EF94719AB3745006EB5BB /* LeftViewController.m */; };
-		640EF94D19AB3841006EB5BB /* SKSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 640EF94A19AB3841006EB5BB /* SKSTableView.m */; };
-		640EF94E19AB3841006EB5BB /* SKSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 640EF94C19AB3841006EB5BB /* SKSTableViewCell.m */; };
 		6419DBDB19A70E1B00D0F74B /* ll_add.png in Resources */ = {isa = PBXBuildFile; fileRef = 6419DBD519A70E1B00D0F74B /* ll_add.png */; };
 		6419DBDC19A70E1B00D0F74B /* ll_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6419DBD619A70E1B00D0F74B /* ll_bg.png */; };
 		6419DBDE19A70E1B00D0F74B /* ll_head.png in Resources */ = {isa = PBXBuildFile; fileRef = 6419DBD819A70E1B00D0F74B /* ll_head.png */; };
@@ -180,6 +176,18 @@
 		6419DBF019A71D3A00D0F74B /* CheckTemperatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6419DBEF19A71D3A00D0F74B /* CheckTemperatureViewController.m */; };
 		6419DBF319A71E0800D0F74B /* TemperatureAndCheckManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6419DBF219A71E0800D0F74B /* TemperatureAndCheckManagerViewController.m */; };
 		6419DBF619A71E7500D0F74B /* RecordLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6419DBF519A71E7500D0F74B /* RecordLineViewController.m */; };
+		6438B80119AD7B4F00B23899 /* ImageCroperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6438B7FF19AD7B4F00B23899 /* ImageCroperViewController.m */; };
+		6438B80219AD7B4F00B23899 /* ImageCroperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6438B80019AD7B4F00B23899 /* ImageCroperViewController.xib */; };
+		6438B80619AD7C3E00B23899 /* BJImageCropper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6438B80519AD7C3E00B23899 /* BJImageCropper.m */; };
+		6438B80A19ADA5C800B23899 /* TWTSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6438B80919ADA5C800B23899 /* TWTSideMenuViewController.m */; };
+		6438B80D19ADABB700B23899 /* CommonNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6438B80C19ADABB700B23899 /* CommonNavigationController.m */; };
+		6438B81119ADAD9100B23899 /* UIColor+getColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6438B81019ADAD9100B23899 /* UIColor+getColor.m */; };
+		6438B81519ADB6D800B23899 /* userLIstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6438B81419ADB6D800B23899 /* userLIstCell.m */; };
+		6438B81A19ADB83B00B23899 /* SKSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6438B81719ADB83B00B23899 /* SKSTableView.m */; };
+		6438B81B19ADB83B00B23899 /* SKSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6438B81919ADB83B00B23899 /* SKSTableViewCell.m */; };
+		6438B81E19ADB8C600B23899 /* expandable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6438B81C19ADB8C600B23899 /* expandable@2x.png */; };
+		6438B81F19ADB8C600B23899 /* expanded@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6438B81D19ADB8C600B23899 /* expanded@2x.png */; };
+		6438B82219ADDE5000B23899 /* SelectedSwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6438B82119ADDE5000B23899 /* SelectedSwitchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -412,16 +420,10 @@
 		640DFCE319A5F62800F3A092 /* main2_zhengzhuang_hl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main2_zhengzhuang_hl.png; sourceTree = "<group>"; };
 		640EF93B19AB1863006EB5BB /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		640EF93C19AB1863006EB5BB /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
-		640EF93E19AB1DAE006EB5BB /* ll_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ll_close@2x.png"; sourceTree = "<group>"; };
-		640EF93F19AB1DAE006EB5BB /* ll_open@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ll_open@2x.png"; sourceTree = "<group>"; };
 		640EF94319AB3303006EB5BB /* YRSideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRSideViewController.h; sourceTree = "<group>"; };
 		640EF94419AB3303006EB5BB /* YRSideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRSideViewController.m; sourceTree = "<group>"; };
 		640EF94619AB3745006EB5BB /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		640EF94719AB3745006EB5BB /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
-		640EF94919AB3841006EB5BB /* SKSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSTableView.h; sourceTree = "<group>"; };
-		640EF94A19AB3841006EB5BB /* SKSTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSTableView.m; sourceTree = "<group>"; };
-		640EF94B19AB3841006EB5BB /* SKSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSTableViewCell.h; sourceTree = "<group>"; };
-		640EF94C19AB3841006EB5BB /* SKSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSTableViewCell.m; sourceTree = "<group>"; };
 		6419DBD519A70E1B00D0F74B /* ll_add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ll_add.png; sourceTree = "<group>"; };
 		6419DBD619A70E1B00D0F74B /* ll_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ll_bg.png; sourceTree = "<group>"; };
 		6419DBD819A70E1B00D0F74B /* ll_head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ll_head.png; sourceTree = "<group>"; };
@@ -440,6 +442,27 @@
 		6419DBF219A71E0800D0F74B /* TemperatureAndCheckManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperatureAndCheckManagerViewController.m; sourceTree = "<group>"; };
 		6419DBF419A71E7500D0F74B /* RecordLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordLineViewController.h; sourceTree = "<group>"; };
 		6419DBF519A71E7500D0F74B /* RecordLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordLineViewController.m; sourceTree = "<group>"; };
+		6438B7FE19AD7B4F00B23899 /* ImageCroperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCroperViewController.h; sourceTree = "<group>"; };
+		6438B7FF19AD7B4F00B23899 /* ImageCroperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCroperViewController.m; sourceTree = "<group>"; };
+		6438B80019AD7B4F00B23899 /* ImageCroperViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCroperViewController.xib; sourceTree = "<group>"; };
+		6438B80419AD7C3E00B23899 /* BJImageCropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJImageCropper.h; sourceTree = "<group>"; };
+		6438B80519AD7C3E00B23899 /* BJImageCropper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJImageCropper.m; sourceTree = "<group>"; };
+		6438B80819ADA5C800B23899 /* TWTSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTSideMenuViewController.h; sourceTree = "<group>"; };
+		6438B80919ADA5C800B23899 /* TWTSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTSideMenuViewController.m; sourceTree = "<group>"; };
+		6438B80B19ADABB700B23899 /* CommonNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonNavigationController.h; sourceTree = "<group>"; };
+		6438B80C19ADABB700B23899 /* CommonNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonNavigationController.m; sourceTree = "<group>"; };
+		6438B80F19ADAD9100B23899 /* UIColor+getColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+getColor.h"; sourceTree = "<group>"; };
+		6438B81019ADAD9100B23899 /* UIColor+getColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+getColor.m"; sourceTree = "<group>"; };
+		6438B81319ADB6D800B23899 /* userLIstCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userLIstCell.h; sourceTree = "<group>"; };
+		6438B81419ADB6D800B23899 /* userLIstCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userLIstCell.m; sourceTree = "<group>"; };
+		6438B81619ADB83B00B23899 /* SKSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSTableView.h; sourceTree = "<group>"; };
+		6438B81719ADB83B00B23899 /* SKSTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSTableView.m; sourceTree = "<group>"; };
+		6438B81819ADB83B00B23899 /* SKSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSTableViewCell.h; sourceTree = "<group>"; };
+		6438B81919ADB83B00B23899 /* SKSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSTableViewCell.m; sourceTree = "<group>"; };
+		6438B81C19ADB8C600B23899 /* expandable@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "expandable@2x.png"; sourceTree = "<group>"; };
+		6438B81D19ADB8C600B23899 /* expanded@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "expanded@2x.png"; sourceTree = "<group>"; };
+		6438B82019ADDE5000B23899 /* SelectedSwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedSwitchViewController.h; sourceTree = "<group>"; };
+		6438B82119ADDE5000B23899 /* SelectedSwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedSwitchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -536,6 +559,7 @@
 		64072A1019A31DB400510ED4 /* bodyCare */ = {
 			isa = PBXGroup;
 			children = (
+				6438B81219ADB6C200B23899 /* views */,
 				640DFC4219A5CF7D00F3A092 /* DataStorage */,
 				64072A6019A32CD500510ED4 /* Image */,
 				64072A4019A31E0000510ED4 /* thirdParty */,
@@ -585,6 +609,11 @@
 		64072A3F19A31DC400510ED4 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				6438B80B19ADABB700B23899 /* CommonNavigationController.h */,
+				6438B80C19ADABB700B23899 /* CommonNavigationController.m */,
+				6438B7FE19AD7B4F00B23899 /* ImageCroperViewController.h */,
+				6438B7FF19AD7B4F00B23899 /* ImageCroperViewController.m */,
+				6438B80019AD7B4F00B23899 /* ImageCroperViewController.xib */,
 				64072A5A19A32BA600510ED4 /* firstUseView */,
 				64072A5719A3228000510ED4 /* firstUseViewController.h */,
 				64072A5819A3228000510ED4 /* firstUseViewController.m */,
@@ -592,6 +621,8 @@
 				0F9F193619A50E880089E452 /* LoginViewController.m */,
 				0F9F193E19A511A90089E452 /* RegisterViewController.h */,
 				0F9F193F19A511A90089E452 /* RegisterViewController.m */,
+				6438B82019ADDE5000B23899 /* SelectedSwitchViewController.h */,
+				6438B82119ADDE5000B23899 /* SelectedSwitchViewController.m */,
 				640EF94619AB3745006EB5BB /* LeftViewController.h */,
 				640EF94719AB3745006EB5BB /* LeftViewController.m */,
 				6419DBE819A7119C00D0F74B /* UserListViewController.h */,
@@ -613,6 +644,9 @@
 		64072A4019A31E0000510ED4 /* thirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				6438B80E19ADAD9100B23899 /* UIColor+getColor */,
+				6438B80719ADA5C800B23899 /* TWTSideMenuViewController */,
+				6438B80319AD7C2400B23899 /* BJImageCropper */,
 				640EF94219AB3303006EB5BB /* YRSideViewController */,
 				640EF93419AB1216006EB5BB /* sksTableview */,
 				6419DBE119A7103F00D0F74B /* DIDatepicker */,
@@ -941,10 +975,10 @@
 		640EF93419AB1216006EB5BB /* sksTableview */ = {
 			isa = PBXGroup;
 			children = (
-				640EF94919AB3841006EB5BB /* SKSTableView.h */,
-				640EF94A19AB3841006EB5BB /* SKSTableView.m */,
-				640EF94B19AB3841006EB5BB /* SKSTableViewCell.h */,
-				640EF94C19AB3841006EB5BB /* SKSTableViewCell.m */,
+				6438B81619ADB83B00B23899 /* SKSTableView.h */,
+				6438B81719ADB83B00B23899 /* SKSTableView.m */,
+				6438B81819ADB83B00B23899 /* SKSTableViewCell.h */,
+				6438B81919ADB83B00B23899 /* SKSTableViewCell.m */,
 			);
 			path = sksTableview;
 			sourceTree = "<group>";
@@ -961,8 +995,8 @@
 		6419DBD419A70E1B00D0F74B /* leftList */ = {
 			isa = PBXGroup;
 			children = (
-				640EF93E19AB1DAE006EB5BB /* ll_close@2x.png */,
-				640EF93F19AB1DAE006EB5BB /* ll_open@2x.png */,
+				6438B81C19ADB8C600B23899 /* expandable@2x.png */,
+				6438B81D19ADB8C600B23899 /* expanded@2x.png */,
 				6419DBD519A70E1B00D0F74B /* ll_add.png */,
 				6419DBD619A70E1B00D0F74B /* ll_bg.png */,
 				6419DBD819A70E1B00D0F74B /* ll_head.png */,
@@ -980,6 +1014,42 @@
 				6419DBE519A7103F00D0F74B /* DIDatepickerDateView.m */,
 			);
 			path = DIDatepicker;
+			sourceTree = "<group>";
+		};
+		6438B80319AD7C2400B23899 /* BJImageCropper */ = {
+			isa = PBXGroup;
+			children = (
+				6438B80419AD7C3E00B23899 /* BJImageCropper.h */,
+				6438B80519AD7C3E00B23899 /* BJImageCropper.m */,
+			);
+			name = BJImageCropper;
+			sourceTree = "<group>";
+		};
+		6438B80719ADA5C800B23899 /* TWTSideMenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6438B80819ADA5C800B23899 /* TWTSideMenuViewController.h */,
+				6438B80919ADA5C800B23899 /* TWTSideMenuViewController.m */,
+			);
+			path = TWTSideMenuViewController;
+			sourceTree = "<group>";
+		};
+		6438B80E19ADAD9100B23899 /* UIColor+getColor */ = {
+			isa = PBXGroup;
+			children = (
+				6438B80F19ADAD9100B23899 /* UIColor+getColor.h */,
+				6438B81019ADAD9100B23899 /* UIColor+getColor.m */,
+			);
+			path = "UIColor+getColor";
+			sourceTree = "<group>";
+		};
+		6438B81219ADB6C200B23899 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				6438B81319ADB6D800B23899 /* userLIstCell.h */,
+				6438B81419ADB6D800B23899 /* userLIstCell.m */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1059,6 +1129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				640DFCF019A5F62800F3A092 /* main2_stop.png in Resources */,
+				6438B80219AD7B4F00B23899 /* ImageCroperViewController.xib in Resources */,
 				640DFB7919A5BC5E00F3A092 /* add_camera.png in Resources */,
 				64072A6D19A32D0F00510ED4 /* fu_bg2.png in Resources */,
 				0F9F193B19A5112E0089E452 /* re_bg.png in Resources */,
@@ -1087,6 +1158,7 @@
 				640DFBAD19A5C63B00F3A092 /* main_rightup1.png in Resources */,
 				640DFB7E19A5BC5E00F3A092 /* add_done_hl.png in Resources */,
 				640DFB8019A5BC5E00F3A092 /* add_girl_hl.png in Resources */,
+				6438B81E19ADB8C600B23899 /* expandable@2x.png in Resources */,
 				640DFCE619A5F62800F3A092 /* main2_Alert_hl.png in Resources */,
 				0F9F192F19A50C5E0089E452 /* login_login.png in Resources */,
 				640DFBB119A5C63B00F3A092 /* main_start.png in Resources */,
@@ -1109,18 +1181,17 @@
 				64072A2319A31DB400510ED4 /* Images.xcassets in Resources */,
 				640DFB7819A5BC5E00F3A092 /* add_boy_hl.png in Resources */,
 				640DFCE519A5F62800F3A092 /* main2_Alert.png in Resources */,
+				6438B81F19ADB8C600B23899 /* expanded@2x.png in Resources */,
 				64072A6919A32CD500510ED4 /* fu_bg.png in Resources */,
 				640DFCEE19A5F62800F3A092 /* main2_push.png in Resources */,
 				64072A8519A342E100510ED4 /* firstUseThreeViewController.xib in Resources */,
 				64072A1519A31DB400510ED4 /* InfoPlist.strings in Resources */,
 				640DFCE819A5F62800F3A092 /* main2_cy.png in Resources */,
 				0F9F193119A50C5E0089E452 /* login_register.png in Resources */,
-				640EF94019AB1DAE006EB5BB /* ll_close@2x.png in Resources */,
 				640DFBA219A5C63B00F3A092 /* main_add_hl1.png in Resources */,
 				640DFBA619A5C63B00F3A092 /* main_l0.png in Resources */,
 				640DFBA319A5C63B00F3A092 /* main_add_hl2.png in Resources */,
 				64072A6819A32CD500510ED4 /* fu_alarm.png in Resources */,
-				640EF94119AB1DAE006EB5BB /* ll_open@2x.png in Resources */,
 				0F9F191D19A4F86D0089E452 /* fu_yezi.png in Resources */,
 				0F9F193319A50C5E0089E452 /* login_yisheng.png in Resources */,
 				640DFB8419A5BC5E00F3A092 /* add_photo_hl.png in Resources */,
@@ -1179,7 +1250,7 @@
 				640DFCB819A5D3A700F3A092 /* TemperatureAppModels.xcdatamodeld in Sources */,
 				64072A7E19A3328400510ED4 /* firstUseTwoViewController.m in Sources */,
 				640DFC4019A5CED600F3A092 /* ConnectionManager.m in Sources */,
-				640EF94D19AB3841006EB5BB /* SKSTableView.m in Sources */,
+				6438B81119ADAD9100B23899 /* UIColor+getColor.m in Sources */,
 				640DFC0E19A5C92900F3A092 /* ASIDownloadCache.m in Sources */,
 				6419DBF619A71E7500D0F74B /* RecordLineViewController.m in Sources */,
 				640DFC1619A5C92900F3A092 /* ASICloudFilesContainerRequest.m in Sources */,
@@ -1187,22 +1258,26 @@
 				640DFC1419A5C92900F3A092 /* ASICloudFilesCDNRequest.m in Sources */,
 				640DFC0F19A5C92900F3A092 /* ASIFormDataRequest.m in Sources */,
 				640DFC1719A5C92900F3A092 /* ASICloudFilesContainerXMLParserDelegate.m in Sources */,
+				6438B80119AD7B4F00B23899 /* ImageCroperViewController.m in Sources */,
 				64072A7719A3325800510ED4 /* BEMAnimations.m in Sources */,
 				640DFC3419A5C94A00F3A092 /* HttpRequest.m in Sources */,
 				640DFC1E19A5C92900F3A092 /* ASIS3BucketObject.m in Sources */,
 				64072A1B19A31DB400510ED4 /* AppDelegate.m in Sources */,
+				6438B82219ADDE5000B23899 /* SelectedSwitchViewController.m in Sources */,
 				6419DBF319A71E0800D0F74B /* TemperatureAndCheckManagerViewController.m in Sources */,
+				6438B80D19ADABB700B23899 /* CommonNavigationController.m in Sources */,
 				640DFC1519A5C92900F3A092 /* ASICloudFilesContainer.m in Sources */,
 				64072A7919A3325800510ED4 /* BEMLine.m in Sources */,
 				640DFCCC19A5E1D800F3A092 /* NSDate+JBCommon.m in Sources */,
 				64072A7A19A3325800510ED4 /* BEMSimpleLineGraphView.m in Sources */,
 				6419DBED19A711C600D0F74B /* UserInfoEditViewController.m in Sources */,
 				64072A5E19A32C3E00510ED4 /* firstUseOneViewController.m in Sources */,
+				6438B80A19ADA5C800B23899 /* TWTSideMenuViewController.m in Sources */,
 				640DFC1D19A5C92900F3A092 /* ASIS3Bucket.m in Sources */,
 				640DFC1919A5C92900F3A092 /* ASICloudFilesObjectRequest.m in Sources */,
 				640DFC2219A5C92900F3A092 /* ASIS3ServiceRequest.m in Sources */,
+				6438B80619AD7C3E00B23899 /* BJImageCropper.m in Sources */,
 				640DFC1319A5C92900F3A092 /* ASIWebPageRequest.m in Sources */,
-				640EF94E19AB3841006EB5BB /* SKSTableViewCell.m in Sources */,
 				6419DBF019A71D3A00D0F74B /* CheckTemperatureViewController.m in Sources */,
 				640DFC2119A5C92900F3A092 /* ASIS3Request.m in Sources */,
 				64072A1719A31DB400510ED4 /* main.m in Sources */,
@@ -1214,7 +1289,10 @@
 				6419DBEA19A7119C00D0F74B /* UserListViewController.m in Sources */,
 				640DFCCD19A5E1D800F3A092 /* NSString+randonStr.m in Sources */,
 				640DFC4119A5CED600F3A092 /* soundVibrateManager.m in Sources */,
+				6438B81519ADB6D800B23899 /* userLIstCell.m in Sources */,
+				6438B81A19ADB83B00B23899 /* SKSTableView.m in Sources */,
 				640DFC0D19A5C92900F3A092 /* ASIDataDecompressor.m in Sources */,
+				6438B81B19ADB83B00B23899 /* SKSTableViewCell.m in Sources */,
 				640DFCB919A5D3A700F3A092 /* TemperatureFob.m in Sources */,
 				640DFC0C19A5C92900F3A092 /* ASIDataCompressor.m in Sources */,
 				640DFCB619A5D3A700F3A092 /* EventReminderModel.m in Sources */,
@@ -1357,6 +1435,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bodyCare/bodyCare-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1376,6 +1455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bodyCare/bodyCare-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1471,7 +1551,7 @@
 				640DFCB019A5D3A700F3A092 /* TemperatureAppModels2.xcdatamodel */,
 				640DFCB119A5D3A700F3A092 /* TemperatureAppModels3.xcdatamodel */,
 			);
-			currentVersion = 640DFCAE19A5D3A700F3A092 /* TemperatureAppModels 1.1.xcdatamodel */;
+			currentVersion = 640DFCB019A5D3A700F3A092 /* TemperatureAppModels2.xcdatamodel */;
 			path = TemperatureAppModels.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

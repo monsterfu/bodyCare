@@ -26,7 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self.navigationController setNavigationBarHidden:YES];
+
+    _personArray = [PersonDetailInfo allPersonDetail];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,5 +46,17 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)leftListButtonTouch:(UIBarButtonItem *)sender {
+}
+
+- (IBAction)test1ButtonTouched:(UIButton *)sender {
+}
+
+- (IBAction)test2ButtonTouched:(UIButton *)sender {
+}
+
+- (IBAction)test3ButtonTouched:(UIButton *)sender {
+}
 
 @end

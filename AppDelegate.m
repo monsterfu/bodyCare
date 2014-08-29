@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ConnectionManager.h"
+#import "LoginViewController.h"
 
 @implementation AppDelegate
 @synthesize managedObjectContext = _managedObjectContext;
@@ -16,6 +18,52 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+//    [[ConnectionManager sharedInstance] startScanForFobs];
+    if ([USER_DEFAULT integerForKey:KEY_FIRSTUSE] == 0) {
+        [USER_DEFAULT setInteger:1 forKey:KEY_FIRSTUSE];
+    }else{
+        UIStoryboard* storyBord = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        LoginViewController* _loginViewController = [storyBord instantiateViewControllerWithIdentifier:@"LoginViewID"];
+        self.window.rootViewController = _loginViewController;
+    }
+    
+    if (![USER_DEFAULT stringForKey:KEY_USERNAME]) {
+        //没有则创建一个
+        NSString* personId = [NSString randomStr];
+        PersonDetailInfo* _detailInfo = [PersonDetailInfo createPersonDetailInfoWithName:@"宝贝" personId:personId];
+        _detailInfo.image = [UIImage imageNamed:@"default_head.png"];
+        _detailInfo.birthday = [NSDate dateWithTimeIntervalSinceNow:-2*365*24*60*60];
+        _detailInfo.weight = [NSNumber numberWithInteger:14];
+        
+        //
+        personId = [NSString randomStr];
+        _detailInfo = [PersonDetailInfo createPersonDetailInfoWithName:@"Feman" personId:personId];
+        _detailInfo.image = [UIImage imageNamed:@"default_head.png"];
+        _detailInfo.birthday = [NSDate dateWithTimeIntervalSinceNow:-2*365*24*60*60];
+        _detailInfo.weight = [NSNumber numberWithInteger:14];
+        
+        //
+        personId = [NSString randomStr];
+        _detailInfo = [PersonDetailInfo createPersonDetailInfoWithName:@"贝儿" personId:personId];
+        _detailInfo.image = [UIImage imageNamed:@"default_head.png"];
+        _detailInfo.birthday = [NSDate dateWithTimeIntervalSinceNow:-2*365*24*60*60];
+        _detailInfo.weight = [NSNumber numberWithInteger:14];
+        
+        [USER_DEFAULT setObject:@"宝贝" forKey:KEY_USERNAME];
+        [USER_DEFAULT setBool:YES forKey:KEY_BACKGROUND_OPEN];
+        [USER_DEFAULT setObject:personId forKey:KEY_PERSONID];
+        [USER_DEFAULT setInteger:5 forKey:KEY_MOST_STR];
+        
+        NSError *error = nil;
+        
+        if (![_detailInfo.managedObjectContext save:&error]) {
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
+    }
+    [USER_DEFAULT setInteger:2014 forKey:KEY_SELECTED_YEAR];
+    [USER_DEFAULT setInteger:7 forKey:KEY_SELECTED_MONTH];
+    [USER_DEFAULT synchronize];
     return YES;
 }
 							
