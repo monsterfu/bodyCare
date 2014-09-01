@@ -13,6 +13,7 @@
 @interface UserInfoEditViewController : UIViewController<UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,ImageCroperViewControllerDelegate>
 {
     UIImagePickerController* _imagePickerController;
+    UITapGestureRecognizer* _tapGestureRecognizer;
 }
 
 @property(nonatomic,retain)PersonDetailInfo* person;

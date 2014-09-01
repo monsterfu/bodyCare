@@ -189,7 +189,7 @@ static ConnectionManager *sharedConnectionManager;
         
         [[UIApplication sharedApplication] presentLocalNotificationNow:_localOutOfRangeNotice];
         
-    }else{
+    }else if ([[UIApplication sharedApplication]applicationState] == UIApplicationStateActive){
         
         [[soundVibrateManager sharedInstance]playAlertSound];
         [[soundVibrateManager sharedInstance]vibrate];

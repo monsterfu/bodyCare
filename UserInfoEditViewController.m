@@ -38,6 +38,8 @@
         [self setPersonSex:[_person.sex boolValue]];
     }
     
+    _tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction)];
+    [self.view addGestureRecognizer:_tapGestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,6 +58,11 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(void)tapAction
+{
+    [_nameTextfield resignFirstResponder];
+}
 #pragma mark -setSex
 
 -(void)setPersonSex:(BOOL)sex
@@ -104,7 +111,7 @@
     }
     
     //    self.imagePickerController = imagePickerController;
-    [self.navigationController presentViewController:_imagePickerController animated:YES completion:nil];
+    [self presentViewController:_imagePickerController animated:YES completion:nil];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo
