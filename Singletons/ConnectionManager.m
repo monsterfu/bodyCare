@@ -16,56 +16,16 @@
 @implementation ConnectionManager
 @synthesize manager;
 /*
- 2014-09-02 17:05:37.581 bodyCare[1970:60b] Discovered peripheral, name iBody-Manridy, data: {
- kCBAdvDataChannel = 37;
- kCBAdvDataIsConnectable = 1;
- kCBAdvDataLocalName = "iBody-Manridy";
- kCBAdvDataManufacturerData = <0000ffff ffff6400 ff>;
- kCBAdvDataServiceUUIDs =     (
- FFF0,
- FFB0
- );
- kCBAdvDataTxPowerLevel = 0;
- }, RSSI: -66.000000
- 2014-09-02 17:05:40.697 bodyCare[1970:60b] Service found with UUID: Device Information
- 2014-09-02 17:05:40.698 bodyCare[1970:60b] Service found with UUID: Battery
- 2014-09-02 17:05:40.700 bodyCare[1970:60b] Service found with UUID: FFE0
- 2014-09-02 17:05:40.702 bodyCare[1970:60b] Service found with UUID: FFE5
- 2014-09-02 17:05:40.703 bodyCare[1970:60b] Service found with UUID: FFF0
- 2014-09-02 17:05:40.706 bodyCare[1970:60b] Service found with UUID: FFD0
- 2014-09-02 17:05:40.708 bodyCare[1970:60b] Service found with UUID: FFC0
- 2014-09-02 17:05:40.710 bodyCare[1970:60b] Service found with UUID: FFB0
- 2014-09-02 17:05:40.712 bodyCare[1970:60b] Service found with UUID: FFA0
- 2014-09-02 17:05:40.714 bodyCare[1970:60b] Service found with UUID: FF90
- 2014-09-02 17:05:40.716 bodyCare[1970:60b] Service found with UUID: FC60
- 2014-09-02 17:05:40.718 bodyCare[1970:60b] Service found with UUID: FE00
- 2014-09-02 17:05:40.721 bodyCare[1970:60b] Characteristic FOUND: (null) FFF1 10
- 2014-09-02 17:05:40.724 bodyCare[1970:60b] Characteristic FOUND: (null) FFF2 8
- 2014-09-02 17:05:40.726 bodyCare[1970:60b] Characteristic FOUND: (null) FFF3 18
- 2014-09-02 17:05:40.728 bodyCare[1970:60b] Characteristic FOUND: (null) FFF4 10
- 2014-09-02 17:05:40.730 bodyCare[1970:60b] Characteristic FOUND: (null) FFF5 10
- 2014-09-02 17:05:40.732 bodyCare[1970:60b] Characteristic FOUND: (null) FFF6 10
- 2014-09-02 17:05:40.735 bodyCare[1970:60b] Characteristic FOUND: (null) FFF7 10
- 2014-09-02 17:05:40.737 bodyCare[1970:60b] Characteristic FOUND: (null) FFF8 18
- 2014-09-02 17:05:40.740 bodyCare[1970:60b] Characteristic FOUND: (null) FFF9 18
- 2014-09-02 17:05:40.743 bodyCare[1970:60b] Characteristic FOUND: <01> FFB1 10
- 2014-09-02 17:05:40.745 bodyCare[1970:60b] Characteristic FOUND: <ffffffff> FFB2 10
- 2014-09-02 17:05:40.747 bodyCare[1970:60b] Characteristic FOUND: <8235> FFB3 10
- 2014-09-02 17:05:40.749 bodyCare[1970:60b] Characteristic FOUND: <0000> FFB4 10
- 2014-09-02 17:05:40.814 bodyCare[1970:60b] Characteristic value : <00> with ID FFF1
- 2014-09-02 17:05:40.874 bodyCare[1970:60b] Error discovering characteristics: Reading is not permitted.
- 2014-09-02 17:05:40.934 bodyCare[1970:60b] Characteristic value : <ff> with ID FFF3
- 2014-09-02 17:05:40.994 bodyCare[1970:60b] Characteristic value : <00000000> with ID FFF4
- 2014-09-02 17:05:41.054 bodyCare[1970:60b] Characteristic value : <00000000> with ID FFF5
- 2014-09-02 17:05:44.753 bodyCare[1970:60b] Characteristic value : <00000000> with ID FFF6
- 2014-09-02 17:05:52.748 bodyCare[1970:60b] Characteristic value : <00000000> with ID FFF7
- 2014-09-02 17:05:56.745 bodyCare[1970:60b] Characteristic value : <00000000> with ID FFF8
- 2014-09-02 17:06:00.743 bodyCare[1970:60b] Characteristic value : <00000000> with ID FFF9
- 2014-09-02 17:06:06.739 bodyCare[1970:60b] Characteristic value : <01> with ID FFB1
- 2014-09-02 17:06:10.737 bodyCare[1970:60b] Characteristic value : <ffffffff> with ID FFB2
- 2014-09-02 17:06:18.732 bodyCare[1970:60b] Characteristic value : <8235> with ID FFB3
- 2014-09-02 17:06:22.729 bodyCare[1970:60b] Characteristic value : <0000> with ID FFB4
- 
+ CBCharacteristicPropertyBroadcast												= 0x01,
+ CBCharacteristicPropertyRead													= 0x02,
+ CBCharacteristicPropertyWriteWithoutResponse									= 0x04,
+ CBCharacteristicPropertyWrite													= 0x08,
+ CBCharacteristicPropertyNotify													= 0x10,
+ CBCharacteristicPropertyIndicate												= 0x20,
+ CBCharacteristicPropertyAuthenticatedSignedWrites								= 0x40,
+ CBCharacteristicPropertyExtendedProperties										= 0x80,
+ CBCharacteristicPropertyNotifyEncryptionRequired NS_ENUM_AVAILABLE(NA, 6_0)		= 0x100,
+ CBCharacteristicPropertyIndicateEncryptionRequired NS_ENUM_AVAILABLE(NA, 6_0)	= 0x200
  
  2014-09-02 17:51:42.345 bodyCare[9546:60b] Discovered peripheral, name iBody-Manridy, data: {
  kCBAdvDataChannel = 37;
@@ -733,6 +693,28 @@ static ConnectionManager *sharedConnectionManager;
     disconnectTimer = nil;
     
 }
+-(NSData*)msrRead
+{
+    
+    unsigned char command[512] = {0};
+    unsigned char *pTmp;
+    int nSendLen = 0;
+    
+    pTmp = command;
+    *pTmp = '<';
+    pTmp++;
+    *pTmp = 'm';
+    pTmp++;
+    for (NSUInteger i =0; i < 3; i++) {
+        *pTmp = 'f';
+        pTmp++;
+    }
+    *pTmp = 'm';
+    pTmp++;
+    *pTmp = '>';
+    pTmp++;
+    return [[NSData alloc] initWithBytes:&command length:5];
+}
 -(void)peripheral:(CBPeripheral *)args_peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error{
     
     if (error) {
@@ -746,6 +728,11 @@ static ConnectionManager *sharedConnectionManager;
         
         /* Set notification on heart rate measurement */
         [args_peripheral readValueForCharacteristic:aChar];
+//        uint8_t val;
+//        val = 'm';
+//        NSData* valData = [NSData dataWithBytes:(void*)&val length:sizeof(val)];
+        NSData* valData = [self msrRead];
+        [args_peripheral writeValue:valData forCharacteristic:aChar type:CBCharacteristicWriteWithoutResponse];
     }
     return;
     if ([service.UUID isEqual:[CBUUID UUIDWithString:TRANSFER_SERVICE_UUID]])
@@ -756,6 +743,11 @@ static ConnectionManager *sharedConnectionManager;
             
             /* Set notification on heart rate measurement */
             [args_peripheral readValueForCharacteristic:aChar];
+            uint8_t val;
+            val = 'q';
+            NSData* valData = [NSData dataWithBytes:(void*)&val length:sizeof(val)];
+            
+            [args_peripheral writeValue:valData forCharacteristic:aChar type:CBCharacteristicWriteWithoutResponse];
         }
     }
     if ([service.UUID isEqual:[CBUUID UUIDWithString:TRANSFER_BATTERY_UUID]])
@@ -766,6 +758,11 @@ static ConnectionManager *sharedConnectionManager;
             
             /* Set notification on heart rate measurement */
             [args_peripheral readValueForCharacteristic:aChar];
+            uint8_t val;
+            val = 'q';
+            NSData* valData = [NSData dataWithBytes:(void*)&val length:sizeof(val)];
+            
+            [args_peripheral writeValue:valData forCharacteristic:aChar type:CBCharacteristicWriteWithoutResponse];
         }
     }
 }
@@ -775,7 +772,7 @@ static ConnectionManager *sharedConnectionManager;
         NSLog(@"Error discovering characteristics: %@", [error localizedDescription]);
         return;
     }
-    NSLog(@"Characteristic value : %@ with ID %@", characteristic.value, characteristic.UUID);
+    NSLog(@"Characteristic value : %@ with ID %@",  [[NSString alloc] initWithData:characteristic.value encoding:NSASCIIStringEncoding], characteristic.UUID);
 //    if ([characteristic.UUID isEqual:_batteryUUID]) {
 //        checkDevice = [_deviceManagerDictionary objectForKey:[peripheral.identifier UUIDString]];
 //        
