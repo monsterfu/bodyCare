@@ -20,6 +20,8 @@
 #import "TWTSideMenuViewController.h"
 #import "CommonNavigationController.h"
 #import "UIColor+getColor.h"
+#import "PersonDetailInfo.h"
+#import "NSString+deviceName.h"
 
 #define VISION_NO    @"1.1.2"
 //#define NSLog(...) {}
@@ -74,4 +76,14 @@
 
 #define KEY_SELECTED_YEAR   @"key_selected_year"
 #define KEY_SELECTED_MONTH  @"key_selected_month"
+
+#define KEY_DEVICE_INFO   @"key_device_info"
+
+#define KEY_DEVICELIST_INFO   @"key_devicelist_info"         //设备列表
+
+
+#define NSNotificationCenter_dismissRecordChange            @"NSNotificationCenter_dismissRecordChange"
+#define NSNotificationCenter_appWillEnterBackGround         @"NSNotificationCenter_appWillEnterBackGround"
+#define NSNotificationCenter_appWillEnterForeground         @"NSNotificationCenter_appWillEnterForeground"
+#define NSNotificationMainActionChange  @"NSNotificationMainActionChange"
 #endif

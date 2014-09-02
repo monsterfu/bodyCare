@@ -18,7 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-//    [[ConnectionManager sharedInstance] startScanForFobs];
+    [[ConnectionManager sharedInstance] startScanForDevice];
     if ([USER_DEFAULT integerForKey:KEY_FIRSTUSE] == 0) {
         [USER_DEFAULT setInteger:1 forKey:KEY_FIRSTUSE];
     }else{

@@ -23,6 +23,8 @@
     NSArray* _settingArray;
     SKSTableViewCell* _settingCell;
     userLIstCell* _userListCell;
+    
+    NSString* _mainTitleStr;
 }
 @property (nonatomic, assign)id<LeftViewControllerDelegate>delegate;
 @property (weak, nonatomic) IBOutlet SKSTableView *tableView;

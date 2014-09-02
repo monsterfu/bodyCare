@@ -26,12 +26,12 @@
 
 + (CBUUID *) batteryServiceUUID
 {
-    return [CBUUID UUIDWithString:@"180F"];
+    return [CBUUID UUIDWithString:@"FFF0"];
 }
 
 + (CBUUID *) thermometerServiceUUID
 {
-    return [CBUUID UUIDWithString:@"1809"];
+    return [CBUUID UUIDWithString:@"FFB0"];
 }
 
 

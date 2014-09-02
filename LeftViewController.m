@@ -27,9 +27,21 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _settingArray = [NSArray arrayWithObjects:@"宝贝列表",@"设置",nil];
+    _mainTitleStr = @"bodyCare体温检测";
+    _settingArray = [NSArray arrayWithObjects:_mainTitleStr,@"宝贝列表",@"设置",nil];
     _tableView.SKSTableViewDelegate = self;
     
+    UIView* _views = [UIView new];
+    [_views setBackgroundColor:[UIColor clearColor]];
+    [_tableView setTableFooterView:_views];
+    
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(mainActionChange) name:NSNotificationMainActionChange object:nil];
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:NSNotificationMainActionChange object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,6 +60,12 @@
  // Pass the selected object to the new view controller.
  }
  */
+
+#pragma mark - Notification
+-(void)mainActionChange
+{
+    
+}
 #pragma mark - TableView Delegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -64,22 +82,22 @@
     switch (indexPath.row) {
         case 0:
         {
-            return 3;
+            return 0;
         }
             break;
             
         case 1:
         {
-            return 0;
+            return 3;
         }
             break;
             
-//        case 2:
-//        {
-//            return 3;
-//        }
-//            break;
-//            
+        case 2:
+        {
+            return 0;
+        }
+            break;
+//
 //        case 3:
 //        {
 //            return 1;
@@ -114,22 +132,22 @@
     switch (indexPath.row) {
         case 0:
         {
-            settingCell.isExpandable = YES;
+            settingCell.isExpandable = NO;
         }
             break;
             
         case 1:
         {
-            settingCell.isExpandable = NO;
+            settingCell.isExpandable = YES;
         }
             break;
             
-//        case 2:
-//        {
-//            settingCell.isExpandable = YES;
-//        }
-//            break;
-//            
+        case 2:
+        {
+            settingCell.isExpandable = NO;
+        }
+            break;
+//
 //        case 3:
 //        {
 //            settingCell.isExpandable = YES;
