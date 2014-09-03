@@ -31,9 +31,12 @@
     _storyBord = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     _commonNavigationController = [_storyBord instantiateViewControllerWithIdentifier:@"UserListNavigationIdentifier"];
     _settingViewController = [_storyBord instantiateViewControllerWithIdentifier:@"SettingViewID"];
+    _recordLineViewController = [_storyBord instantiateViewControllerWithIdentifier:@"RecordLineViewIdentifier"];
+    
     
     [self addChildViewController:_commonNavigationController];
     [self addChildViewController:_settingViewController];
+    [self addChildViewController:_recordLineViewController];
     [self.view addSubview:_commonNavigationController.view];
     
     _currentViewController = _commonNavigationController;
@@ -58,14 +61,23 @@
 -(void)switchToViewEnum:(SelectedSwitchEnum)selectNum
 {
     switch (selectNum) {
-        case SelectedSwitchEnum_User:
+        case SelectedSwitchEnum_Main:
         {
             if (_currentViewController != _commonNavigationController) {
                 [self transitionFromViewController:_currentViewController toViewController:_commonNavigationController duration:1.0f options:UIViewAnimationOptionTransitionNone animations:nil completion:^(BOOL finish){
                     if (finish) {
                         _currentViewController = _commonNavigationController;
-                    }else{
-                        _currentViewController = _settingViewController;
+                    }
+                }];
+            }
+        }
+            break;
+        case SelectedSwitchEnum_User:
+        {
+            if (_currentViewController != _recordLineViewController) {
+                [self transitionFromViewController:_currentViewController toViewController:_recordLineViewController duration:1.0f options:UIViewAnimationOptionTransitionNone animations:nil completion:^(BOOL finish){
+                    if (finish) {
+                        _currentViewController = _recordLineViewController;
                     }
                 }];
             }
@@ -77,8 +89,6 @@
                 [self transitionFromViewController:_currentViewController toViewController:_settingViewController duration:1.0f options:UIViewAnimationOptionTransitionNone animations:nil completion:^(BOOL finish){
                     if (finish) {
                         _currentViewController = _settingViewController;
-                    }else{
-                        _currentViewController = _commonNavigationController;
                     }
                 }];
             }

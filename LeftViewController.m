@@ -36,6 +36,8 @@
     [_tableView setTableFooterView:_views];
     
     
+    _personArray = [PersonDetailInfo allPersonDetail];
+    
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(mainActionChange) name:NSNotificationMainActionChange object:nil];
 }
 
@@ -114,6 +116,7 @@
         _userListCell = [tableView dequeueReusableCellWithIdentifier:@"userLIstCellIdentifier" forIndexPath:indexPath];
         _userListCell.headImage = nil;
         _userListCell.backgroundColor = [UIColor clearColor];
+        
         return _userListCell;
     }
 }
@@ -171,10 +174,13 @@
     if (indexPath.row == 1) {
         if (![_tableView isExpandedForCellAtIndexPath:indexPath]) {
             //            [self performSegueWithIdentifier:WIRELESSALARMACTION sender:nil];
+            NSLog(@"isExpandedForCellAtIndexPath:%d,%d",indexPath.row,indexPath.subRow);
+            return;
         }
+        return;
     }
-    if (self.delegate&&[self.delegate respondsToSelector:@selector(leftViewControllerListSelectedAtIndexPath:)]) {
-        [self.delegate leftViewControllerListSelectedAtIndexPath:indexPath];
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(leftViewControllerListSelectedAtIndexPath: isExpanded:  )]) {
+        [self.delegate leftViewControllerListSelectedAtIndexPath:indexPath isExpanded:[_tableView isExpandedForCellAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]]];
     }
     
 }

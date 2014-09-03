@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface RegisterViewController : UIViewController
-
+{
+    UITapGestureRecognizer* _tapGestureRecognizer;
+}
 @property (weak, nonatomic) IBOutlet UIButton *jzButton;
 @property (weak, nonatomic) IBOutlet UIButton *ysButton;
 - (IBAction)jzButtonTouch:(UIButton *)sender;

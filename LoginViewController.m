@@ -174,16 +174,31 @@
     return YES;
 }
 #pragma mark - leftViewControllerDelegate
--(void)leftViewControllerListSelectedAtIndexPath:(NSIndexPath *)indexPath
+-(void)leftViewControllerListSelectedAtIndexPath:(NSIndexPath *)indexPath isExpanded:(BOOL)expanded
 {
-    NSLog(@"indexPath:%d,%d",indexPath.row,indexPath.subRow);
-    if (indexPath.row < 4&&indexPath.row) {
-        [_selectedSwitchViewController switchToViewEnum:SelectedSwitchEnum_User];
-        [_sideViewController hideSideViewController:YES];
-    }
-    if (indexPath.row == 4) {
-        [_selectedSwitchViewController switchToViewEnum:SelectedSwitchEnum_Setting];
-        [_sideViewController hideSideViewController:YES];
+    NSLog(@"indexPath:%d",indexPath.row);
+    if (expanded) {
+        if (indexPath.row == 0) {
+            [_selectedSwitchViewController switchToViewEnum:SelectedSwitchEnum_Main];
+            [_sideViewController hideSideViewController:YES];
+        }
+        else if (indexPath.row < 5) {
+            [_selectedSwitchViewController switchToViewEnum:SelectedSwitchEnum_User];
+            [_sideViewController hideSideViewController:YES];
+        }
+        else if (indexPath.row == 5) {
+            [_selectedSwitchViewController switchToViewEnum:SelectedSwitchEnum_Setting];
+            [_sideViewController hideSideViewController:YES];
+        }
+    }else{
+        if (indexPath.row == 0) {
+            [_selectedSwitchViewController switchToViewEnum:SelectedSwitchEnum_Main];
+            [_sideViewController hideSideViewController:YES];
+        }
+        else if (indexPath.row == 5) {
+            [_selectedSwitchViewController switchToViewEnum:SelectedSwitchEnum_Setting];
+            [_sideViewController hideSideViewController:YES];
+        }
     }
 }
 @end

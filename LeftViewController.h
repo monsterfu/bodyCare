@@ -14,7 +14,7 @@
 
 @protocol LeftViewControllerDelegate <NSObject>
 
--(void)leftViewControllerListSelectedAtIndexPath:(NSIndexPath *)indexPath;
+-(void)leftViewControllerListSelectedAtIndexPath:(NSIndexPath *)indexPath isExpanded:(BOOL)expanded;
 
 @end
 
@@ -31,5 +31,5 @@
 @property (weak, nonatomic) IBOutlet SKSTableViewCell *cell;
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 
-
+@property (nonatomic, retain)NSMutableArray* personArray;
 @end

@@ -27,7 +27,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    _tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap)];
+    [self.view addGestureRecognizer:_tapGestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,7 +36,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(void)tap
+{
+    [_phoneTextField resignFirstResponder];
+    [_passWordTextField resignFirstResponder];
+    [_codeTextField resignFirstResponder];
+}
 /*
 #pragma mark - Navigation
 

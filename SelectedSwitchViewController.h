@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "SettingViewController.h"
 #import "CommonNavigationController.h"
+#import "RecordLineViewController.h"
 
 typedef enum : NSUInteger {
-    SelectedSwitchEnum_User,
-    SelectedSwitchEnum_Setting,
+    SelectedSwitchEnum_Main, //测量等界面
+    SelectedSwitchEnum_User, //用户体温记录等界面
+    SelectedSwitchEnum_Setting, //设置
     SelectedSwitchEnum_Max,
 }SelectedSwitchEnum;
 
@@ -22,6 +24,7 @@ typedef enum : NSUInteger {
 //    UserListViewController* _userListViewController;
     CommonNavigationController* _commonNavigationController;
     SettingViewController* _settingViewController;
+    RecordLineViewController* _recordLineViewController;
     UIStoryboard* _storyBord;
     UIViewController* _currentViewController;
 }
