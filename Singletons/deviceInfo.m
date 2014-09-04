@@ -67,7 +67,17 @@
     
     [self.delegate didUpdateData:self];
 }
-
+- (void) setTemperatureWithRawData:(NSData *)rawData
+{
+    unsigned char data[20];
+    [rawData getBytes:data length:17];
+    
+    unsigned long red = strtoul(data[11],0,16);
+    unsigned long red1 = strtoul(data[12],0,16);
+    unsigned long red2 = strtoul(data[13],0,16);
+    unsigned long red3 = strtoul(data[14],0,16);
+    
+}
 - (UIImage *) currentSignalStrengthImage
 {
     NSString *imageName;

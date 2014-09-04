@@ -129,7 +129,6 @@
 		640DFC3619A5CB0700F3A092 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640DFC3519A5CB0700F3A092 /* CFNetwork.framework */; };
 		640DFC3819A5CB1700F3A092 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640DFC3719A5CB1700F3A092 /* MobileCoreServices.framework */; };
 		640DFC3A19A5CDA600F3A092 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640DFC3919A5CDA600F3A092 /* CoreBluetooth.framework */; };
-		640DFC4019A5CED600F3A092 /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 640DFC3D19A5CED600F3A092 /* ConnectionManager.m */; };
 		640DFC4119A5CED600F3A092 /* soundVibrateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 640DFC3F19A5CED600F3A092 /* soundVibrateManager.m */; };
 		640DFC5819A5CFF500F3A092 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640DFC5719A5CFF500F3A092 /* CoreData.framework */; };
 		640DFCB619A5D3A700F3A092 /* EventReminderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 640DFCAA19A5D3A700F3A092 /* EventReminderModel.m */; };
@@ -176,6 +175,11 @@
 		6419DBF019A71D3A00D0F74B /* CheckTemperatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6419DBEF19A71D3A00D0F74B /* CheckTemperatureViewController.m */; };
 		6419DBF319A71E0800D0F74B /* TemperatureAndCheckManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6419DBF219A71E0800D0F74B /* TemperatureAndCheckManagerViewController.m */; };
 		6419DBF619A71E7500D0F74B /* RecordLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6419DBF519A71E7500D0F74B /* RecordLineViewController.m */; };
+		6421EC1E19B59DD0002CE7D2 /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6421EC1D19B59DD0002CE7D2 /* ConnectionManager.m */; };
+		6421EC2119B59ED8002CE7D2 /* deviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6421EC2019B59ED8002CE7D2 /* deviceInfo.m */; };
+		6421EC2419B59FC8002CE7D2 /* locationCoordinateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6421EC2319B59FC8002CE7D2 /* locationCoordinateInfo.m */; };
+		6421EC2719B59FDD002CE7D2 /* deviceDisconnectInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6421EC2619B59FDD002CE7D2 /* deviceDisconnectInfo.m */; };
+		6421EC2D19B5AB51002CE7D2 /* NSString+deviceName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6421EC2C19B5AB51002CE7D2 /* NSString+deviceName.m */; };
 		6438B80119AD7B4F00B23899 /* ImageCroperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6438B7FF19AD7B4F00B23899 /* ImageCroperViewController.m */; };
 		6438B80219AD7B4F00B23899 /* ImageCroperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6438B80019AD7B4F00B23899 /* ImageCroperViewController.xib */; };
 		6438B80619AD7C3E00B23899 /* BJImageCropper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6438B80519AD7C3E00B23899 /* BJImageCropper.m */; };
@@ -374,8 +378,6 @@
 		640DFC3519A5CB0700F3A092 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		640DFC3719A5CB1700F3A092 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		640DFC3919A5CDA600F3A092 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		640DFC3C19A5CED600F3A092 /* ConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionManager.h; sourceTree = "<group>"; };
-		640DFC3D19A5CED600F3A092 /* ConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionManager.m; sourceTree = "<group>"; };
 		640DFC3E19A5CED600F3A092 /* soundVibrateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = soundVibrateManager.h; sourceTree = "<group>"; };
 		640DFC3F19A5CED600F3A092 /* soundVibrateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = soundVibrateManager.m; sourceTree = "<group>"; };
 		640DFC5719A5CFF500F3A092 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -442,6 +444,16 @@
 		6419DBF219A71E0800D0F74B /* TemperatureAndCheckManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperatureAndCheckManagerViewController.m; sourceTree = "<group>"; };
 		6419DBF419A71E7500D0F74B /* RecordLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordLineViewController.h; sourceTree = "<group>"; };
 		6419DBF519A71E7500D0F74B /* RecordLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordLineViewController.m; sourceTree = "<group>"; };
+		6421EC1C19B59DD0002CE7D2 /* ConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionManager.h; sourceTree = "<group>"; };
+		6421EC1D19B59DD0002CE7D2 /* ConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionManager.m; sourceTree = "<group>"; };
+		6421EC1F19B59ED8002CE7D2 /* deviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = deviceInfo.h; sourceTree = "<group>"; };
+		6421EC2019B59ED8002CE7D2 /* deviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = deviceInfo.m; sourceTree = "<group>"; };
+		6421EC2219B59FC8002CE7D2 /* locationCoordinateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = locationCoordinateInfo.h; sourceTree = "<group>"; };
+		6421EC2319B59FC8002CE7D2 /* locationCoordinateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = locationCoordinateInfo.m; sourceTree = "<group>"; };
+		6421EC2519B59FDD002CE7D2 /* deviceDisconnectInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = deviceDisconnectInfo.h; sourceTree = "<group>"; };
+		6421EC2619B59FDD002CE7D2 /* deviceDisconnectInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = deviceDisconnectInfo.m; sourceTree = "<group>"; };
+		6421EC2B19B5AB51002CE7D2 /* NSString+deviceName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+deviceName.h"; sourceTree = "<group>"; };
+		6421EC2C19B5AB51002CE7D2 /* NSString+deviceName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+deviceName.m"; sourceTree = "<group>"; };
 		6438B7FE19AD7B4F00B23899 /* ImageCroperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCroperViewController.h; sourceTree = "<group>"; };
 		6438B7FF19AD7B4F00B23899 /* ImageCroperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCroperViewController.m; sourceTree = "<group>"; };
 		6438B80019AD7B4F00B23899 /* ImageCroperViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCroperViewController.xib; sourceTree = "<group>"; };
@@ -644,6 +656,7 @@
 		64072A4019A31E0000510ED4 /* thirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				6421EC2A19B5AB51002CE7D2 /* NSString+deviceName */,
 				6438B80E19ADAD9100B23899 /* UIColor+getColor */,
 				6438B80719ADA5C800B23899 /* TWTSideMenuViewController */,
 				6438B80319AD7C2400B23899 /* BJImageCropper */,
@@ -895,8 +908,14 @@
 		640DFC3B19A5CED600F3A092 /* Singletons */ = {
 			isa = PBXGroup;
 			children = (
-				640DFC3C19A5CED600F3A092 /* ConnectionManager.h */,
-				640DFC3D19A5CED600F3A092 /* ConnectionManager.m */,
+				6421EC2519B59FDD002CE7D2 /* deviceDisconnectInfo.h */,
+				6421EC2619B59FDD002CE7D2 /* deviceDisconnectInfo.m */,
+				6421EC2219B59FC8002CE7D2 /* locationCoordinateInfo.h */,
+				6421EC2319B59FC8002CE7D2 /* locationCoordinateInfo.m */,
+				6421EC1F19B59ED8002CE7D2 /* deviceInfo.h */,
+				6421EC2019B59ED8002CE7D2 /* deviceInfo.m */,
+				6421EC1C19B59DD0002CE7D2 /* ConnectionManager.h */,
+				6421EC1D19B59DD0002CE7D2 /* ConnectionManager.m */,
 				640DFC3E19A5CED600F3A092 /* soundVibrateManager.h */,
 				640DFC3F19A5CED600F3A092 /* soundVibrateManager.m */,
 			);
@@ -1014,6 +1033,16 @@
 				6419DBE519A7103F00D0F74B /* DIDatepickerDateView.m */,
 			);
 			path = DIDatepicker;
+			sourceTree = "<group>";
+		};
+		6421EC2A19B5AB51002CE7D2 /* NSString+deviceName */ = {
+			isa = PBXGroup;
+			children = (
+				6421EC2B19B5AB51002CE7D2 /* NSString+deviceName.h */,
+				6421EC2C19B5AB51002CE7D2 /* NSString+deviceName.m */,
+			);
+			name = "NSString+deviceName";
+			path = "category/NSString+deviceName";
 			sourceTree = "<group>";
 		};
 		6438B80319AD7C2400B23899 /* BJImageCropper */ = {
@@ -1249,7 +1278,6 @@
 				640DFC1019A5C92900F3A092 /* ASIHTTPRequest.m in Sources */,
 				640DFCB819A5D3A700F3A092 /* TemperatureAppModels.xcdatamodeld in Sources */,
 				64072A7E19A3328400510ED4 /* firstUseTwoViewController.m in Sources */,
-				640DFC4019A5CED600F3A092 /* ConnectionManager.m in Sources */,
 				6438B81119ADAD9100B23899 /* UIColor+getColor.m in Sources */,
 				640DFC0E19A5C92900F3A092 /* ASIDownloadCache.m in Sources */,
 				6419DBF619A71E7500D0F74B /* RecordLineViewController.m in Sources */,
@@ -1260,6 +1288,7 @@
 				640DFC1719A5C92900F3A092 /* ASICloudFilesContainerXMLParserDelegate.m in Sources */,
 				6438B80119AD7B4F00B23899 /* ImageCroperViewController.m in Sources */,
 				64072A7719A3325800510ED4 /* BEMAnimations.m in Sources */,
+				6421EC2119B59ED8002CE7D2 /* deviceInfo.m in Sources */,
 				640DFC3419A5C94A00F3A092 /* HttpRequest.m in Sources */,
 				640DFC1E19A5C92900F3A092 /* ASIS3BucketObject.m in Sources */,
 				64072A1B19A31DB400510ED4 /* AppDelegate.m in Sources */,
@@ -1274,16 +1303,20 @@
 				64072A5E19A32C3E00510ED4 /* firstUseOneViewController.m in Sources */,
 				6438B80A19ADA5C800B23899 /* TWTSideMenuViewController.m in Sources */,
 				640DFC1D19A5C92900F3A092 /* ASIS3Bucket.m in Sources */,
+				6421EC2D19B5AB51002CE7D2 /* NSString+deviceName.m in Sources */,
 				640DFC1919A5C92900F3A092 /* ASICloudFilesObjectRequest.m in Sources */,
 				640DFC2219A5C92900F3A092 /* ASIS3ServiceRequest.m in Sources */,
 				6438B80619AD7C3E00B23899 /* BJImageCropper.m in Sources */,
 				640DFC1319A5C92900F3A092 /* ASIWebPageRequest.m in Sources */,
+				6421EC1E19B59DD0002CE7D2 /* ConnectionManager.m in Sources */,
 				6419DBF019A71D3A00D0F74B /* CheckTemperatureViewController.m in Sources */,
 				640DFC2119A5C92900F3A092 /* ASIS3Request.m in Sources */,
 				64072A1719A31DB400510ED4 /* main.m in Sources */,
 				0F9F194019A511A90089E452 /* RegisterViewController.m in Sources */,
 				640DFC1219A5C92900F3A092 /* ASINetworkQueue.m in Sources */,
 				6419DBE619A7103F00D0F74B /* DIDatepicker.m in Sources */,
+				6421EC2719B59FDD002CE7D2 /* deviceDisconnectInfo.m in Sources */,
+				6421EC2419B59FC8002CE7D2 /* locationCoordinateInfo.m in Sources */,
 				0F9F193719A50E880089E452 /* LoginViewController.m in Sources */,
 				640DFC1F19A5C92900F3A092 /* ASIS3BucketRequest.m in Sources */,
 				6419DBEA19A7119C00D0F74B /* UserListViewController.m in Sources */,

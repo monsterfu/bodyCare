@@ -11,8 +11,12 @@
 #define TRANSFER_SERVICE_UUID @"FFF0"
 #define TRANSFER_CHARACTERISTIC_UUID    @"FFF1"
 #define TRANSFER_BATTERY_UUID  @"FFB0"
-//检验和错误重置
-#define TRANSFER_COMMOND_CHECKERROR    @""
+
+#define TRANSFER_SERVICE_COMMONDCHANNEL_UUID  @"FFE5"
+#define TRANSFER_CHARACTERISTIC_COMMONDCHANNEL_UUID    @"FFE9"
+#define TRANSFER_SERVICE_READTEMPCHANNEL_UUID  @"FFE0"
+#define TRANSFER_CHARACTERISTIC_READTEMPCHANNEL_UUID  @"FFE4"
+
 @implementation ConnectionManager
 @synthesize manager;
 /*
@@ -296,53 +300,6 @@ static ConnectionManager *sharedConnectionManager;
     }
     return result;
 }
-//来电提示操作
--(void)reminderDeviceStr:(NSString*)str on:(BOOL)on
-{
-    uint8_t val;
-    if (on) {
-        if (_dialingSign == NO) {
-            val = 2;
-            _dialingSign = YES;
-        }else{
-            val = 0;
-            _dialingSign = NO;
-        }
-    }else{
-        val = 0;
-    }
-    
-    NSData* valData = [NSData dataWithBytes:(void*)&val length:sizeof(val)];
-    
-    CBPeripheral* peripheralss = [_peripheralDictionary objectForKey:str];
-    CBCharacteristic* characterisiticss = [_characteristicDictionary objectForKey:str];
-    
-    if (peripheralss && characterisiticss) {
-        [peripheralss writeValue:valData forCharacteristic:characterisiticss type:CBCharacteristicWriteWithoutResponse];
-        NSLog(@"reminderDevice  ++++++");
-    }
-}
--(void)reminderDevice:(NSTimer*)useinfo
-{
-    NSString* name = [useinfo userInfo];
-    uint8_t val;
-    if (_dialingSign == NO) {
-        val = 2;
-        _dialingSign = YES;
-    }else{
-        val = 0;
-        _dialingSign = NO;
-    }
-    NSData* valData = [NSData dataWithBytes:(void*)&val length:sizeof(val)];
-    
-    CBPeripheral* peripheralss = [_peripheralDictionary objectForKey:name];
-    CBCharacteristic* characterisiticss = [_characteristicDictionary objectForKey:name];
-    
-    if (peripheralss && characterisiticss) {
-        [peripheralss writeValue:valData forCharacteristic:characterisiticss type:CBCharacteristicWriteWithoutResponse];
-        NSLog(@"reminderDevice  ++++++");
-    }
-}
 
 -(void)scheduleOutOfRangeNotification:(deviceInfo*)device
 {
@@ -526,12 +483,23 @@ static ConnectionManager *sharedConnectionManager;
 //        return;
 //    }
     
+    PersonDetailInfo* personInfo = [PersonDetailInfo PersonWithPersonId:[USER_DEFAULT stringForKey:KEY_PERSONID]];
+    TemperatureFob *fob = [personInfo foundFobWithUUid:[args_peripheral.identifier UUIDString]];
+    
+    if (fob == nil)
+    {
+        fob = [personInfo createFobWithName:[args_peripheral name] UUid:[[args_peripheral identifier]UUIDString]];
+//        [self.delegate didDiscoverFob:fob];
+    }
+    if (_perpheralConnecting == nil) {
+        _perpheralConnecting = args_peripheral;
+        [manager connectPeripheral:args_peripheral options:nil];
+    }
+    return;
+    
     NSLog(@"Discovered peripheral, name %@, data: %@, RSSI: %f", [args_peripheral name], advertisementData, RSSI.floatValue);
-    if (![_peripheralDictionary objectForKey:[args_peripheral.identifier UUIDString]]) {
-//        NSLog(@"args_peripheral:%@",args_peripheral);
-        
+    if (![_peripheralDictionary objectForKey:[args_peripheral.identifier UUIDString]]) {        
         devInfo = [deviceInfo deviceWithId:args_peripheral.name identifier:[args_peripheral.identifier UUIDString]];
-//        [devInfo.locationCoordArray addObject:[deviceDisconnectInfo shareInstanceWithLocation:_location date:[NSDate date]]];
         if (_perpheralConnecting == nil) {
             _perpheralConnecting = args_peripheral;
             [manager connectPeripheral:args_peripheral options:nil];
@@ -678,12 +646,11 @@ static ConnectionManager *sharedConnectionManager;
     
     for(CBService *service in args_peripheral.services){
         NSLog(@"Service found with UUID: %@",service.UUID);
-        if ([service.UUID isEqual:[CBUUID UUIDWithString:TRANSFER_SERVICE_UUID]]) {
+        if ([service.UUID isEqual:[CBUUID UUIDWithString:TRANSFER_SERVICE_COMMONDCHANNEL_UUID]]) {
             [args_peripheral discoverCharacteristics:nil forService:service];
-        }else if ([service.UUID isEqual:[CBUUID UUIDWithString:TRANSFER_BATTERY_UUID]]) {
+        }else if ([service.UUID isEqual:[CBUUID UUIDWithString:TRANSFER_SERVICE_READTEMPCHANNEL_UUID]]) {
             [args_peripheral discoverCharacteristics:nil forService:service];
         }
-//         [args_peripheral discoverCharacteristics:nil forService:service];
     }
     
     deviceInfo* device = [_deviceManagerDictionary objectForKey:[args_peripheral.identifier UUIDString]];
@@ -693,30 +660,37 @@ static ConnectionManager *sharedConnectionManager;
     disconnectTimer = nil;
     
 }
--(NSData*)msrRead
+-(NSData*)commondData:(BodyCare_GlobalHeader_Common_Enum)commond
 {
     
-    unsigned char command[17] = {0x3C,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x6D,0x04,0xFF,0xFF,0xFF,0xFF,0x03,0x3E};
-//    unsigned char *pTmp;
-//    int nSendLen = 0;
-//    
-//    pTmp = command;
-//    *pTmp = 0x3C;
-//    pTmp++;
-//    for (NSUInteger i =0; i < 3; i++) {
-//        *pTmp = 'f';
-//        pTmp++;
-//    }
-//    for (NSUInteger i =0; i < 3; i++) {
-//        *pTmp = 'f';
-//        pTmp++;
-//    }
-//    *pTmp = 'm';
-//    pTmp++;
-//    *pTmp = '>';
-//    pTmp++;
-    return [[NSData alloc] initWithBytes:&command length:17];
+    switch (commond) {
+        case BodyCare_GlobalHeader_Common_StartCheck:
+        {
+            unsigned char command[17] = {0x3C,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x6D,0x04,0xFF,0xFF,0xFF,0xFF,0x03,0x3E};
+            return [[NSData alloc] initWithBytes:&command length:17];
+        }
+            break;
+        case BodyCare_GlobalHeader_Common_StandBy:
+        {
+            unsigned char command[17] = {0x3C,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x6D,0x04,0xFF,0xFF,0xFF,0xFF,0x03,0x3E};
+            return [[NSData alloc] initWithBytes:&command length:17];
+        }
+            break;
+        case BodyCare_GlobalHeader_Common_WarningSend:
+        {
+            unsigned char command[17] = {0x3C,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x6D,0x04,0xFF,0xFF,0xFF,0xFF,0x03,0x3E};
+            return [[NSData alloc] initWithBytes:&command length:17];
+        }
+            break;
+        default:
+        {
+            unsigned char command[17] = {0x3C,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x6D,0x04,0xFF,0xFF,0xFF,0xFF,0x03,0x3E};
+            return [[NSData alloc] initWithBytes:&command length:17];
+        }
+            break;
+    }
 }
+
 -(void)peripheral:(CBPeripheral *)args_peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error{
     
     if (error) {
@@ -737,34 +711,24 @@ static ConnectionManager *sharedConnectionManager;
 //        [args_peripheral writeValue:valData forCharacteristic:aChar type:CBCharacteristicWriteWithoutResponse];
 //    }
 //    return;
-    if ([service.UUID isEqual:[CBUUID UUIDWithString:TRANSFER_SERVICE_UUID]])
+    if ([service.UUID isEqual:[CBUUID UUIDWithString:TRANSFER_SERVICE_COMMONDCHANNEL_UUID]])
     {
         for (CBCharacteristic *aChar in service.characteristics)
         {
-            NSLog(@"Characteristic FOUND: %@ %@ %u",aChar.value,aChar.UUID,aChar.properties);
+            NSLog(@"Characteristic FOUND111: %@ %@ %u",aChar.value,aChar.UUID,aChar.properties);
             
             /* Set notification on heart rate measurement */
             [args_peripheral readValueForCharacteristic:aChar];
-            //        uint8_t val;
-            //        val = 'm';
-            //        NSData* valData = [NSData dataWithBytes:(void*)&val length:sizeof(val)];
-            NSData* valData = [self msrRead];
+            NSData* valData = [self commondData:BodyCare_GlobalHeader_Common_StartCheck];
             [args_peripheral writeValue:valData forCharacteristic:aChar type:CBCharacteristicWriteWithoutResponse];
         }
     }
-    if ([service.UUID isEqual:[CBUUID UUIDWithString:TRANSFER_BATTERY_UUID]])
+    if ([service.UUID isEqual:[CBUUID UUIDWithString:TRANSFER_SERVICE_READTEMPCHANNEL_UUID]])
     {
         for (CBCharacteristic *aChar in service.characteristics)
         {
             NSLog(@"Characteristic FOUND: %@ %@ %u",aChar.value,aChar.UUID,aChar.properties);
-            
-            /* Set notification on heart rate measurement */
-            [args_peripheral readValueForCharacteristic:aChar];
-            //        uint8_t val;
-            //        val = 'm';
-            //        NSData* valData = [NSData dataWithBytes:(void*)&val length:sizeof(val)];
-            NSData* valData = [self msrRead];
-            [args_peripheral writeValue:valData forCharacteristic:aChar type:CBCharacteristicWriteWithoutResponse];
+            [args_peripheral setNotifyValue:YES forCharacteristic:aChar];
         }
     }
 }
@@ -806,8 +770,8 @@ static ConnectionManager *sharedConnectionManager;
     if (error) {
         NSLog(@"didUpdateNotificationStateForCharacteristic error:%@",error);
     }
-    NSLog(@"characteristic.UUID:%@  value:%@, characteristic.properties:%d",characteristic.UUID,characteristic.value,characteristic.properties);
-    if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:TRANSFER_CHARACTERISTIC_UUID]]) {
+    NSLog(@"characteristic.UUID:%@  value:%@, characteristic.properties:%d,characteristic:%@",characteristic.UUID,characteristic.value,characteristic.properties,characteristic);
+    if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:TRANSFER_CHARACTERISTIC_COMMONDCHANNEL_UUID]]) {
         [_characteristicDictionary setObject:characteristic forKey:[args_peripheral.identifier UUIDString]];
          [args_peripheral readValueForCharacteristic:characteristic];
     }

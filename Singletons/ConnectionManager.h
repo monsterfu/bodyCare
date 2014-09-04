@@ -12,6 +12,8 @@
 #import "deviceInfo.h"
 #import "GlobalHeader.h"
 #import "deviceDisconnectInfo.h"
+#import "TemperatureFob.h"
+#import "TemperatureReading.h"
 
 @protocol ConnectionManagerDelegate
 - (void) isBluetoothEnabled:(bool) enabled;
@@ -22,15 +24,14 @@
 - (void) didDeviceWanaFindMe:(deviceInfo*)device on:(BOOL)on;
 @end
 
+typedef enum : NSUInteger {
+    BodyCare_GlobalHeader_Common_StartCheck,
+    BodyCare_GlobalHeader_Common_StandBy,
+    BodyCare_GlobalHeader_Common_WarningSend,
+    BodyCare_GlobalHeader_Common_Max
+} BodyCare_GlobalHeader_Common_Enum;
+
 @interface ConnectionManager : NSObject<CBCentralManagerDelegate,CBPeripheralDelegate,CBPeripheralManagerDelegate,CLLocationManagerDelegate>{
-    
-    Byte *tempbuffer;
-    Byte chrisbuffer;
-    int parserStatus;
-    int payloadLength;
-    int payloadBytesReceived;
-    int payloadSum;
-    int checksum;
     NSTimer* checkRssiTimer;
     deviceInfo* devInfo;
     CLLocationManager * _locationManager;
@@ -44,18 +45,14 @@
     
     NSTimer* disconnectTimer;
     
-    
-    BOOL _dialingSign;//来点提示音 开、关、开、关标记
-    NSTimer* _dialingGapTimer;//来点提示音间隔
-    
     CBUUID* _batteryUUID;
     BOOL _finePhoneOpen;
     
     NSUInteger _indexRSSI;
     BOOL _isOutWarning;
 }
-@property id<ConnectionManagerDelegate> delegate;
-@property(nonatomic,strong)CBCentralManager *manager;
+@property (nonatomic,assign) id<ConnectionManagerDelegate> delegate;
+@property (nonatomic,strong)CBCentralManager *manager;
 @property (strong, nonatomic) CBPeripheralManager       *peripheralManager;
 @property (strong, nonatomic) CBMutableCharacteristic   *transferCharacteristic;
 
@@ -76,7 +73,5 @@
 - (void) startScanForDevice;
 - (void) stopScanForDevice;
 - (void) removeDevice:(deviceInfo*)device;
-- (void) scheduleCallingState:(NSString*)stateStr;
 - (BOOL) findDevice:(NSString*)name isOn:(BOOL)on;
-- (void) reminderDeviceStr:(NSString*)str;
 @end

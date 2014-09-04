@@ -44,6 +44,7 @@
 + (CBUUID *) ServiceUUIDThree;
 + (deviceInfo *) deviceWithId:(NSString *) idString identifier:(NSString*)identifier;
 - (void) setBatteryLevelWithRawData:(NSData *)rawData;
+- (void) setTemperatureWithRawData:(NSData *)rawData;
 
 - (UIImage *) currentSignalStrengthImage;
 - (UIImage *) currentBatteryStrengthImage;
