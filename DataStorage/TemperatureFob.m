@@ -48,51 +48,27 @@
 
 - (BOOL) addReadingWithRawData:(NSData *)rawData person:(PersonDetailInfo*)person
 {
-    NSDate *now = [NSDate date];
-    NSInteger index = [USER_DEFAULT integerForKey:KEY_GAPTIMER_STR];
-    CGFloat time = 0;
-    switch (index) {
-        case 0:
-            time = 5*60;
-            break;
-        case 1:
-            time = 10*60;
-            break;
-        case 2:
-            time = 15*60;
-            break;
-        case 3:
-            time = 30*60;
-            break;
-        case 4:
-            time = 60*60;
-            break;
-        default:
-            time = 10*60;
-            break;
-    }
+    char data[20];
+    char encode_buf[5] = {0};
+    [rawData getBytes:data length:17];
     
+    for (NSUInteger i = 0; i < 4; i++) {
+        encode_buf[i] = data[11+i];
+    }
+    NSString* str = [[NSString alloc] initWithCString:(const char*)encode_buf encoding:NSASCIIStringEncoding];
+    CGFloat tem = [[str substringToIndex:4] floatValue];
+    
+    CGFloat temptempereture = tem/100.0f;
+    self.temperature = [NSNumber numberWithFloat:temptempereture];
     [self.delegate didUpdateData:self];
-    
-    if ([UIApplication sharedApplication].applicationState == UIApplicationStateActive) {
-        if ([now timeIntervalSinceDate:[self.lastReading date]] < 2*60)
-        {
-            return false;
-        }
-    }else if ([UIApplication sharedApplication].applicationState == UIApplicationStateBackground) {
-        if ([now timeIntervalSinceDate:[self.lastReading date]] < time)
-        {
-            return false;
-        }
-    }
-    
     TemperatureReading *reading = (TemperatureReading *) [NSEntityDescription insertNewObjectForEntityForName:@"TemperatureReading" inManagedObjectContext:self.managedObjectContext];
     [reading setDate:[NSDate date]];
-    [reading setRawValue:rawData];
+    [reading setValue:self.temperature];
     [reading setFob:self];
     [reading setPerson:person];
     
     [self addReadingsObject:reading];
+    
     return true;
 }
 

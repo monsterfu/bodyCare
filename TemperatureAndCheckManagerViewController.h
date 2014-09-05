@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "CheckTemperatureViewController.h"
 #import "RecordLineViewController.h"
+#import "GlobalHeader.h"
 
-@interface TemperatureAndCheckManagerViewController : UIViewController<CheckTemperatureViewControllerDelegate,RecordLineViewControllerDelegate>
+@interface TemperatureAndCheckManagerViewController : UIViewController<CheckTemperatureViewControllerDelegate,RecordLineViewControllerDelegate,ConnectionManagerDelegate>
 {
     CheckTemperatureViewController* _checkViewController;
     RecordLineViewController* _recordViewController;

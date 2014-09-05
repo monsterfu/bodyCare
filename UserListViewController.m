@@ -51,6 +51,7 @@
 }
 
 - (IBAction)test1ButtonTouched:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"TemperatureAndCheckManagerIdentifier" sender:nil];
 }
 
 - (IBAction)test2ButtonTouched:(UIButton *)sender {

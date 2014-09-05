@@ -29,7 +29,7 @@
     // Do any additional setup after loading the view.
     UIStoryboard* storyBord = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     _checkViewController = [storyBord instantiateViewControllerWithIdentifier:@"CheckTemperatureIdentifier"];
-    _recordViewController = [storyBord instantiateViewControllerWithIdentifier:@"CheckTemperatureIdentifier"];
+    _recordViewController = [storyBord instantiateViewControllerWithIdentifier:@"RecordLineViewIdentifier"];
     [self addChildViewController:_checkViewController];
     [self addChildViewController:_recordViewController];
     [self.view addSubview:_checkViewController.view];
@@ -37,6 +37,8 @@
     _checkViewController.delegate = self;
     _recordViewController.delegate = self;
     _currentViewController = _checkViewController;
+    
+    [[ConnectionManager sharedInstance]setDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -80,5 +82,27 @@
             _currentViewController = _recordViewController;
         }
     }];
+}
+
+#pragma mark - 
+- (void) isBluetoothEnabled:(bool) enabled
+{
+    
+}
+- (void) didDiscoverDevice:(TemperatureFob*)device
+{
+    
+}
+- (void) didDisconnectWithDevice:(TemperatureFob*)device
+{
+    
+}
+- (void) didConnectWithDevice:(TemperatureFob*)device
+{
+    
+}
+- (void) didUpdateTemperature:(CGFloat)temp
+{
+    NSLog(@"temp:%.2f",temp);
 }
 @end

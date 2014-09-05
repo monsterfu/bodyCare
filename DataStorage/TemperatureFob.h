@@ -14,13 +14,21 @@
 
 @class PersonDetailInfo;
 
+
+typedef enum : NSUInteger {
+    BodyCare_GlobalHeader_Common_StartCheck,
+    BodyCare_GlobalHeader_Common_StandBy,
+    BodyCare_GlobalHeader_Common_WarningSend,
+    BodyCare_GlobalHeader_Common_Max
+} BodyCare_GlobalHeader_Common_Enum;
+
 @protocol TemperatureFobDelegate
 - (void) didUpdateData:(TemperatureFob *) fob;
 @end
 
+
 @interface TemperatureFob : NSManagedObject
 @property (nonatomic, retain) id<TemperatureFobDelegate> delegate;
-
 @property (nonatomic, retain) NSNumber *batteryLevel;
 @property (nonatomic, retain) NSNumber *temperature;
 @property (nonatomic, retain) NSString *idString;
@@ -30,7 +38,6 @@
 @property (nonatomic, retain) NSSet *readings;
 @property (nonatomic, retain) NSString* uuid;
 @property (nonatomic, assign) BOOL active;
-
 
 + (CBUUID *) batteryServiceUUID;
 + (CBUUID *) thermometerServiceUUID;
@@ -47,10 +54,10 @@
 - (NSArray *) lastReadingsSince:(NSUInteger) minutes;
 - (NSArray *) lastReadingsDay:(NSDate*)day person:(PersonDetailInfo*)person;
 - (NSArray *) lastReadingsMonth:(NSDate*)month;
+
 @end
 
 @interface TemperatureFob (CoreDataGeneratedAccessors)
-
 - (void)addReadingsObject:(NSManagedObject *)value;
 - (void)removeReadingsObject:(NSManagedObject *)value;
 - (void)addReadings:(NSSet *)values;

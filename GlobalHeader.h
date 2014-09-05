@@ -9,6 +9,7 @@
 #ifndef bodyCare_GlobalHeader_h
 #define bodyCare_GlobalHeader_h
 
+
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "NSDate+JBCommon.h"
 #import "NSString+randonStr.h"
@@ -16,12 +17,15 @@
 #import "RESideMenu.h"
 #import "DIDatepicker/DIDatepicker.h"
 #import "YRSideViewController.h"
+
+#import "TemperatureFob.h"
+#import "TemperatureReading.h"
+#import "NSString+deviceName.h"
 #import "ConnectionManager.h"
 #import "TWTSideMenuViewController.h"
 #import "CommonNavigationController.h"
 #import "UIColor+getColor.h"
 #import "PersonDetailInfo.h"
-#import "NSString+deviceName.h"
 
 #define VISION_NO    @"1.1.2"
 //#define NSLog(...) {}

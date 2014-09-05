@@ -19,6 +19,11 @@
 {
     // Override point for customization after application launch.
     [[ConnectionManager sharedInstance] startScanForDevice];
+    
+//    char datass = 50;
+//    
+//    NSString* str = [[NSString alloc]initWithCString:&datass encoding:NSASCIIStringEncoding];
+    
     if ([USER_DEFAULT integerForKey:KEY_FIRSTUSE] == 0) {
         [USER_DEFAULT setInteger:1 forKey:KEY_FIRSTUSE];
     }else{
