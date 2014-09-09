@@ -90,7 +90,7 @@
             
         case 1:
         {
-            return 3;
+            return [_personArray count];
         }
             break;
             
@@ -112,13 +112,13 @@
 }
 - (UITableViewCell *)tableView:(SKSTableView *)tableView cellForSubRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (1){//indexPath.row == 0) {
-        _userListCell = [tableView dequeueReusableCellWithIdentifier:@"userLIstCellIdentifier" forIndexPath:indexPath];
-        _userListCell.headImage = nil;
-        _userListCell.backgroundColor = [UIColor clearColor];
-        
-        return _userListCell;
-    }
+    _userListCell = [tableView dequeueReusableCellWithIdentifier:@"userLIstCellIdentifier" forIndexPath:indexPath];
+    PersonDetailInfo* person = [_personArray objectAtIndex:indexPath.subRow-1];
+    _userListCell.headImage = (UIImage*)person.image;
+    NSLog(@"indexPath.row:%d,[person name]:%@",indexPath.subRow,[person name]);
+    _userListCell.backgroundColor = [UIColor clearColor];
+    _userListCell.nameLabel.text = [person name];
+    return _userListCell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForSubRowAtIndexPath:(NSIndexPath *)indexPath
 {

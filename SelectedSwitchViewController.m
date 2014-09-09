@@ -63,6 +63,7 @@
     switch (selectNum) {
         case SelectedSwitchEnum_Main:
         {
+            [_commonNavigationController popToRootViewControllerAnimated:YES];
             if (_currentViewController != _commonNavigationController) {
                 [self transitionFromViewController:_currentViewController toViewController:_commonNavigationController duration:1.0f options:UIViewAnimationOptionTransitionNone animations:nil completion:^(BOOL finish){
                     if (finish) {

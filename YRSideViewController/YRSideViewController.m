@@ -308,6 +308,7 @@
     
     _currentView.transform = CGAffineTransformMakeScale(scale, scale);
     _baseView.transform = CGAffineTransformMakeTranslation(scale, scale);
+    _leftViewController.view.alpha = xoffset/180.0f;
     CGFloat totalWidth=_baseView.frame.size.width;
     CGFloat totalHeight=_baseView.frame.size.height;
     if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation)) {

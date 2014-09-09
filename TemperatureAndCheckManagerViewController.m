@@ -74,7 +74,7 @@
 #pragma mark - RecordLineViewControllerDelegate
 -(void)RecordLineViewControllerLeftButtonTouch
 {
-    [self transitionFromViewController:_currentViewController toViewController:_checkViewController duration:1 options:UIViewAnimationOptionTransitionFlipFromRight animations:^{
+    [self transitionFromViewController:_currentViewController toViewController:_checkViewController duration:1 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
     }completion:^(BOOL finished) {
         if (finished) {
             _currentViewController = _checkViewController;

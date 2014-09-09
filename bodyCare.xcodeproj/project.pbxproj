@@ -192,6 +192,7 @@
 		6438B81E19ADB8C600B23899 /* expandable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6438B81C19ADB8C600B23899 /* expandable@2x.png */; };
 		6438B81F19ADB8C600B23899 /* expanded@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6438B81D19ADB8C600B23899 /* expanded@2x.png */; };
 		6438B82219ADDE5000B23899 /* SelectedSwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6438B82119ADDE5000B23899 /* SelectedSwitchViewController.m */; };
+		64B248A519BEE62F003AF072 /* UIButton+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B248A419BEE62F003AF072 /* UIButton+Scale.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -475,6 +476,8 @@
 		6438B81D19ADB8C600B23899 /* expanded@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "expanded@2x.png"; sourceTree = "<group>"; };
 		6438B82019ADDE5000B23899 /* SelectedSwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedSwitchViewController.h; sourceTree = "<group>"; };
 		6438B82119ADDE5000B23899 /* SelectedSwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedSwitchViewController.m; sourceTree = "<group>"; };
+		64B248A319BEE62F003AF072 /* UIButton+Scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+Scale.h"; path = "UIButton+Scale/UIButton+Scale.h"; sourceTree = "<group>"; };
+		64B248A419BEE62F003AF072 /* UIButton+Scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Scale.m"; path = "UIButton+Scale/UIButton+Scale.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -656,6 +659,7 @@
 		64072A4019A31E0000510ED4 /* thirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				64B248A219BEE5F8003AF072 /* UIButton+Scale */,
 				6421EC2A19B5AB51002CE7D2 /* NSString+deviceName */,
 				6438B80E19ADAD9100B23899 /* UIColor+getColor */,
 				6438B80719ADA5C800B23899 /* TWTSideMenuViewController */,
@@ -1081,6 +1085,15 @@
 			name = views;
 			sourceTree = "<group>";
 		};
+		64B248A219BEE5F8003AF072 /* UIButton+Scale */ = {
+			isa = PBXGroup;
+			children = (
+				64B248A319BEE62F003AF072 /* UIButton+Scale.h */,
+				64B248A419BEE62F003AF072 /* UIButton+Scale.m */,
+			);
+			name = "UIButton+Scale";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1309,6 +1322,7 @@
 				6438B80619AD7C3E00B23899 /* BJImageCropper.m in Sources */,
 				640DFC1319A5C92900F3A092 /* ASIWebPageRequest.m in Sources */,
 				6421EC1E19B59DD0002CE7D2 /* ConnectionManager.m in Sources */,
+				64B248A519BEE62F003AF072 /* UIButton+Scale.m in Sources */,
 				6419DBF019A71D3A00D0F74B /* CheckTemperatureViewController.m in Sources */,
 				640DFC2119A5C92900F3A092 /* ASIS3Request.m in Sources */,
 				64072A1719A31DB400510ED4 /* main.m in Sources */,

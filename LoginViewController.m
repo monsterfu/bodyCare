@@ -195,7 +195,7 @@
             [_selectedSwitchViewController switchToViewEnum:SelectedSwitchEnum_Main];
             [_sideViewController hideSideViewController:YES];
         }
-        else if (indexPath.row == 5) {
+        else if (indexPath.row == 2) {
             [_selectedSwitchViewController switchToViewEnum:SelectedSwitchEnum_Setting];
             [_sideViewController hideSideViewController:YES];
         }

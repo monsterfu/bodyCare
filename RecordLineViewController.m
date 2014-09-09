@@ -41,9 +41,9 @@
     
     //    totalNumber = 0;
     
-    for (int i=0; i < 6; i++) {
+    for (int i=0; i < 46; i++) {
         [self.ArrayOfValues addObject:[NSNumber numberWithInteger:(arc4random() % 70000)]]; // Random values for the graph
-        [self.ArrayOfDates addObject:[NSString stringWithFormat:@"%@",[NSNumber numberWithInt:2000 + i]]]; // Dates for the X-Axis of the graph
+        [self.ArrayOfDates addObject:[NSString stringWithFormat:@"%@:00",[NSNumber numberWithInt:i]]]; // Dates for the X-Axis of the graph
         
         //        totalNumber = totalNumber + [[self.ArrayOfValues objectAtIndex:i] intValue]; // All of the values added together
     }
@@ -58,9 +58,9 @@
     self.recordLine.enableTouchReport = YES;
     self.recordLine.colorTop = [UIColor clearColor];
     self.recordLine.colorBottom = [UIColor clearColor]; // Leaving this not-set on iOS 7 will default to your window's tintColor
-    self.recordLine.colorLine = [UIColor whiteColor];
+    self.recordLine.colorLine = [UIColor blackColor];
     self.recordLine.backgroundColor = [UIColor clearColor];
-    self.recordLine.colorXaxisLabel = [UIColor whiteColor];
+    self.recordLine.colorXaxisLabel = [UIColor blackColor];
     self.recordLine.widthLine = 3.0;
     self.recordLine.enableTouchReport = YES;
 }

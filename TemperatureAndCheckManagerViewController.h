@@ -18,4 +18,6 @@
     
     UIViewController* _currentViewController;
 }
+
+@property(nonatomic, retain)PersonDetailInfo* person;
 @end
