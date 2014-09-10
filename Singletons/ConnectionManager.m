@@ -35,7 +35,7 @@ static ConnectionManager *sharedConnectionManager;
     if (self = [super init])
     {
         _delegate = delegate;
-        
+        _status = BodyCare_Status_Ble_Close;
         manager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
         
         _peripheralDictionary = [NSMutableDictionary dictionary];
@@ -46,19 +46,16 @@ static ConnectionManager *sharedConnectionManager;
         
         _deviceManagerDictionary = [NSMutableDictionary dictionary];
         _indexRSSI = 0;
-        NSData* aData = [USER_DEFAULT objectForKey:KEY_DEVICELIST_INFO];
-        _addedDeviceArray = [NSKeyedUnarchiver unarchiveObjectWithData:aData];
-        if (_addedDeviceArray == nil) {
-            _addedDeviceArray = [NSMutableArray array];
-        }else{
-            
-            for (deviceInfo* device in _addedDeviceArray) {
-                [_deviceManagerDictionary setObject:device forKey:device.identifier];
-                
-                device.connected = NO;
-                
-            }
-        }
+//        NSData* aData = [USER_DEFAULT objectForKey:KEY_DEVICELIST_INFO];
+//        _addedDeviceArray = [NSKeyedUnarchiver unarchiveObjectWithData:aData];
+//        if (_addedDeviceArray == nil) {
+//            _addedDeviceArray = [NSMutableArray array];
+//        }else{
+//            
+//            for (TemperatureFob* device in _addedDeviceArray) {
+//                [_deviceManagerDictionary setObject:device forKey:device.uuid];
+//            }
+//        }
     }
     return self;
 }
@@ -90,18 +87,7 @@ static ConnectionManager *sharedConnectionManager;
 {
     [manager stopScan];
 }
-#pragma mark - fuction
 
-- (void) removeDevice:(deviceInfo*)device
-{
-    device.isUserForceDisconnect = YES;//用户在列表删除  则以后不再连接
-    NSLog(@"removeDevice: device : %@,,[_peripheralDictionary objectForKey:device.identifier]:%@",device.idString,[_peripheralDictionary objectForKey:device.identifier]);
-    if (device.connected) {
-        if ([_peripheralDictionary objectForKey:device.identifier]) {
-            [self.manager cancelPeripheralConnection:[_peripheralDictionary objectForKey:device.identifier]];
-        }
-    }
-}
 
 #pragma mark - center delegate
 -(void)centralManagerDidUpdateState:(CBCentralManager *)central{
@@ -110,11 +96,13 @@ static ConnectionManager *sharedConnectionManager;
         {
             if ([central state] == CBCentralManagerStatePoweredOn)
             {
-                [_delegate isBluetoothEnabled:YES];
+//                [_delegate isBluetoothEnabled:YES];
+                _status = BodyCare_Status_Ble_Open;
             }
             else
             {
-                [_delegate isBluetoothEnabled:NO];
+//                [_delegate isBluetoothEnabled:NO];
+                _status = BodyCare_Status_Ble_Close;
             }
             
             NSLog(@"CBCentralManagerStatePoweredOn");
@@ -151,6 +139,7 @@ static ConnectionManager *sharedConnectionManager;
         return;
     }
     if (![[args_peripheral name] isEqualToString:@"iBody-Manridy"]) {
+//        NSLog(@"Discovered unknown device, %@", [args_peripheral name]);
         return;
     }
     
@@ -173,7 +162,8 @@ static ConnectionManager *sharedConnectionManager;
     if (_selectedDevFob == nil)
     {
         _selectedDevFob = [_selectedPerson createFobWithName:[args_peripheral name] UUid:[[args_peripheral identifier]UUIDString]];
-        _selectedDevFob.delegate = self;
+//        _selectedDevFob.delegate = self;
+        _status = BodyCare_Status_Ble_DiscoverDevice;
         [self.delegate didDiscoverDevice:_selectedDevFob];
     }
     if (_perpheralConnecting == nil) {
@@ -191,22 +181,18 @@ static ConnectionManager *sharedConnectionManager;
 - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)persipheral error:(NSError *)error
 {
     NSLog(@"disconnect!!!!  error: %@",error);
+    _status = BodyCare_Status_Ble_DisconnectDevice;
     
-    
-    deviceInfo* device = [_deviceManagerDictionary objectForKey:[persipheral.identifier UUIDString]];
-    if (!device||device.isUserForceDisconnect) {
+    TemperatureFob* device = [_deviceManagerDictionary objectForKey:[persipheral.identifier UUIDString]];
+    if (!device) {
         if (device) {
-            [_peripheralDictionary removeObjectForKey:device.identifier];
-            [_deviceManagerDictionary removeObjectForKey:device.identifier];
+            [_peripheralDictionary removeObjectForKey:device.uuid];
+            [_deviceManagerDictionary removeObjectForKey:device.uuid];
         }
         return;
     }
     
     [manager connectPeripheral:persipheral options:nil];
-    if (!device.open) {
-        return;
-    }
-    device.connected = NO;
 }
 
 -(void)peripheralDidUpdateRSSI:(CBPeripheral *)arg_peripheral error:(NSError *)error
@@ -241,8 +227,9 @@ static ConnectionManager *sharedConnectionManager;
         }
     }
     
-    deviceInfo* device = [_deviceManagerDictionary objectForKey:[args_peripheral.identifier UUIDString]];
-    device.connected = YES;
+    TemperatureFob* device = [_deviceManagerDictionary objectForKey:[args_peripheral.identifier UUIDString]];
+//    device.connected = YES;
+    _status = BodyCare_Status_Ble_ConnectDevice;
     [self.delegate didConnectWithDevice:device];
     
 }
@@ -258,7 +245,7 @@ static ConnectionManager *sharedConnectionManager;
     {
         for (CBCharacteristic *aChar in service.characteristics)
         {
-            NSLog(@"Characteristic FOUND111: %@ %@ %u",aChar.value,aChar.UUID,aChar.properties);
+//            NSLog(@"Characteristic FOUND111: %@ %@ %u",aChar.value,aChar.UUID,aChar.properties);
             [_peripheralDictionary setObject:args_peripheral forKey:_selectedDevFob.uuid];
             [_characteristicDictionary setObject:aChar forKey:_selectedDevFob.uuid];
             [self startMeasureTemperature];
@@ -268,7 +255,7 @@ static ConnectionManager *sharedConnectionManager;
     {
         for (CBCharacteristic *aChar in service.characteristics)
         {
-            NSLog(@"Characteristic FOUND: %@ %@ %u",aChar.value,aChar.UUID,aChar.properties);
+//            NSLog(@"Characteristic FOUND: %@ %@ %u",aChar.value,aChar.UUID,aChar.properties);
             [args_peripheral setNotifyValue:YES forCharacteristic:aChar];
         }
     }
@@ -282,6 +269,7 @@ static ConnectionManager *sharedConnectionManager;
     NSLog(@"Characteristic value : %@ with ID %@",  [[NSString alloc] initWithData:characteristic.value encoding:NSASCIIStringEncoding], characteristic.UUID);
     NSLog(@"Characteristic value : %@ with ID %@",  characteristic.value, characteristic.UUID);
     [_selectedDevFob addReadingWithRawData:characteristic.value person:_selectedPerson];
+    [self.delegate didUpdateTemperature:[_selectedDevFob.temperature floatValue]];
 }
 
 -(void)peripheral:(CBPeripheral *)args_peripheral didUpdateNotificationStateForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error{
@@ -304,6 +292,7 @@ static ConnectionManager *sharedConnectionManager;
     CBPeripheral* _selectedPeripheral = [_peripheralDictionary objectForKey:_selectedDevFob.uuid];
     CBCharacteristic* _selectedCharacteristic = [_characteristicDictionary objectForKey:_selectedDevFob.uuid];
     [_selectedPeripheral writeValue:[[NSData alloc] initWithBytes:&command length:17] forCharacteristic:_selectedCharacteristic type:CBCharacteristicWriteWithoutResponse];
+    _status = BodyCare_Status_Ble_MeasureTemperature;
 }
 - (void) standByTemperature
 {

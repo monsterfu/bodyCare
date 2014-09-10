@@ -42,8 +42,6 @@
     uint8_t value;
     [rawData getBytes:&value length:1];
     self.batteryLevel = [NSNumber numberWithUnsignedShort:value];
-    
-    [self.delegate didUpdateData:self];
 }
 
 - (BOOL) addReadingWithRawData:(NSData *)rawData person:(PersonDetailInfo*)person
@@ -59,8 +57,9 @@
     CGFloat tem = [[str substringToIndex:4] floatValue];
     
     CGFloat temptempereture = tem/100.0f;
+    NSLog(@"now temperature:%.2f",temptempereture);
     self.temperature = [NSNumber numberWithFloat:temptempereture];
-    [self.delegate didUpdateData:self];
+//    [self.delegate didUpdateData:self];
     TemperatureReading *reading = (TemperatureReading *) [NSEntityDescription insertNewObjectForEntityForName:@"TemperatureReading" inManagedObjectContext:self.managedObjectContext];
     [reading setDate:[NSDate date]];
     [reading setValue:self.temperature];

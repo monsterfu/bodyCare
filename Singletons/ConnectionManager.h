@@ -10,8 +10,18 @@
 #import "TemperatureFob.h"
 #import "GlobalHeader.h"
 
+typedef enum : NSUInteger {
+    BodyCare_Status_Ble_Close,
+    BodyCare_Status_Ble_Open,
+    BodyCare_Status_Ble_DiscoverDevice,
+    BodyCare_Status_Ble_ConnectDevice,
+    BodyCare_Status_Ble_MeasureTemperature,
+    BodyCare_Status_Ble_DisconnectDevice,
+    BodyCare_Status_Ble_Max
+} BodyCare_Status_Ble_Enum;
+
+
 @protocol ConnectionManagerDelegate
-- (void) isBluetoothEnabled:(bool) enabled;
 - (void) didDiscoverDevice:(TemperatureFob*)device;
 - (void) didDisconnectWithDevice:(TemperatureFob*)device;
 - (void) didConnectWithDevice:(TemperatureFob*)device;
@@ -20,13 +30,14 @@
 
 @protocol TemperatureFobDelegate;
 
-@interface ConnectionManager : NSObject<CBCentralManagerDelegate,CBPeripheralDelegate,CLLocationManagerDelegate,TemperatureFobDelegate>
+@interface ConnectionManager : NSObject<CBCentralManagerDelegate,CBPeripheralDelegate>
 {
     NSTimer* checkRssiTimer;
     CBUUID* _batteryUUID;
     NSUInteger _indexRSSI;
 }
-@property id<ConnectionManagerDelegate> delegate;
+@property(nonatomic,assign)id<ConnectionManagerDelegate> delegate;
+@property(nonatomic,assign)BodyCare_Status_Ble_Enum status;
 @property(nonatomic,strong)CBCentralManager *manager;
 @property(nonatomic,strong)CBPeripheral *peripheral;
 @property(nonatomic,strong)CBPeripheral* perpheralConnecting;

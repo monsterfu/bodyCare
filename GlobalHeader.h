@@ -20,7 +20,6 @@
 
 #import "TemperatureFob.h"
 #import "TemperatureReading.h"
-#import "NSString+deviceName.h"
 #import "ConnectionManager.h"
 #import "TWTSideMenuViewController.h"
 #import "CommonNavigationController.h"

@@ -22,7 +22,15 @@
     }
     return self;
 }
-
+-(void)viewDidAppear:(BOOL)animated
+{
+    if ([ConnectionManager sharedInstance].status == BodyCare_Status_Ble_Open) {
+        [_statusLabel setText:[NSString stringWithFormat:@"蓝牙已打开"]];
+    }
+    
+    [[ConnectionManager sharedInstance]startScanForDevice];
+    [[ConnectionManager sharedInstance]setDelegate:self];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -34,6 +42,11 @@
     _selectedIndex = 0;
     _selectedPerson = [_personArray objectAtIndex:0];
     [self scaleBigButton:_oneButton];
+    
+    if ([ConnectionManager sharedInstance].status == BodyCare_Status_Ble_Close) {
+        [_statusLabel setText:[NSString stringWithFormat:@"蓝牙未打开"]];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -93,6 +106,23 @@
     [self performSegueWithIdentifier:@"TemperatureAndCheckManagerIdentifier" sender:nil];
 }
 
+#pragma mark - connectmanage
+- (void) didDiscoverDevice:(TemperatureFob*)device
+{
+    [_statusLabel setText:[NSString stringWithFormat:@"已发现设备%@,并尝试进行连接",device.idString]];
+}
+- (void) didDisconnectWithDevice:(TemperatureFob*)device
+{
+    [_statusLabel setText:[NSString stringWithFormat:@"与温度计%@断开连接",device.idString]];
+}
+- (void) didConnectWithDevice:(TemperatureFob*)device
+{
+    [_statusLabel setText:[NSString stringWithFormat:@"与温度计%@连接成功",device.idString]];
+}
+- (void) didUpdateTemperature:(CGFloat)temp
+{
+    
+}
 #pragma mark - Button Scale
 -(void)scaleBigButton:(UIButton*)button
 {

@@ -10,7 +10,7 @@
 #import "GlobalHeader.h"
 #import "TemperatureAndCheckManagerViewController.h"
 
-@interface UserListViewController : UIViewController
+@interface UserListViewController : UIViewController<ConnectionManagerDelegate>
 {
     NSUInteger _selectedIndex;
     PersonDetailInfo* _selectedPerson;
@@ -32,4 +32,8 @@
 //panelImage
 @property (weak, nonatomic) IBOutlet UIImageView *panelImage;
 - (IBAction)startButtonTouch:(UIButton *)sender;
+
+//label
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+
 @end
