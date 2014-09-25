@@ -20,4 +20,8 @@
 }
 
 @property(nonatomic, retain)PersonDetailInfo* person;
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
+
 @end

@@ -39,6 +39,12 @@
     _currentViewController = _checkViewController;
     
     [[ConnectionManager sharedInstance]setDelegate:self];
+    
+    
+//    [_scrollView setContentSize:CGSizeMake(DEVICE_WIDTH*2, DEVICE_HEIGHT)];
+//    [_recordViewController.view setFrame:CGRectMake(DEVICE_WIDTH, 0, DEVICE_WIDTH, DEVICE_HEIGHT)];
+//    [_scrollView addSubview:_checkViewController.view];
+//    [_scrollView addSubview:_recordViewController.view];
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,6 +67,9 @@
 #pragma mark - CheckTemperatureViewControllerDelegate
 -(void)CheckTemperatureViewControllerRightButtonTouch
 {
+#if 0
+    [_scrollView setContentOffset:CGPointMake(DEVICE_WIDTH, 0) animated:YES];
+#else
     [self transitionFromViewController:_currentViewController toViewController:_recordViewController duration:1 options:UIViewAnimationOptionTransitionFlipFromRight animations:^{
     }completion:^(BOOL finished) {
         if (finished) {
@@ -69,11 +78,15 @@
             _currentViewController = _checkViewController;
         }
     }];
+#endif
 }
 
 #pragma mark - RecordLineViewControllerDelegate
 -(void)RecordLineViewControllerLeftButtonTouch
 {
+#if 0
+    [_scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+#else
     [self transitionFromViewController:_currentViewController toViewController:_checkViewController duration:1 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
     }completion:^(BOOL finished) {
         if (finished) {
@@ -82,9 +95,10 @@
             _currentViewController = _recordViewController;
         }
     }];
+#endif
 }
 
-#pragma mark - 
+#pragma mark -
 - (void) isBluetoothEnabled:(bool) enabled
 {
     

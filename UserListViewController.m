@@ -46,7 +46,6 @@
     if ([ConnectionManager sharedInstance].status == BodyCare_Status_Ble_Close) {
         [_statusLabel setText:[NSString stringWithFormat:@"蓝牙未打开"]];
     }
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,6 +64,9 @@
     if ([segue.identifier isEqualToString:@"TemperatureAndCheckManagerIdentifier"]) {
         TemperatureAndCheckManagerViewController* _temperAndCheckViewController = (TemperatureAndCheckManagerViewController*)[segue destinationViewController];
         _temperAndCheckViewController.person = (PersonDetailInfo*)[_personArray objectAtIndex:_selectedIndex];
+    }else if([segue.identifier isEqualToString:@"userInfoDetailModelIdentifier"]) {
+        _userInfoEditViewController = (UserInfoEditViewController*)[segue destinationViewController];
+        _userInfoEditViewController.person = (PersonDetailInfo*)[_personArray objectAtIndex:_selectedIndex];
     }
 }
 
@@ -75,9 +77,11 @@
 - (IBAction)test1ButtonTouched:(UIButton *)sender {
     if (_selectedIndex != 0) {
         [self scaleSmallButton:[_buttonArry objectAtIndex:_selectedIndex]];
+        [self scaleBigButton:sender];
+        _selectedIndex = 0;
+    }else{
+        [self performSegueWithIdentifier:@"userInfoDetailModelIdentifier" sender:[_personArray objectAtIndex:_selectedIndex]];
     }
-    [self scaleBigButton:sender];
-    _selectedIndex = 0;
     
     [self imageAnimationNum:_selectedIndex];
 }
@@ -85,9 +89,12 @@
 - (IBAction)test2ButtonTouched:(UIButton *)sender {
     if (_selectedIndex != 1) {
         [self scaleSmallButton:[_buttonArry objectAtIndex:_selectedIndex]];
+        [self scaleBigButton:sender];
+        _selectedIndex = 1;
+    }else{
+        [self performSegueWithIdentifier:@"userInfoDetailModelIdentifier" sender:[_personArray objectAtIndex:_selectedIndex]];
     }
-    [self scaleBigButton:sender];
-    _selectedIndex = 1;
+    
     
     [self imageAnimationNum:_selectedIndex];
 }
@@ -95,11 +102,18 @@
 - (IBAction)test3ButtonTouched:(UIButton *)sender {
     if (_selectedIndex != 2) {
         [self scaleSmallButton:[_buttonArry objectAtIndex:_selectedIndex]];
+        [self scaleBigButton:sender];
+        _selectedIndex = 2;
+    }else{
+        [self performSegueWithIdentifier:@"userInfoDetailModelIdentifier" sender:[_personArray objectAtIndex:_selectedIndex]];
     }
-    [self scaleBigButton:sender];
-    _selectedIndex = 2;
+    
     
     [self imageAnimationNum:_selectedIndex];
+}
+
+- (IBAction)newButtonTouched:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"userInfoDetailModelIdentifier" sender:nil];
 }
 
 - (IBAction)startButtonTouch:(UIButton *)sender {
@@ -127,9 +141,9 @@
 -(void)scaleBigButton:(UIButton*)button
 {
     CAKeyframeAnimation *k = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
-    k.values = @[@(0.1),@(1.0),@(1.5)];
+    k.values = @[@(1.1),@(1.0),@(1.5)];
     k.keyTimes = @[@(0.0),@(0.5),@(0.8),@(1.0)];
-    k.calculationMode = kCAAnimationLinear;
+    k.calculationMode = kCAAnimationCubicPaced;
     k.fillMode = kCAFillModeForwards;
     k.removedOnCompletion = NO;
     [button.layer addAnimation:k forKey:@"SHOW"];
@@ -150,11 +164,13 @@
 {
     CABasicAnimation* rotationAnimation1;
     rotationAnimation1 = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    rotationAnimation1.fromValue = _rotationNumber;
     rotationAnimation1.toValue = [NSNumber numberWithFloat: M_PI/2*num];
+    _rotationNumber = [NSNumber numberWithFloat: M_PI/2*num];
     rotationAnimation1.duration = 0.5;
     rotationAnimation1.cumulative = YES;
-    rotationAnimation1.removedOnCompletion = NO;
     rotationAnimation1.fillMode = kCAFillModeForwards;
+    rotationAnimation1.removedOnCompletion = NO;
     rotationAnimation1.delegate = self;
     rotationAnimation1.repeatCount = 1;
     [_panelImage.layer addAnimation:rotationAnimation1 forKey:@"rotationAnimation"];

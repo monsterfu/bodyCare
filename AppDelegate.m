@@ -35,7 +35,7 @@
     if (![USER_DEFAULT stringForKey:KEY_USERNAME]) {
         //没有则创建一个
         NSString* personId = [NSString randomStr];
-        PersonDetailInfo* _detailInfo = [PersonDetailInfo createPersonDetailInfoWithName:@"宝贝" personId:personId];
+        PersonDetailInfo* _detailInfo = [PersonDetailInfo createPersonDetailInfoWithName:@"Kimi" personId:personId];
         _detailInfo.image = [UIImage imageNamed:@"default_head.png"];
         _detailInfo.birthday = [NSDate dateWithTimeIntervalSinceNow:-2*365*24*60*60];
         _detailInfo.weight = [NSNumber numberWithInteger:14];
