@@ -14,7 +14,7 @@
 @end
 
 
-@interface RecordLineViewController : UIViewController<BEMSimpleLineGraphDelegate>
+@interface RecordLineViewController : UIViewController<BEMSimpleLineGraphDelegate,DIDatepickerDelegate>
 @property(nonatomic,assign)id<RecordLineViewControllerDelegate>delegate;
 
 @property (weak, nonatomic) IBOutlet DIDatepicker *datePicker;

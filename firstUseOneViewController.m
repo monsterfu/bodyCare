@@ -47,7 +47,7 @@
 {
     CABasicAnimation* rotationAnimation1;
     rotationAnimation1 = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-    rotationAnimation1.toValue = [NSNumber numberWithFloat: M_PI];
+    rotationAnimation1.toValue = [NSNumber numberWithFloat: -M_PI];
     rotationAnimation1.duration = 2;
     rotationAnimation1.cumulative = YES;
     rotationAnimation1.removedOnCompletion = NO;

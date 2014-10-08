@@ -14,6 +14,11 @@
 {
     UIImagePickerController* _imagePickerController;
     UITapGestureRecognizer* _tapGestureRecognizer;
+    
+    NSNumber* _sex;
+    UIImage* _image;
+    NSDate* _birthday;
+    NSString* _name;
 }
 
 @property(nonatomic,retain)PersonDetailInfo* person;
@@ -23,12 +28,15 @@
 @property (weak, nonatomic) IBOutlet UIButton *boyButton;
 - (IBAction)girlButtonTouch:(UIButton *)sender;
 - (IBAction)boyButtonTouch:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *birthdayLabel;
 
 //头像
+
+@property (weak, nonatomic) IBOutlet UIImageView *headIconImageView;
+
 - (IBAction)cameraButtonTouch:(UIButton *)sender;
 - (IBAction)photoButtonTouch:(UIButton *)sender;
-@property (weak, nonatomic) IBOutlet UITextField *nameTextfield;
 
 - (IBAction)cancelButtonTouch:(UIButton *)sender;
 

@@ -192,6 +192,7 @@ const CGFloat kDIDatepickerSpaceBetweenItems = 15.;
 
 - (void)selectDate:(NSDate *)date
 {
+    
     NSAssert([self.dates indexOfObject:date] != NSNotFound, @"Date not found in dates array");
 
     self.selectedDate = date;
@@ -243,6 +244,9 @@ const CGFloat kDIDatepickerSpaceBetweenItems = 15.;
 - (void)updateSelectedDate:(DIDatepickerDateView *)dateView
 {
     self.selectedDate = dateView.date;
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(DIDatepickerDidSeletedDate:)]) {
+        [self.delegate DIDatepickerDidSeletedDate:dateView.date];
+    }
 }
 
 - (void)updateSelectedDatePosition

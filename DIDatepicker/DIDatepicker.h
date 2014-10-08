@@ -9,6 +9,11 @@
 extern const NSTimeInterval kSecondsInDay;
 extern const CGFloat kDIDetepickerHeight;
 
+@protocol DIDatepickerDelegate <NSObject>
+
+-(void)DIDatepickerDidSeletedDate:(NSDate*)date;
+
+@end
 
 @interface DIDatepicker : UIControl
 
@@ -19,6 +24,9 @@ extern const CGFloat kDIDetepickerHeight;
 // UI
 @property (strong, nonatomic) UIColor *bottomLineColor;
 @property (strong, nonatomic) UIColor *selectedDateBottomLineColor;
+
+//delegate
+@property (weak, nonatomic)id<DIDatepickerDelegate>delegate;
 
 // methods
 - (void)fillDatesFromCurrentDate:(NSInteger)nextDatesCount;

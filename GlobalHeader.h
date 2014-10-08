@@ -25,6 +25,7 @@
 #import "CommonNavigationController.h"
 #import "UIColor+getColor.h"
 #import "PersonDetailInfo.h"
+#import "NSDate+JBCommon.h"
 
 #define VISION_NO    @"1.1.2"
 //#define NSLog(...) {}

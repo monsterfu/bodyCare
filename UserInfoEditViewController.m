@@ -28,18 +28,30 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [_headIconImageView.layer setCornerRadius:CGRectGetHeight([_headIconImageView bounds]) / 2];
+    _headIconImageView.layer.masksToBounds = YES;
+    
+    
     NSLocale *cnTime = [[NSLocale alloc]initWithLocaleIdentifier:[[USER_DEFAULT objectForKey:@"AppleLanguages"]objectAtIndex:0]];
     NSString* dateStr = [[[NSDate date] descriptionWithLocale:cnTime]substringToIndex:10];
     _birthdayLabel.text = dateStr;
     if (_person != nil) {
         NSString* dateStr = [[_person.birthday descriptionWithLocale:cnTime]substringToIndex:10];
         _birthdayLabel.text = dateStr;
-        _nameTextfield.text = _person.name;
+        _nameLabel.text = _person.name;
         [self setPersonSex:[_person.sex boolValue]];
+        _headIconImageView.image = _person.image;
+        [_datePicker setDate:_person.birthday animated:YES];
+        
+        _sex = _person.sex;
+        _birthday = [_person birthday];
+        _name = [_person name];
+        _image = [_person image];
     }
     
     _tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction)];
     [self.view addGestureRecognizer:_tapGestureRecognizer];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,7 +73,6 @@
 
 -(void)tapAction
 {
-    [_nameTextfield resignFirstResponder];
 }
 #pragma mark -setSex
 
@@ -138,7 +149,7 @@
     _imageCroperViewController.delegate = self;
     _imageCroperViewController.editImage = images;
     [self dismissViewControllerAnimated:YES completion:^{
-        [self.navigationController presentViewController:_imageCroperViewController animated:YES completion:nil];
+        [self presentViewController:_imageCroperViewController animated:YES completion:nil];
     }];
     
     
@@ -154,12 +165,15 @@
 {
 //    [_headButton setImage:image forState:UIControlStateNormal];
 //    [_headButton setImage:image forState:UIControlStateHighlighted];
+    [_headIconImageView setImage:image];
+    _image = image;
 }
 
 - (IBAction)girlButtonTouch:(UIButton *)sender {
     if (sender.selected == NO) {
         _girlButton.selected = YES;
         _boyButton.selected = NO;
+        _sex = [NSNumber numberWithInt:0];
     }
     
 }
@@ -168,6 +182,7 @@
     if (sender.selected == NO) {
         _boyButton.selected = YES;
         _girlButton.selected = NO;
+        _sex = [NSNumber numberWithInt:1];
     }
 }
 
@@ -187,9 +202,16 @@
     NSLocale *cnTime = [[NSLocale alloc]initWithLocaleIdentifier:[[USER_DEFAULT objectForKey:@"AppleLanguages"]objectAtIndex:0]];
     NSString* dateStr = [[sender.date descriptionWithLocale:cnTime]substringToIndex:10];
     _birthdayLabel.text = dateStr;
+    _birthday = sender.date;
 }
 
 - (IBAction)doneButtonTouch:(UIButton *)sender {
+    
+    _person.name = _name;
+    _person.birthday = _birthday;
+    _person.sex = _sex;
+    _person.image = _image;
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

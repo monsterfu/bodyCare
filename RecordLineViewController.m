@@ -27,21 +27,17 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [_datePicker addTarget:self action:@selector(updateSelectedDate) forControlEvents:UIControlEventValueChanged];
-    
-    //    [self.datepicker fillDatesFromCurrentDate:14];
-    //    [self.datepicker fillCurrentWeek];
-    //    [self.datepicker fillCurrentMonth];
     [_datePicker fillCurrentYear];
-    [_datePicker selectDateAtIndex:0];
-    
+    NSDate* today = [NSDate date];
+    [_datePicker selectDate:[NSDate dateWithYear:today.year Month:today.month]];
+    [_datePicker setDelegate:self];
     
     self.ArrayOfValues = [[NSMutableArray alloc] init];
     self.ArrayOfDates = [[NSMutableArray alloc] init];
     
     //    totalNumber = 0;
     
-    for (int i=0; i < 46; i++) {
+    for (int i=0; i < 17; i++) {
         [self.ArrayOfValues addObject:[NSNumber numberWithInteger:(arc4random() % 70000)]]; // Random values for the graph
         [self.ArrayOfDates addObject:[NSString stringWithFormat:@"%@:00",[NSNumber numberWithInt:i]]]; // Dates for the X-Axis of the graph
         
@@ -143,5 +139,32 @@
 -(void)allAnimationDidFinished
 {
     NSLog(@"allAnimationDidFinished");
+}
+#pragma mark - DIDatepickerDelegate
+-(void)DIDatepickerDidSeletedDate:(NSDate *)date
+{
+    [self.ArrayOfValues removeAllObjects];
+    [self.ArrayOfDates removeAllObjects];
+    
+    for (int i = 0; i < 17; i++) {
+        [self.ArrayOfValues addObject:[NSNumber numberWithInteger:(arc4random() % 70000)]]; // Random values for the graph
+        [self.ArrayOfDates addObject:[NSString stringWithFormat:@"%@",[NSNumber numberWithInt:2000 + i]]]; // Dates for the X-Axis of the graph
+        
+        //        totalNumber = totalNumber + [[self.ArrayOfValues objectAtIndex:i] intValue]; // All of the values added together
+    }
+    
+    UIColor *color;
+    //    if (self.graphColorChoice.selectedSegmentIndex == 0) color = [UIColor colorWithRed:31.0/255.0 green:187.0/255.0 blue:166.0/255.0 alpha:1.0];
+    //    else if (self.graphColorChoice.selectedSegmentIndex == 1) color = [UIColor colorWithRed:255.0/255.0 green:187.0/255.0 blue:31.0/255.0 alpha:1.0];
+    //    else if (self.graphColorChoice.selectedSegmentIndex == 2) color = [UIColor colorWithRed:0.0 green:140.0/255.0 blue:255.0/255.0 alpha:1.0];
+    color = [UIColor clearColor];//[UIColor colorWithRed:31.0/255.0 green:187.0/255.0 blue:166.0/255.0 alpha:1.0];
+    self.recordLine.colorTop = color;
+    self.recordLine.colorBottom = color;
+    self.recordLine.backgroundColor = color;
+    self.view.tintColor = color;
+    //    self.labelValues.textColor = color;
+    //    self.navigationController.navigationBar.tintColor = color;
+    
+    [self.recordLine reloadGraph];
 }
 @end

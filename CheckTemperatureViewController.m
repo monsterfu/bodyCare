@@ -27,11 +27,19 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    [self.view setBackgroundColor:[UIColor blackColor]];
     [[ConnectionManager sharedInstance]setDelegate:self];
     
     _panelView.transform=CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(180.0));
     _tempLabel.text = @"0.0℃";
+    
+    [_headIconImageView.layer setCornerRadius:CGRectGetHeight([_headIconImageView bounds]) / 2];
+    _headIconImageView.layer.masksToBounds = YES;
+}
+-(void)setPerson:(PersonDetailInfo *)person
+{
+    _person = person;
+    [_headIconImageView setImage:_person.image];
 }
 
 - (void)didReceiveMemoryWarning
@@ -90,4 +98,22 @@
     [_panelView.layer addAnimation:rotationAnimation1 forKey:@"rotationAnimation"];
 }
 
+- (IBAction)bottonButtonTouch:(UIButton *)sender {
+    NSLog(@"bottonButtonTouch");
+    if (sender.selected) {
+        sender.selected = NO;
+        [UIView animateWithDuration:0.3 animations:^{
+            [_bottomView setFrame:CGRectMake(0, DEVICE_HEIGHT- 30, _bottomView.frame.size.width, _bottomView.frame.size.height)];
+        }];
+    }else{
+        sender.selected = YES;
+        [UIView animateWithDuration:0.3 animations:^{
+            [_bottomView setFrame:CGRectMake(0, DEVICE_HEIGHT- 138, _bottomView.frame.size.width, _bottomView.frame.size.height)];
+        }];
+    }
+}
+
+- (IBAction)bottomButtonTouchDragInside:(UIButton *)sender {
+    NSLog(@"bottomButtonTouchDragInside sender pos: x %f  y  %f", sender.frame.origin.x,sender.frame.origin.y);
+}
 @end

@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.view setBackgroundColor:[UIColor blackColor]];
     UIStoryboard* storyBord = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     _checkViewController = [storyBord instantiateViewControllerWithIdentifier:@"CheckTemperatureIdentifier"];
     _recordViewController = [storyBord instantiateViewControllerWithIdentifier:@"RecordLineViewIdentifier"];
@@ -35,6 +36,7 @@
     [self.view addSubview:_checkViewController.view];
     
     _checkViewController.delegate = self;
+    _checkViewController.person = _person;
     _recordViewController.delegate = self;
     _currentViewController = _checkViewController;
     

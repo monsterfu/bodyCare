@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "GlobalHeader.h"
-
+#import "bottomPanelView.h"
 
 @protocol CheckTemperatureViewControllerDelegate <NSObject>
 -(void)CheckTemperatureViewControllerRightButtonTouch;
@@ -20,10 +20,19 @@
 //panelView
 @property (weak, nonatomic) IBOutlet UIView *panelView;
 @property (weak, nonatomic) IBOutlet UILabel *tempLabel;
-
+//headIcon
+@property (weak, nonatomic) IBOutlet UIImageView *headIconImageView;
+//
+@property(nonatomic,retain)PersonDetailInfo* person;
 
 @property (weak, nonatomic) IBOutlet UIButton *actionButton;
 - (IBAction)actionButtonTouch:(UIButton *)sender;
 
 - (IBAction)rightButtonTouch:(UIButton *)sender;
+
+//症状
+@property (weak, nonatomic) IBOutlet bottomPanelView *bottomView;
+- (IBAction)bottonButtonTouch:(UIButton *)sender;
+- (IBAction)bottomButtonTouchDragInside:(UIButton *)sender;
+
 @end
