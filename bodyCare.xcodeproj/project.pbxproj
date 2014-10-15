@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F033BED19E62980006920CC /* NSString+deviceName.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F033BEC19E62980006920CC /* NSString+deviceName.m */; };
+		0F033BF319E633E2006920CC /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F033BF019E633E2006920CC /* CircleView.m */; };
+		0F033BF419E633E2006920CC /* DragImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F033BF219E633E2006920CC /* DragImageView.m */; };
+		0F033BF719E64966006920CC /* diseaseSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F033BF619E64966006920CC /* diseaseSelectView.m */; };
+		0F033C0119E6748D006920CC /* 1yezi-xiao-hong.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F033BF819E6748D006920CC /* 1yezi-xiao-hong.png */; };
+		0F033C0219E6748D006920CC /* 1yezi-xiao-huang.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F033BF919E6748D006920CC /* 1yezi-xiao-huang.png */; };
+		0F033C0319E6748D006920CC /* 1yezi-xiao-lan.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F033BFA19E6748D006920CC /* 1yezi-xiao-lan.png */; };
+		0F033C0419E6748D006920CC /* 1yezi-xiao-lv.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F033BFB19E6748D006920CC /* 1yezi-xiao-lv.png */; };
+		0F033C0519E6748D006920CC /* quxiao.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F033BFC19E6748D006920CC /* quxiao.png */; };
+		0F033C0619E6748D006920CC /* touxiang.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F033BFD19E6748D006920CC /* touxiang.png */; };
+		0F033C0719E6748D006920CC /* touxiangkuang.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F033BFE19E6748D006920CC /* touxiangkuang.png */; };
+		0F033C0819E6748D006920CC /* xiangce.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F033BFF19E6748D006920CC /* xiangce.png */; };
+		0F033C0919E6748D006920CC /* xiangji.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F033C0019E6748D006920CC /* xiangji.png */; };
 		0F9F191319A4F33E0089E452 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9F191219A4F33E0089E452 /* 3.png */; };
 		0F9F191519A4F4710089E452 /* fu_table.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9F191419A4F4710089E452 /* fu_table.png */; };
 		0F9F191A19A4F86D0089E452 /* fu_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9F191619A4F86D0089E452 /* fu_4.png */; };
@@ -65,11 +78,6 @@
 		64072A7F19A3328400510ED4 /* firstUseTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64072A7D19A3328400510ED4 /* firstUseTwoViewController.xib */; };
 		64072A8419A342E100510ED4 /* firstUseThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64072A8219A342E100510ED4 /* firstUseThreeViewController.m */; };
 		64072A8519A342E100510ED4 /* firstUseThreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64072A8319A342E100510ED4 /* firstUseThreeViewController.xib */; };
-		640A229419C289C7008921C8 /* 120.png in Resources */ = {isa = PBXBuildFile; fileRef = 640A228F19C289C7008921C8 /* 120.png */; };
-		640A229519C289C7008921C8 /* 58.png in Resources */ = {isa = PBXBuildFile; fileRef = 640A229019C289C7008921C8 /* 58.png */; };
-		640A229619C289C7008921C8 /* 80.png in Resources */ = {isa = PBXBuildFile; fileRef = 640A229119C289C7008921C8 /* 80.png */; };
-		640A229719C289C7008921C8 /* qidong1.png in Resources */ = {isa = PBXBuildFile; fileRef = 640A229219C289C7008921C8 /* qidong1.png */; };
-		640A229819C289C7008921C8 /* qidong2.png in Resources */ = {isa = PBXBuildFile; fileRef = 640A229319C289C7008921C8 /* qidong2.png */; };
 		640DFB7619A5BC5E00F3A092 /* add_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 640DFB6719A5BC5E00F3A092 /* add_bg.png */; };
 		640DFB7719A5BC5E00F3A092 /* add_boy.png in Resources */ = {isa = PBXBuildFile; fileRef = 640DFB6819A5BC5E00F3A092 /* add_boy.png */; };
 		640DFB7819A5BC5E00F3A092 /* add_boy_hl.png in Resources */ = {isa = PBXBuildFile; fileRef = 640DFB6919A5BC5E00F3A092 /* add_boy_hl.png */; };
@@ -195,7 +203,6 @@
 		6438B81E19ADB8C600B23899 /* expandable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6438B81C19ADB8C600B23899 /* expandable@2x.png */; };
 		6438B81F19ADB8C600B23899 /* expanded@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6438B81D19ADB8C600B23899 /* expanded@2x.png */; };
 		6438B82219ADDE5000B23899 /* SelectedSwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6438B82119ADDE5000B23899 /* SelectedSwitchViewController.m */; };
-		64B248A519BEE62F003AF072 /* UIButton+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B248A419BEE62F003AF072 /* UIButton+Scale.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +216,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F033BEB19E62980006920CC /* NSString+deviceName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+deviceName.h"; path = "bodyCare/NSString+deviceName.h"; sourceTree = SOURCE_ROOT; };
+		0F033BEC19E62980006920CC /* NSString+deviceName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+deviceName.m"; path = "bodyCare/NSString+deviceName.m"; sourceTree = SOURCE_ROOT; };
+		0F033BEF19E633E2006920CC /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleView.h; path = UserListViewController/CircleView.h; sourceTree = "<group>"; };
+		0F033BF019E633E2006920CC /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleView.m; path = UserListViewController/CircleView.m; sourceTree = "<group>"; };
+		0F033BF119E633E2006920CC /* DragImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DragImageView.h; path = UserListViewController/DragImageView.h; sourceTree = "<group>"; };
+		0F033BF219E633E2006920CC /* DragImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DragImageView.m; path = UserListViewController/DragImageView.m; sourceTree = "<group>"; };
+		0F033BF519E64966006920CC /* diseaseSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = diseaseSelectView.h; sourceTree = "<group>"; };
+		0F033BF619E64966006920CC /* diseaseSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = diseaseSelectView.m; sourceTree = "<group>"; };
+		0F033BF819E6748D006920CC /* 1yezi-xiao-hong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1yezi-xiao-hong.png"; sourceTree = "<group>"; };
+		0F033BF919E6748D006920CC /* 1yezi-xiao-huang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1yezi-xiao-huang.png"; sourceTree = "<group>"; };
+		0F033BFA19E6748D006920CC /* 1yezi-xiao-lan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1yezi-xiao-lan.png"; sourceTree = "<group>"; };
+		0F033BFB19E6748D006920CC /* 1yezi-xiao-lv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1yezi-xiao-lv.png"; sourceTree = "<group>"; };
+		0F033BFC19E6748D006920CC /* quxiao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quxiao.png; sourceTree = "<group>"; };
+		0F033BFD19E6748D006920CC /* touxiang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touxiang.png; sourceTree = "<group>"; };
+		0F033BFE19E6748D006920CC /* touxiangkuang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touxiangkuang.png; sourceTree = "<group>"; };
+		0F033BFF19E6748D006920CC /* xiangce.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xiangce.png; sourceTree = "<group>"; };
+		0F033C0019E6748D006920CC /* xiangji.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xiangji.png; sourceTree = "<group>"; };
 		0F9F191219A4F33E0089E452 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		0F9F191419A4F4710089E452 /* fu_table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fu_table.png; sourceTree = "<group>"; };
 		0F9F191619A4F86D0089E452 /* fu_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fu_4.png; path = 4/fu_4.png; sourceTree = "<group>"; };
@@ -289,11 +313,6 @@
 		64072A8119A342E100510ED4 /* firstUseThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firstUseThreeViewController.h; sourceTree = "<group>"; };
 		64072A8219A342E100510ED4 /* firstUseThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = firstUseThreeViewController.m; sourceTree = "<group>"; };
 		64072A8319A342E100510ED4 /* firstUseThreeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = firstUseThreeViewController.xib; sourceTree = "<group>"; };
-		640A228F19C289C7008921C8 /* 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 120.png; sourceTree = "<group>"; };
-		640A229019C289C7008921C8 /* 58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 58.png; sourceTree = "<group>"; };
-		640A229119C289C7008921C8 /* 80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 80.png; sourceTree = "<group>"; };
-		640A229219C289C7008921C8 /* qidong1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qidong1.png; sourceTree = "<group>"; };
-		640A229319C289C7008921C8 /* qidong2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qidong2.png; sourceTree = "<group>"; };
 		640DFB6719A5BC5E00F3A092 /* add_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_bg.png; sourceTree = "<group>"; };
 		640DFB6819A5BC5E00F3A092 /* add_boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_boy.png; sourceTree = "<group>"; };
 		640DFB6919A5BC5E00F3A092 /* add_boy_hl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_boy_hl.png; sourceTree = "<group>"; };
@@ -480,8 +499,6 @@
 		6438B81D19ADB8C600B23899 /* expanded@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "expanded@2x.png"; sourceTree = "<group>"; };
 		6438B82019ADDE5000B23899 /* SelectedSwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedSwitchViewController.h; sourceTree = "<group>"; };
 		6438B82119ADDE5000B23899 /* SelectedSwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedSwitchViewController.m; sourceTree = "<group>"; };
-		64B248A319BEE62F003AF072 /* UIButton+Scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+Scale.h"; path = "UIButton+Scale/UIButton+Scale.h"; sourceTree = "<group>"; };
-		64B248A419BEE62F003AF072 /* UIButton+Scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Scale.m"; path = "UIButton+Scale/UIButton+Scale.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -516,6 +533,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F033BEE19E633A7006920CC /* UserLIstViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0F033BEF19E633E2006920CC /* CircleView.h */,
+				0F033BF019E633E2006920CC /* CircleView.m */,
+				0F033BF119E633E2006920CC /* DragImageView.h */,
+				0F033BF219E633E2006920CC /* DragImageView.m */,
+			);
+			name = UserLIstViewController;
+			sourceTree = "<group>";
+		};
 		0F9F191E19A50C5E0089E452 /* login */ = {
 			isa = PBXGroup;
 			children = (
@@ -646,6 +674,7 @@
 				640EF94719AB3745006EB5BB /* LeftViewController.m */,
 				6419DBE819A7119C00D0F74B /* UserListViewController.h */,
 				6419DBE919A7119C00D0F74B /* UserListViewController.m */,
+				0F033BEE19E633A7006920CC /* UserLIstViewController */,
 				6419DBEB19A711C600D0F74B /* UserInfoEditViewController.h */,
 				6419DBEC19A711C600D0F74B /* UserInfoEditViewController.m */,
 				6419DBF119A71E0800D0F74B /* TemperatureAndCheckManagerViewController.h */,
@@ -663,7 +692,7 @@
 		64072A4019A31E0000510ED4 /* thirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				64B248A219BEE5F8003AF072 /* UIButton+Scale */,
+				6421EC2A19B5AB51002CE7D2 /* NSString+deviceName */,
 				6438B80E19ADAD9100B23899 /* UIColor+getColor */,
 				6438B80719ADA5C800B23899 /* TWTSideMenuViewController */,
 				6438B80319AD7C2400B23899 /* BJImageCropper */,
@@ -718,7 +747,6 @@
 		64072A6019A32CD500510ED4 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				640A228E19C289C7008921C8 /* AppIcon */,
 				6419DBD419A70E1B00D0F74B /* leftList */,
 				640DFCD219A5F62800F3A092 /* main2 */,
 				640DFB6619A5BC5E00F3A092 /* main */,
@@ -761,21 +789,18 @@
 			path = BemLine;
 			sourceTree = "<group>";
 		};
-		640A228E19C289C7008921C8 /* AppIcon */ = {
-			isa = PBXGroup;
-			children = (
-				640A228F19C289C7008921C8 /* 120.png */,
-				640A229019C289C7008921C8 /* 58.png */,
-				640A229119C289C7008921C8 /* 80.png */,
-				640A229219C289C7008921C8 /* qidong1.png */,
-				640A229319C289C7008921C8 /* qidong2.png */,
-			);
-			path = AppIcon;
-			sourceTree = "<group>";
-		};
 		640DFB6619A5BC5E00F3A092 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				0F033BF819E6748D006920CC /* 1yezi-xiao-hong.png */,
+				0F033BF919E6748D006920CC /* 1yezi-xiao-huang.png */,
+				0F033BFA19E6748D006920CC /* 1yezi-xiao-lan.png */,
+				0F033BFB19E6748D006920CC /* 1yezi-xiao-lv.png */,
+				0F033BFC19E6748D006920CC /* quxiao.png */,
+				0F033BFD19E6748D006920CC /* touxiang.png */,
+				0F033BFE19E6748D006920CC /* touxiangkuang.png */,
+				0F033BFF19E6748D006920CC /* xiangce.png */,
+				0F033C0019E6748D006920CC /* xiangji.png */,
 				640DFCCE19A5EFFD00F3A092 /* main_bigs.png */,
 				640DFCCF19A5EFFD00F3A092 /* main_bigw.png */,
 				640DFB8819A5C63B00F3A092 /* main_1.png */,
@@ -1053,6 +1078,16 @@
 			path = DIDatepicker;
 			sourceTree = "<group>";
 		};
+		6421EC2A19B5AB51002CE7D2 /* NSString+deviceName */ = {
+			isa = PBXGroup;
+			children = (
+				0F033BEB19E62980006920CC /* NSString+deviceName.h */,
+				0F033BEC19E62980006920CC /* NSString+deviceName.m */,
+			);
+			name = "NSString+deviceName";
+			path = "category/NSString+deviceName";
+			sourceTree = "<group>";
+		};
 		6438B80319AD7C2400B23899 /* BJImageCropper */ = {
 			isa = PBXGroup;
 			children = (
@@ -1085,17 +1120,10 @@
 			children = (
 				6438B81319ADB6D800B23899 /* userLIstCell.h */,
 				6438B81419ADB6D800B23899 /* userLIstCell.m */,
+				0F033BF519E64966006920CC /* diseaseSelectView.h */,
+				0F033BF619E64966006920CC /* diseaseSelectView.m */,
 			);
 			name = views;
-			sourceTree = "<group>";
-		};
-		64B248A219BEE5F8003AF072 /* UIButton+Scale */ = {
-			isa = PBXGroup;
-			children = (
-				64B248A319BEE62F003AF072 /* UIButton+Scale.h */,
-				64B248A419BEE62F003AF072 /* UIButton+Scale.m */,
-			);
-			name = "UIButton+Scale";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1145,14 +1173,6 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Monster;
 				TargetAttributes = {
-					64072A0619A31DB400510ED4 = {
-						DevelopmentTeam = 8C87933EV5;
-						SystemCapabilities = {
-							com.apple.BackgroundModes = {
-								enabled = 1;
-							};
-						};
-					};
 					64072A2719A31DB400510ED4 = {
 						TestTargetID = 64072A0619A31DB400510ED4;
 					};
@@ -1183,11 +1203,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				640DFCF019A5F62800F3A092 /* main2_stop.png in Resources */,
+				0F033C0719E6748D006920CC /* touxiangkuang.png in Resources */,
 				6438B80219AD7B4F00B23899 /* ImageCroperViewController.xib in Resources */,
 				640DFB7919A5BC5E00F3A092 /* add_camera.png in Resources */,
 				64072A6D19A32D0F00510ED4 /* fu_bg2.png in Resources */,
 				0F9F193B19A5112E0089E452 /* re_bg.png in Resources */,
 				640DFB9E19A5C63B00F3A092 /* main_2.png in Resources */,
+				0F033C0819E6748D006920CC /* xiangce.png in Resources */,
 				6419DBDC19A70E1B00D0F74B /* ll_bg.png in Resources */,
 				0F9F193019A50C5E0089E452 /* login_login_hl.png in Resources */,
 				0F9F191A19A4F86D0089E452 /* fu_4.png in Resources */,
@@ -1196,6 +1218,7 @@
 				640DFCED19A5F62800F3A092 /* main2_panel.png in Resources */,
 				640DFB7719A5BC5E00F3A092 /* add_boy.png in Resources */,
 				640DFB8219A5BC5E00F3A092 /* add_name_hl.png in Resources */,
+				0F033C0619E6748D006920CC /* touxiang.png in Resources */,
 				64072A5F19A32C3E00510ED4 /* firstUseOneViewController.xib in Resources */,
 				0F9F191519A4F4710089E452 /* fu_table.png in Resources */,
 				640DFB8319A5BC5E00F3A092 /* add_photo.png in Resources */,
@@ -1209,35 +1232,39 @@
 				640DFB7F19A5BC5E00F3A092 /* add_girl.png in Resources */,
 				6419DBDF19A70E1B00D0F74B /* ll_neiquan.png in Resources */,
 				640DFCE919A5F62800F3A092 /* main2_cy_hl.png in Resources */,
+				0F033C0519E6748D006920CC /* quxiao.png in Resources */,
+				0F033C0319E6748D006920CC /* 1yezi-xiao-lan.png in Resources */,
 				640DFBAD19A5C63B00F3A092 /* main_rightup1.png in Resources */,
 				640DFB7E19A5BC5E00F3A092 /* add_done_hl.png in Resources */,
 				640DFB8019A5BC5E00F3A092 /* add_girl_hl.png in Resources */,
 				6438B81E19ADB8C600B23899 /* expandable@2x.png in Resources */,
 				640DFCE619A5F62800F3A092 /* main2_Alert_hl.png in Resources */,
+				0F033C0119E6748D006920CC /* 1yezi-xiao-hong.png in Resources */,
 				0F9F192F19A50C5E0089E452 /* login_login.png in Resources */,
 				640DFBB119A5C63B00F3A092 /* main_start.png in Resources */,
 				640DFC1B19A5C92900F3A092 /* README-GHUnit in Resources */,
 				640DFCEA19A5F62800F3A092 /* main2_head.png in Resources */,
 				640DFBA819A5C63B00F3A092 /* main_l2.png in Resources */,
-				640A229419C289C7008921C8 /* 120.png in Resources */,
+				0F033C0419E6748D006920CC /* 1yezi-xiao-lv.png in Resources */,
 				0F9F193419A50C5E0089E452 /* login_yisheng_hl.png in Resources */,
 				640DFBAB19A5C63B00F3A092 /* main_pop.png in Resources */,
 				0F9F191B19A4F86D0089E452 /* fu_button_hl.png in Resources */,
 				0F9F192D19A50C5E0089E452 /* login_jiazhang.png in Resources */,
 				0F9F192A19A50C5E0089E452 /* login_bg.png in Resources */,
-				640A229619C289C7008921C8 /* 80.png in Resources */,
 				640DFB9D19A5C63B00F3A092 /* main_1.png in Resources */,
 				640DFB7D19A5BC5E00F3A092 /* add_done.png in Resources */,
 				640DFB7B19A5BC5E00F3A092 /* add_cancel.png in Resources */,
 				640DFB7A19A5BC5E00F3A092 /* add_camera_hl.png in Resources */,
 				640DFB7619A5BC5E00F3A092 /* add_bg.png in Resources */,
 				640DFCF119A5F62800F3A092 /* main2_stop_hl.png in Resources */,
+				0F033C0919E6748D006920CC /* xiangji.png in Resources */,
 				64072A6A19A32CD500510ED4 /* fu_panel.png in Resources */,
 				640DFB9F19A5C63B00F3A092 /* main_3.png in Resources */,
 				64072A2319A31DB400510ED4 /* Images.xcassets in Resources */,
 				640DFB7819A5BC5E00F3A092 /* add_boy_hl.png in Resources */,
 				640DFCE519A5F62800F3A092 /* main2_Alert.png in Resources */,
 				6438B81F19ADB8C600B23899 /* expanded@2x.png in Resources */,
+				0F033C0219E6748D006920CC /* 1yezi-xiao-huang.png in Resources */,
 				64072A6919A32CD500510ED4 /* fu_bg.png in Resources */,
 				640DFCEE19A5F62800F3A092 /* main2_push.png in Resources */,
 				64072A8519A342E100510ED4 /* firstUseThreeViewController.xib in Resources */,
@@ -1253,18 +1280,15 @@
 				640DFB8419A5BC5E00F3A092 /* add_photo_hl.png in Resources */,
 				6419DBDE19A70E1B00D0F74B /* ll_head.png in Resources */,
 				640DFCEF19A5F62800F3A092 /* main2_right.png in Resources */,
-				640A229519C289C7008921C8 /* 58.png in Resources */,
 				640DFBAF19A5C63B00F3A092 /* main_rightup3.png in Resources */,
 				640DFBA719A5C63B00F3A092 /* main_l1.png in Resources */,
 				0F9F193D19A5112E0089E452 /* re_re.png in Resources */,
-				640A229719C289C7008921C8 /* qidong1.png in Resources */,
 				640DFBA019A5C63B00F3A092 /* main_4.png in Resources */,
 				640DFCD119A5EFFD00F3A092 /* main_bigw.png in Resources */,
 				0F9F192E19A50C5E0089E452 /* login_jiazhang_hl.png in Resources */,
 				640DFCF319A5F62800F3A092 /* main2_zhengzhuang.png in Resources */,
 				640DFBAC19A5C63B00F3A092 /* main_rightUp.png in Resources */,
 				640DFCF419A5F62800F3A092 /* main2_zhengzhuang_hl.png in Resources */,
-				640A229819C289C7008921C8 /* qidong2.png in Resources */,
 				640DFB7C19A5BC5E00F3A092 /* add_cancel_hl.png in Resources */,
 				640DFCE419A5F62800F3A092 /* main2_add.png in Resources */,
 				640DFBAA19A5C63B00F3A092 /* main_l4.png in Resources */,
@@ -1301,6 +1325,7 @@
 			files = (
 				640DFC0B19A5C92900F3A092 /* ASIAuthenticationDialog.m in Sources */,
 				640DFC1819A5C92900F3A092 /* ASICloudFilesObject.m in Sources */,
+				0F033BF419E633E2006920CC /* DragImageView.m in Sources */,
 				6419DBE719A7103F00D0F74B /* DIDatepickerDateView.m in Sources */,
 				640DFC1A19A5C92900F3A092 /* ASICloudFilesRequest.m in Sources */,
 				64072A5919A3228000510ED4 /* firstUseViewController.m in Sources */,
@@ -1316,6 +1341,7 @@
 				640DFC1419A5C92900F3A092 /* ASICloudFilesCDNRequest.m in Sources */,
 				640DFC0F19A5C92900F3A092 /* ASIFormDataRequest.m in Sources */,
 				640DFC1719A5C92900F3A092 /* ASICloudFilesContainerXMLParserDelegate.m in Sources */,
+				0F033BF719E64966006920CC /* diseaseSelectView.m in Sources */,
 				6438B80119AD7B4F00B23899 /* ImageCroperViewController.m in Sources */,
 				64072A7719A3325800510ED4 /* BEMAnimations.m in Sources */,
 				640DFC3419A5C94A00F3A092 /* HttpRequest.m in Sources */,
@@ -1325,6 +1351,7 @@
 				6419DBF319A71E0800D0F74B /* TemperatureAndCheckManagerViewController.m in Sources */,
 				6438B80D19ADABB700B23899 /* CommonNavigationController.m in Sources */,
 				640DFC1519A5C92900F3A092 /* ASICloudFilesContainer.m in Sources */,
+				0F033BF319E633E2006920CC /* CircleView.m in Sources */,
 				64072A7919A3325800510ED4 /* BEMLine.m in Sources */,
 				640DFCCC19A5E1D800F3A092 /* NSDate+JBCommon.m in Sources */,
 				64072A7A19A3325800510ED4 /* BEMSimpleLineGraphView.m in Sources */,
@@ -1337,7 +1364,6 @@
 				6438B80619AD7C3E00B23899 /* BJImageCropper.m in Sources */,
 				640DFC1319A5C92900F3A092 /* ASIWebPageRequest.m in Sources */,
 				6421EC1E19B59DD0002CE7D2 /* ConnectionManager.m in Sources */,
-				64B248A519BEE62F003AF072 /* UIButton+Scale.m in Sources */,
 				6419DBF019A71D3A00D0F74B /* CheckTemperatureViewController.m in Sources */,
 				640DFC2119A5C92900F3A092 /* ASIS3Request.m in Sources */,
 				64072A1719A31DB400510ED4 /* main.m in Sources */,
@@ -1366,6 +1392,7 @@
 				64072A5219A31E2900510ED4 /* REBackgroundView.m in Sources */,
 				640DFC1C19A5C92900F3A092 /* Reachability.m in Sources */,
 				640EF94519AB3303006EB5BB /* YRSideViewController.m in Sources */,
+				0F033BED19E62980006920CC /* NSString+deviceName.m in Sources */,
 				640EF94819AB3745006EB5BB /* LeftViewController.m in Sources */,
 				64072A5619A31E2900510ED4 /* UIWindow+RESideMenuExtensions.m in Sources */,
 				640DFC1119A5C92900F3A092 /* ASIInputStream.m in Sources */,
@@ -1495,7 +1522,9 @@
 		64072A3A19A31DB400510ED4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Xiaoming Sui (YPGQK89HXC)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bodyCare/bodyCare-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1506,7 +1535,6 @@
 				INFOPLIST_FILE = "bodyCare/bodyCare-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "CF21F0F1-1C47-4C7D-94BD-223EDF823F63";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1514,7 +1542,9 @@
 		64072A3B19A31DB400510ED4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Xiaoming Sui (YPGQK89HXC)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bodyCare/bodyCare-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1525,7 +1555,6 @@
 				INFOPLIST_FILE = "bodyCare/bodyCare-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "CF21F0F1-1C47-4C7D-94BD-223EDF823F63";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
