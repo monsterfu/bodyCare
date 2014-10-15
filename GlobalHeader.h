@@ -90,4 +90,7 @@
 #define NSNotificationCenter_appWillEnterBackGround         @"NSNotificationCenter_appWillEnterBackGround"
 #define NSNotificationCenter_appWillEnterForeground         @"NSNotificationCenter_appWillEnterForeground"
 #define NSNotificationMainActionChange  @"NSNotificationMainActionChange"
+
+//用户信息发生改变
+#define NSNotificationCenter_personInfoChange   @"NSNotificationCenter_personInfoChange"
 #endif

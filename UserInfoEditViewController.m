@@ -212,6 +212,35 @@
     _person.sex = _sex;
     _person.image = _image;
     
+    
+    _managedObjectContext = [(AppDelegate*) [[UIApplication sharedApplication] delegate] managedObjectContext];
+    
+    NSManagedObjectContext *context = _person.managedObjectContext;
+    
+    NSError *error = nil;
+    if (![context save:&error]) {
+        /*
+         Replace this implementation with code to handle the error appropriately.
+         
+         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
+         */
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+        
+        if (![_managedObjectContext save:&error]) {
+            /*
+             Replace this implementation with code to handle the error appropriately.
+             
+             abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
+             */
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
+    }
+
+    
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [[NSNotificationCenter defaultCenter]postNotificationName:NSNotificationCenter_personInfoChange object:nil];
 }
 @end

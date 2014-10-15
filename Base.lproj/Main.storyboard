@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="TzK-Yn-Ol8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="TzK-Yn-Ol8">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -312,7 +312,7 @@
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" id="xJT-Gf-NJy">
-                                <rect key="frame" x="47" y="374" width="226" height="138"/>
+                                <rect key="frame" x="71" y="374" width="179" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.45850568104787748" green="0.86485427490798639" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -551,45 +551,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="elq-T2-mHe">
-                                <rect key="frame" x="64" y="183" width="109" height="109"/>
-                                <state key="normal" title="Kimi" backgroundImage="main_l2.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="test1ButtonTouched:" destination="3I7-A1-i2l" eventType="touchUpInside" id="9Kx-5e-Wth"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="aF5-eL-VF7">
-                                <rect key="frame" x="181" y="183" width="109" height="109"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Feman" backgroundImage="main_rightUp.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="test2ButtonTouched:" destination="3I7-A1-i2l" eventType="touchUpInside" id="blZ-Fu-uuu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="dcq-Op-X6v">
-                                <rect key="frame" x="64" y="300" width="109" height="109"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="main_add.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="newButtonTouched:" destination="3I7-A1-i2l" eventType="touchUpInside" id="ubx-zj-V6M"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="EWB-ni-gMh">
-                                <rect key="frame" x="181" y="300" width="109" height="109"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="贝儿" backgroundImage="main_1.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="test3ButtonTouched:" destination="3I7-A1-i2l" eventType="touchUpInside" id="JGd-J8-vBv"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="蓝牙未打开" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ivz-h2-zLR">
                                 <rect key="frame" x="79" y="472" width="162" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -619,11 +580,9 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="OQz-E3-Zdb"/>
                     <connections>
-                        <outlet property="oneButton" destination="elq-T2-mHe" id="ZPi-pU-I26"/>
                         <outlet property="panelImage" destination="oBi-yW-MnG" id="h9L-r6-IMl"/>
+                        <outlet property="startButton" destination="Cks-Zq-GCy" id="Jcf-gc-YUW"/>
                         <outlet property="statusLabel" destination="Ivz-h2-zLR" id="oM1-V1-mv4"/>
-                        <outlet property="threeButton" destination="EWB-ni-gMh" id="JPr-dk-jPc"/>
-                        <outlet property="twoButton" destination="aF5-eL-VF7" id="Pqe-IM-QTv"/>
                         <segue destination="AnD-FI-gp5" kind="push" identifier="TemperatureAndCheckManagerIdentifier" id="3ey-r3-fef"/>
                         <segue destination="T5l-FE-I7A" kind="modal" identifier="userInfoDetailModelIdentifier" id="qzB-4Q-Tin"/>
                     </connections>
@@ -727,7 +686,7 @@
                                 <rect key="frame" x="114" y="304" width="81" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" id="DaJ-B0-f5Y">
+                            <view contentMode="scaleToFill" id="DaJ-B0-f5Y" customClass="diseaseSelectView">
                                 <rect key="frame" x="0.0" y="430" width="320" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -875,7 +834,7 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="y1N-mL-TJw">
-                                                    <rect key="frame" x="118" y="4" width="50" height="50"/>
+                                                    <rect key="frame" x="122" y="6" width="42" height="45"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VCQ-61-pNU">
@@ -956,13 +915,9 @@
         <image name="main2_panel.png" width="372" height="372"/>
         <image name="main2_right.png" width="27" height="35"/>
         <image name="main2_zhengzhuang.png" width="123" height="122"/>
-        <image name="main_1.png" width="223" height="223"/>
         <image name="main_3.png" width="223" height="223"/>
-        <image name="main_add.png" width="223" height="223"/>
         <image name="main_bg.png" width="640" height="1136"/>
-        <image name="main_l2.png" width="375" height="373"/>
         <image name="main_pop.png" width="266" height="270"/>
-        <image name="main_rightUp.png" width="223" height="223"/>
         <image name="main_start.png" width="226" height="227"/>
         <image name="main_start_hl.png" width="226" height="227"/>
         <image name="quxiao.png" width="123" height="128"/>

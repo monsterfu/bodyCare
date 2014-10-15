@@ -12,6 +12,8 @@
 
 @end
 
+#define imageWH  (120)
+
 @implementation UserListViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -38,14 +40,57 @@
     //用户
     _personArray = [PersonDetailInfo allPersonDetail];
     //按钮
-    _buttonArry = [NSMutableArray arrayWithObjects:_oneButton,_twoButton,_threeButton, nil];
+    [self initDragImageView];
+    [self showImage];
+    
+    [self.view bringSubviewToFront:_panelImage];
+    [self.view bringSubviewToFront:_startButton];
+    
     _selectedIndex = 0;
     _selectedPerson = [_personArray objectAtIndex:0];
-    [self scaleBigButton:_oneButton];
     
     if ([ConnectionManager sharedInstance].status == BodyCare_Status_Ble_Close) {
         [_statusLabel setText:[NSString stringWithFormat:@"蓝牙未打开"]];
     }
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(userInfoChange) name:NSNotificationCenter_personInfoChange object:nil];
+    
+}
+
+-(void)userInfoChange
+{
+    _personArray = [PersonDetailInfo allPersonDetail];
+    
+    imageviewOne.person = [_personArray objectAtIndex:0];
+    imageviewTwo.person = [_personArray objectAtIndex:1];
+    imageviewThree.person = [_personArray objectAtIndex:2];
+}
+
+- (void)initDragImageView{
+    imageviewOne = [[DragImageView alloc] initWithFrame:CGRectMake(0, 0, imageWH, imageWH)];
+    imageviewOne.bgImageView.image = [UIImage imageNamed:@"1yezi-xiao-hong.png"];
+    imageviewOne.person = [_personArray objectAtIndex:0];
+    imageviewOne.delegate = self;
+    imageviewTwo = [[DragImageView alloc] initWithFrame:CGRectMake(0, 0, imageWH, imageWH)];
+    imageviewTwo.bgImageView.image = [UIImage imageNamed:@"1yezi-xiao-huang.png"];
+    imageviewTwo.person = [_personArray objectAtIndex:1];
+    imageviewTwo.delegate = self;
+    imageviewThree = [[DragImageView alloc] initWithFrame:CGRectMake(0, 0, imageWH, imageWH)];
+    imageviewThree.bgImageView.image = [UIImage imageNamed:@"1yezi-xiao-lan.png"];
+    imageviewThree.person = [_personArray objectAtIndex:2];
+    imageviewThree.delegate = self;
+    imageviewAddNew = [[DragImageView alloc] initWithFrame:CGRectMake(0, 0, imageWH, imageWH)];
+    imageviewAddNew.bgImageView.image = [UIImage imageNamed:@"1yezi-xiao-lv.png"];
+    imageviewAddNew.delegate = self;
+    arrImage = [[NSMutableArray alloc] initWithObjects:imageviewOne, imageviewTwo, imageviewThree, imageviewAddNew, nil];
+}
+
+//显示方式是确定圆心正下方的点，然后逆时针绘制点
+- (void)showImage{
+    CircleView *circleView = [[CircleView alloc] initWithFrame:CGRectMake(0, 64, DEVICE_WIDTH , DEVICE_WIDTH)];
+    circleView.arrImages = arrImage;
+    [self.view addSubview:circleView];
+    [circleView loadView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,7 +111,7 @@
         _temperAndCheckViewController.person = (PersonDetailInfo*)[_personArray objectAtIndex:_selectedIndex];
     }else if([segue.identifier isEqualToString:@"userInfoDetailModelIdentifier"]) {
         _userInfoEditViewController = (UserInfoEditViewController*)[segue destinationViewController];
-        _userInfoEditViewController.person = (PersonDetailInfo*)[_personArray objectAtIndex:_selectedIndex];
+        _userInfoEditViewController.person = (PersonDetailInfo*)sender;
     }
 }
 
@@ -174,5 +219,13 @@
     rotationAnimation1.delegate = self;
     rotationAnimation1.repeatCount = 1;
     [_panelImage.layer addAnimation:rotationAnimation1 forKey:@"rotationAnimation"];
+}
+
+
+#pragma mark -
+#pragma mark - DrapImageViewDelegate
+-(void)DragImageViewLongTap:(PersonDetailInfo*)person
+{
+    [self performSegueWithIdentifier:@"userInfoDetailModelIdentifier" sender:person];
 }
 @end

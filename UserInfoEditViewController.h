@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ImageCroperViewController.h"
 #import "GlobalHeader.h"
+#import "AppDelegate.h"
 
 @interface UserInfoEditViewController : UIViewController<UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,ImageCroperViewControllerDelegate>
 {
@@ -20,7 +21,7 @@
     NSDate* _birthday;
     NSString* _name;
 }
-
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property(nonatomic,retain)PersonDetailInfo* person;
 
 //性别

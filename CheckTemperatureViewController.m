@@ -27,10 +27,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _diseaseArray = @[@"流鼻涕",@"大量出汗",@"咳嗽",@"发冷"];
+    
     [self.view setBackgroundColor:[UIColor blackColor]];
     [[ConnectionManager sharedInstance]setDelegate:self];
     
-    _panelView.transform=CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(180.0));
+    _panelView.transform=CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(180.0 - 45.0));
     _tempLabel.text = @"0.0℃";
     
     [_headIconImageView.layer setCornerRadius:CGRectGetHeight([_headIconImageView bounds]) / 2];

@@ -114,7 +114,9 @@
 {
     _userListCell = [tableView dequeueReusableCellWithIdentifier:@"userLIstCellIdentifier" forIndexPath:indexPath];
     PersonDetailInfo* person = [_personArray objectAtIndex:indexPath.subRow-1];
-    _userListCell.headImage = (UIImage*)person.image;
+    _userListCell.headImage.image = (UIImage*)person.image;
+    [_userListCell.headImage.layer setCornerRadius:CGRectGetHeight([_userListCell.headImage bounds]) / 2];
+    _userListCell.headImage.layer.masksToBounds = YES;
     NSLog(@"indexPath.row:%d,[person name]:%@",indexPath.subRow,[person name]);
     _userListCell.backgroundColor = [UIColor clearColor];
     _userListCell.nameLabel.text = [person name];

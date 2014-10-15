@@ -10,8 +10,10 @@
 #import "GlobalHeader.h"
 #import "UserInfoEditViewController.h"
 #import "TemperatureAndCheckManagerViewController.h"
+#import "CircleView.h"
+#import "DragImageView.h"
 
-@interface UserListViewController : UIViewController<ConnectionManagerDelegate>
+@interface UserListViewController : UIViewController<ConnectionManagerDelegate, DragImageViewDelegate>
 {
     NSUInteger _selectedIndex;
     PersonDetailInfo* _selectedPerson;
@@ -19,29 +21,30 @@
     NSNumber* _rotationNumber;
     
     UserInfoEditViewController* _userInfoEditViewController;
+    
+    //test
+    DragImageView *imageviewOne;
+    DragImageView *imageviewTwo;
+    DragImageView *imageviewThree;
+    DragImageView *imageviewAddNew;
+    
+    NSMutableArray *arrImage;
+    
+    CGPoint pointCenter;
+    CGFloat fRadius;//半径
+    CGFloat fAvarage_Radina;//平均角度
+    CGPoint pointDrag;
+    NSInteger iCurrentIndex;
+    NSInteger iStep;
 }
 
 @property(nonatomic, retain)NSMutableArray* personArray;
-
-- (IBAction)leftListButtonTouch:(UIBarButtonItem *)sender;
-- (IBAction)test1ButtonTouched:(UIButton *)sender;
-- (IBAction)test2ButtonTouched:(UIButton *)sender;
-- (IBAction)test3ButtonTouched:(UIButton *)sender;
-- (IBAction)newButtonTouched:(UIButton *)sender;
-
 //
-
-
-
-//
-@property (weak, nonatomic) IBOutlet UIButton *oneButton;
-@property (weak, nonatomic) IBOutlet UIButton *twoButton;
-@property (weak, nonatomic) IBOutlet UIButton *threeButton;
-
 
 //panelImage
 @property (weak, nonatomic) IBOutlet UIImageView *panelImage;
 - (IBAction)startButtonTouch:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *startButton;
 
 //label
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;

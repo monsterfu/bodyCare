@@ -16,6 +16,9 @@
 @end
 
 @interface CheckTemperatureViewController : UIViewController<ConnectionManagerDelegate>
+{
+    NSMutableArray* _diseaseArray;
+}
 @property(nonatomic,assign)id<CheckTemperatureViewControllerDelegate>delegate;
 //panelView
 @property (weak, nonatomic) IBOutlet UIView *panelView;
@@ -34,5 +37,8 @@
 @property (weak, nonatomic) IBOutlet bottomPanelView *bottomView;
 - (IBAction)bottonButtonTouch:(UIButton *)sender;
 - (IBAction)bottomButtonTouchDragInside:(UIButton *)sender;
+
+//
+
 
 @end

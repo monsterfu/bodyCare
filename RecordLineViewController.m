@@ -54,7 +54,7 @@
     self.recordLine.enableTouchReport = YES;
     self.recordLine.colorTop = [UIColor clearColor];
     self.recordLine.colorBottom = [UIColor clearColor]; // Leaving this not-set on iOS 7 will default to your window's tintColor
-    self.recordLine.colorLine = [UIColor blackColor];
+    self.recordLine.colorLine = [UIColor grayColor];
     self.recordLine.backgroundColor = [UIColor clearColor];
     self.recordLine.colorXaxisLabel = [UIColor blackColor];
     self.recordLine.widthLine = 3.0;
